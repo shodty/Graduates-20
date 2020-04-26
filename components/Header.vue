@@ -1,6 +1,6 @@
 <template lang="pug">
 #main-header
-  b-container.container-fluid
+  b-container.container-fluid.header
     b-row.header
         b-col(cols="11")
             LogoHorizontal.logohorizontal
@@ -22,9 +22,18 @@ export default {
 
 <style scoped lang="stylus">
 
-.header
-    border-bottom 3px solid black
+#main-header
+  position fixed
+  top 0
+  left 0
+  z-index 100
+  height 10%
+  width 100%
+  background white
+  border-bottom 3px solid black
 
+.header
+  height 100%
 .marquee
     width: 100vw;
     margin: 0 auto;
@@ -33,15 +42,16 @@ export default {
 .info
     font-size 4vh
     font-weight 700
+    line-height 0
     text-align center
     background-color #f4a1c6
     border-left 3px solid black
-    padding 15% 0
     height: 100%
+    padding-top 25%
 
 .logohorizontal
     height: 100%
-    width: 30%
+    width: 25%
     padding 1% 2%
 
 </style>
