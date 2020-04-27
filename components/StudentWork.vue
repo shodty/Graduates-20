@@ -126,9 +126,6 @@ export default {
 .work
   height: 86%
 
-.workside
-  height: 100%
-
 .projects
   height: 14%
   width: 100%
@@ -196,7 +193,7 @@ li.hooper-slide
   font-family: 'GT-Pressura', sans-serif
 
 .selfie
-  max-width: 90%
+  max-width: 84%
   padding 5%
 
 .main-name, .view-work
@@ -230,12 +227,9 @@ li.hooper-slide
 
 .fillbutton
   position absolute
-  right 0
+  right 1%
   bottom 0
-  font-size 1vw
-  font-family: 'GT-Pressura', sans-serif
-  background white
-  color white
-  padding 0 1%
+  background black
+  padding .3%
 
 </style>

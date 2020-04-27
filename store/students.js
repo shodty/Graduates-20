@@ -98,7 +98,6 @@ export const mutations = {
       students[j] = temp
     }
     state.studentObject = students
-    console.log(state.studentObject[0].code)
   },
   fill: (state, index) => {
     state.studentObject[index].fill = !state.studentObject[index].fill

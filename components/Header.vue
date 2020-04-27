@@ -4,8 +4,9 @@
     b-row.header
         b-col(cols="11")
             LogoHorizontal.logohorizontal
-        b-col(cols="1")
-            p.info Info
+        b-col.my-auto(cols="1" )
+            b-col
+              p.info Info
 </template>
 
 <script>
@@ -27,7 +28,7 @@ export default {
   top 0
   left 0
   z-index 100
-  height 10%
+  height 8%
   width 100%
   background white
   border-bottom 3px solid black
@@ -40,18 +41,19 @@ export default {
     text-align left
 
 .info
-    font-size 4vh
+    font-family: 'GT-Pressura', sans-serif
+    text-transform uppercase
+    font-size 2vh
     font-weight 700
-    line-height 0
     text-align center
-    background-color #f4a1c6
-    border-left 3px solid black
-    height: 100%
-    padding-top 25%
+
+.pinkbg
+  background-color #f4a1c6
+  border-left 3px solid black
 
 .logohorizontal
     height: 100%
-    width: 25%
-    padding 1% 2%
+    width: 18%
+    padding 1% .75%
 
 </style>

@@ -101,7 +101,7 @@ p
 
 .slide-leave-active,
 .slide-enter-active
-  transition: 1s
+  transition: .5s
 
 .slide-enter
   transform: translate(100%, 0)
@@ -109,14 +109,10 @@ p
 .slide-leave-to
   transform: translate(-100%, 0)
 
-.fade-enter-active
-  transition: opacity .3s ease;
-  opacity 0
-.fade-leave-active
-  transition: opacity .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
-
-.fade-enter
-  opacity: 0;
-
+}
 </style>

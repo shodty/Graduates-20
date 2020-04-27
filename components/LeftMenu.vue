@@ -6,13 +6,13 @@
         ul.leftul
             li.discipline.graphic(@click="showDiscipline('graphic') " :class="{ bigger: show == 'graphic'}") Graphic Design
                 transition(name="fade")
-                    p(v-if="show == 'graphic'") TESTING!
+                    img.discipline-logo(v-if="show == 'graphic'" src='../assets/img/graphic-logo.png')
             li.discipline.interior(@click="showDiscipline('interior')" :class="{ bigger: show == 'interior' }") Interior Architecture
                 transition(name="fade")
-                    p(v-if="show == 'interior'") TESTING!
+                    img.discipline-logo(v-if="show == 'interior'" src='../assets/img/interior-logo.png')
             li.discipline.photo(@click="showDiscipline('photo')" :class="{ bigger: show == 'photo' }") Photography
                 transition(name="fade")
-                    p(v-if="show == 'photo'") TESTING!
+                    img.discipline-logo(v-if="show == 'photo'" src='../assets/img/photo-logo.png')
 </template>
 
 <script>
@@ -53,6 +53,11 @@ export default {
   height 70%
   padding 50px 0
 
+.discipline-logo
+    width 70%
+    margin 0 auto
+    padding 5% 0
+
 ul.leftul
   width 100%
   height 100%
@@ -60,15 +65,14 @@ ul.leftul
 
 li.discipline
   text-align left
-  font-size 2vw
-  font-weight: 600
+  font-size 1.2vw
   font-family: 'GT-Pressura', sans-serif
 
 .leftside
-  height: 90%
-  top 10%
+  height: 92%
+  top 8%
   position fixed
-  width 25%
+  width 16.6666666%
 
 .discipline
   width: 100%

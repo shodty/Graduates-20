@@ -3,11 +3,11 @@
   Header
   b-container.container-fluid
     b-row
-      b-col.left(cols="3")
+      b-col.left(cols="2")
         LeftMenu
-      b-col.right(cols="9")
+      b-col.right(cols="10")
         b-row.rightside
-            .student-loop(v-for="(student, index) in studentObject")
+            .student-loop(v-for="(student, index) in studentObject" :key='componentKey + index')
               StudentWork(:student='student' :index='index')
 </template>
 
@@ -34,7 +34,7 @@ export default {
   data () {
     return {
       showslider: false,
-
+      componentKey: 0,
       hooperSettings: {
         itemsToShow: 1,
         centerMode: true,
@@ -54,7 +54,13 @@ export default {
   mounted () {
     this.$bus.$on('shuffleStudents', () => {
       this.$store.dispatch('students/shuffleStudents')
+      this.forceRerender()
     })
+  },
+  methods: {
+    forceRerender () {
+      this.componentKey += 1
+    }
   }
 }
 </script>
@@ -83,23 +89,11 @@ ul.leftul
   height 100%
   border-right 3px solid black
 
-li.discipline
-  text-align left
-  font-size 2vw
-  font-weight: 600
-  font-family: 'GT-Pressura', sans-serif
-
-.leftside
-  height: 90%
-  top 10%
-  position fixed
-  width 25%
-
 .rightside
-  height: 90%
-  top 10%
+  height: 92%
+  top 8%
   position fixed
-  width 75%
+  width 83.3333333%
   overflow-y auto
   overflow-x hidden
 
