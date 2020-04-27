@@ -26,6 +26,7 @@ html {
 *
   padding: 0
   margin: 0
+  box-sizing: border-box
 
 p
   margin 0
@@ -71,30 +72,51 @@ p
 .row
   margin 0
 
-/*@font-face {
-    font-family: 'cardinal_grotesque_condenseBd';
-    src: url('../assets/fonts/cardinalgrotesquecondensed-bold-webfont.woff2') format('woff2'),
-         url('../assets/fonts/cardinalgrotesquecondensed-bold-webfont.woff') format('woff');
+@font-face {
+    font-family: 'Ciao-Regular';
+    src: url('../assets/fonts/G2Ciao-Regular.woff2') format('woff2'),
+         url('../assets/fonts/G2Ciao-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'cardinal_grotesque_wideSBd';
-    src: url('../assets/fonts/cardinalgrotesquewide-semibold-webfont.woff2') format('woff2'),
-         url('../assets/fonts/cardinalgrotesquewide-semibold-webfont.woff') format('woff');
+    font-family: 'Animal-Soul';
+    src: url('../assets/fonts/glyphworld-animalsoul-webfont.woff2') format('woff2'),
+         url('../assets/fonts/glyphworld-animalsoul-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'goopersemibold_italic';
-    src: url('../assets/fonts/gooper-semibolditalic-webfont.woff2') format('woff2'),
-         url('../assets/fonts/gooper-semibolditalic-webfont.woff') format('woff');
+    font-family: 'GT-Pressura';
+    src: url('../assets/fonts/gt-pressura-mono-bold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/gt-pressura-mono-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
-}*/
+}
+
+.slide-leave-active,
+.slide-enter-active
+  transition: 1s
+
+.slide-enter
+  transform: translate(100%, 0)
+
+.slide-leave-to
+  transform: translate(-100%, 0)
+
+.fade-enter-active
+  transition: opacity .3s ease;
+  opacity 0
+.fade-leave-active
+  transition: opacity .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  opacity: 0;
+
+.fade-enter
+  opacity: 0;
+
 </style>
