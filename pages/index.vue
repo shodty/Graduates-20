@@ -4,61 +4,21 @@
   b-container.container-fluid
     b-row
       b-col.left(cols="3")
-        //b-row
-          Logo(v-if="!showGraphic" class="logo")
-        b-row.leftside
-          ul.leftul
-            li.discipline.graphic(@click="showDiscipline('graphic') " :class="{ bigger: show == 'graphic'}") Graphic Design
-              transition(name="fade")
-                p(v-if="show == 'graphic'") TESTING!
-            li.discipline.interior(@click="showDiscipline('interior')" :class="{ bigger: show == 'interior' }") Interior Architecture
-              transition(name="fade")
-                p(v-if="show == 'interior'") TESTING!
-            li.discipline.photo(@click="showDiscipline('photo')" :class="{ bigger: show == 'photo' }") Photography
-              transition(name="fade")
-                p(v-if="show == 'photo'") TESTING!
-
+        LeftMenu
       b-col.right(cols="9")
         b-row.rightside
-            .testes(v-for="(student, index) in studentObject")
-              b-col.work(cols="12")
-                  transition(name="fade")
-                    video(v-if="show == 'none'" class="video-bottom" src="../assets/video/G20_MaskSpin.mp4" autoplay muted loop)
-                    .students(v-if="show == 'graphic'")
-                      transition(name="slide")
-                        .studentinfo(v-if='!student.showWork')
-                          b-row
-                            b-col(cols='4')
-                              img.selfie( :src='getSrc(student, 0)')
-                            b-col(close='8')
-                              span.main-name(v-html="styleName(student.name)")
-                              br
-                              ul.tagsone
-                                li.tags(v-for='tag in student.tags') {{tag}}
-                              p.main-text {{student.text}}
-                              button.view-work(@click="showStudentWork(index)") VIEW WORK
-                        hooper(v-if='student.showWork' :settings='hooperSettings' class='student-work' style="height: 100%" )
-                          slide(v-for="n in student.images" :key="student.code")
-                            video.vertical-center(v-if="student.ext[n-1] == 'mp4'" :class=" student.fill? 'project-image' : 'project-image-fill' " :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop)
-                            img.vertical-center(v-else :class="student.fill? 'project-image-fill' : 'project-image'" :src='getSrc(student, n)' :alt='student.image1')
-                          hooper-navigation(slot='hooper-addons')
-                      button.fillbutton(v-if='student.showWork' @click='fill(index)') FILL
-              b-col.projects(cols="12")
-                .explanation(v-if="show == 'graphic'")
-                  .student-name
-                    span {{student.name}}
-                    button.aboutbutton(@click="showStudentWork(index)" :class="{ buttonpressed: !student.showWork}") ABOUT
-                    button.workbutton(@click="showStudentWork(index)" :class="{ buttonpressed: student.showWork}") WORK
-                    transition(name="fade")
-                      ul.tagstoo(v-if='student.showWork' )
-                        li.tags(v-for='tag in student.tags') {{tag}}
+            .student-loop(v-for="(student, index) in studentObject")
+              StudentWork(:student='student' :index='index')
 </template>
 
 <script>
 
+import { mapState } from 'vuex'
 import { Hooper, Slide, Navigation as HooperNavigation } from 'hooper'
 import Logo from '~/components/Logo.vue'
 import Header from '~/components/Header.vue'
+import LeftMenu from '~/components/LeftMenu.vue'
+import StudentWork from '~/components/StudentWork.vue'
 import 'hooper/dist/hooper.css'
 
 export default {
@@ -67,11 +27,12 @@ export default {
     HooperNavigation,
     Slide,
     Logo,
-    Header
+    Header,
+    LeftMenu,
+    StudentWork
   },
   data () {
     return {
-      show: 'none',
       showslider: false,
 
       hooperSettings: {
@@ -85,78 +46,32 @@ export default {
   computed: {
     studentObject () {
       return this.$store.state.students.studentObject
-    }
+    },
+    ...mapState({
+      show: state => state.general.show
+    })
   },
-  methods: {
-    showDiscipline (discipline) {
-      this.show = discipline
+  mounted () {
+    this.$bus.$on('shuffleStudents', () => {
       this.$store.dispatch('students/shuffleStudents')
-    },
-    getSrc (student, imagenumber) {
-      if (imagenumber === 0) {
-        return require('../assets/students/' + student.code + '/' + student.code + imagenumber.toString() + '.jpg')
-      } else {
-        return require('../assets/students/' + student.code + '/' + student.code + imagenumber.toString() + '.' + student.ext[imagenumber - 1])
-      }
-    },
-    styleName (name) {
-      const words = name.split(' ')
-      // const chars = words.split('')
-      let repText = ''
-      let newWord = ''
-      for (let h = 0; h < words.length; h++) {
-        const wordchars = words[h].split('')
-        for (let i = 0; i < wordchars.length; i++) {
-          if (i === (wordchars.length - 2)) {
-            repText = `<span style="font-family: Animal-Soul">${wordchars[i]}</span>`
-          } else {
-            repText = wordchars[i]
-          }
-          newWord = newWord + repText
-        }
-        newWord = newWord + ' '
-      }
-      return newWord
-    },
-    showStudentWork (index) {
-      this.$store.dispatch('students/showStudentWork', index)
-    },
-    fill (index) {
-      this.$store.dispatch('students/fill', index)
-    }
-
+    })
   }
 }
 </script>
 
 <style lang="stylus">
-*
-  padding: 0
-  margin: 0
-  box-sizing: border-box
-
-.container
-  @media(min-width: 1px) {
-    max-width: 100%;
-  }
-  padding 0
-
-.row
-  margin 0
 
 .logo
   width 70%
   height 70%
   padding 50px 0
 
-.left
+.left, .right
   height: 100vh
   margin 0 auto
   background-color: white
 
 .right
-  height: 100vh
-  margin 0 auto
   background-color: black
 
 .video-bottom
@@ -168,11 +83,12 @@ ul.leftul
   height 100%
   border-right 3px solid black
 
-li
+li.discipline
   text-align left
   font-size 2vw
   font-weight: 600
   font-family: 'GT-Pressura', sans-serif
+
 .leftside
   height: 90%
   top 10%
@@ -208,12 +124,7 @@ li
   height: 86%;
   transition: height 1s;
 
-.students
-  height: 100%
-  width: 100%
-  background white
-
-.testes
+.student-loop
   height: 100%
   width: 100%
 
@@ -223,116 +134,4 @@ li
   overflow: hidden
   position: relative
 
-.work
-  height: 86%
-
-.workside
-  height: 100%
-
-.projects
-  height: 14%
-  width: 100%
-
-.explanation
-  height: 100%
-  background white
-  color black
-  padding 0 2%
-  font-family: 'Ciao-Regular', sans-serif
-
-.student-name
-  font-size: 1.4vw
-  font-family: 'GT-Pressura', sans-serif
-  text-transform: uppercase
-
-.student-work
-  width: 100%
-  padding: 1%
-  outline: none
-  position absolute
-  right 0
-  left 0
-  top 0
-  bottom 0
-
-.project-image
-  width: 80%
-  margin 0 -41%
-
-.project-image-fill
-  width: 108%
-  margin 0 -53%
-
-.vertical-center
-  position: absolute
-  top: 50%
-  transform: translateY(-50%)
-
-li.hooper-slide
-  text-align center
-
-.icon
-  fill: black
-
-.hooper-next:focus, .hooper-prev:focus
-  outline: none
-
-.tagsone
-  display inline
-
-.tagstoo
-  display inline
-  padding-left 2%
-
-.tags
-  font-size 1vw
-  display inline-block
-  margin-right 2%
-  padding 0 8px
-  background #c1abd3
-  border-radius 15px
-  color black
-
-.selfie
-  max-width: 90%
-  padding 5%
-
-.main-name, .view-work
-  color black
-  font-size 3vw
-  text-transform: uppercase
-  font-family: 'GT-Pressura', sans-serif
-
-.view-work
-  background black
-  color white
-  margin-top 2%
-  padding 0 2%
-  outline none
-
-.main-text
-  color black
-  font-family: 'Ciao-Regular', sans-serif
-  padding-right: 15%
-  font-size 1.5vw
-  padding-top: 2%
-
-.buttonpressed
-  background black
-  color white
-  border 3px solid #c1abd3
-
-.aboutbutton, .workbutton
-  margin-left 1%
-  padding 0 1%
-
-.fillbutton
-  position absolute
-  right 0
-  bottom 0
-  font-size 1vw
-  font-family: 'GT-Pressura', sans-serif
-  background black
-  color white
-  padding 0 1%
 </style>

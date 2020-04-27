@@ -1,39 +1,42 @@
 <template lang="pug">
-b-col.work(cols="12")
-    transition(name="fade")
-    video(v-if="show == 'none'" class="video-bottom" src="../assets/video/G20_MaskSpin.mp4" autoplay muted loop)
-    .students(v-if="show == 'graphic'")
-        transition(name="slide")
-        .studentinfo(v-if='!student.showWork')
-            b-row
-            b-col(cols='4')
-                img.selfie( :src='getSrc(student, 0)')
-            b-col(close='8')
-                span.main-name(v-html="styleName(student.name)")
-                br
-                ul.tagsone
-                li.tags(v-for='tag in student.tags') {{tag}}
-                p.main-text {{student.text}}
-                button.view-work(@click="showStudentWork(index)") VIEW WORK
-        hooper(v-if='student.showWork' :settings='hooperSettings' class='student-work' style="height: 100%" )
-            slide(v-for="n in student.images" :key="student.code")
-            video.vertical-center(v-if="student.ext[n-1] == 'mp4'" :class=" student.fill? 'project-image' : 'project-image-fill' " :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop)
-            img.vertical-center(v-else :class="student.fill? 'project-image-fill' : 'project-image'" :src='getSrc(student, n)' :alt='student.image1')
-            hooper-navigation(slot='hooper-addons')
-        button.fillbutton(v-if='student.showWork' @click='fill(index)') FILL
-b-col.projects(cols="12")
-.explanation(v-if="show == 'graphic'")
-    .student-name
-    span {{student.name}}
-    button.aboutbutton(@click="showStudentWork(index)" :class="{ buttonpressed: !student.showWork}") ABOUT
-    button.workbutton(@click="showStudentWork(index)" :class="{ buttonpressed: student.showWork}") WORK
-    transition(name="fade")
-        ul.tagstoo(v-if='student.showWork' )
-        li.tags(v-for='tag in student.tags') {{tag}}
+.student-work-container
+    b-col.work(cols="12")
+        transition(name="fade")
+        video(v-if="show == 'none'" class="video-bottom" src="../assets/video/G20_MaskSpin.mp4" autoplay muted loop)
+        .students(v-if="show == 'graphic'")
+            transition(name="slide")
+            .studentinfo(v-if='!student.showWork')
+                b-row
+                    b-col(cols='4')
+                        img.selfie( :src='getSrc(student, 0)')
+                    b-col(close='8')
+                        span.main-name(v-html="styleName(student.name)")
+                        br
+                        ul.tagsone
+                            li.tags(v-for='tag in student.tags') {{tag}}
+                        p.main-text {{student.text}}
+                        button.view-work(@click="showStudentWork(index)") VIEW WORK
+            hooper(v-if='student.showWork' :settings='hooperSettings' class='student-work' style="height: 100%" )
+                slide(v-for="n in student.images" :key="student.code")
+                    video.vertical-center(v-if="student.ext[n-1] == 'mp4'" :class=" student.fill? 'project-image-fill' : 'project-image' " :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop)
+                    img.vertical-center(v-else :class="student.fill? 'project-image-fill' : 'project-image'" :src='getSrc(student, n)' :alt='student.image1')
+                hooper-navigation(slot='hooper-addons')
+            button.fillbutton(v-if='student.showWork' @click='fill(index)')
+                img(src='../assets/img/expand.png' height='20px')
+    b-col.projects(cols="12")
+        .explanation(v-if="show == 'graphic'")
+            .student-name
+                span {{student.name}}
+                button.aboutbutton(@click="showStudentWork(index)" :class="{ buttonpressed: !student.showWork}") ABOUT
+                button.workbutton(@click="showStudentWork(index)" :class="{ buttonpressed: student.showWork}") WORK
+                transition(name="fade" key='index')
+                    ul.tagstoo(v-if='student.showWork' )
+                        li.tags(v-for='tag in student.tags') {{tag}}
 </template>
 
 <script>
 
+import { mapState } from 'vuex'
 import { Hooper, Slide, Navigation as HooperNavigation } from 'hooper'
 import 'hooper/dist/hooper.css'
 
@@ -43,9 +46,13 @@ export default {
     HooperNavigation,
     Slide
   },
+  props: {
+    student: { type: Object, default () { return { message: 'empty' } } },
+    index: { type: Number, default: 0 }
+
+  },
   data () {
     return {
-      show: 'none',
       showslider: false,
 
       hooperSettings: {
@@ -57,15 +64,12 @@ export default {
     }
   },
   computed: {
-    studentObject () {
-      return this.$store.state.students.studentObject
-    }
+    ...mapState({
+      show: state => state.general.show,
+      studentObject: state => state.students.studentObject
+    })
   },
   methods: {
-    showDiscipline (discipline) {
-      this.show = discipline
-      this.$store.dispatch('students/shuffleStudents')
-    },
     getSrc (student, imagenumber) {
       if (imagenumber === 0) {
         return require('../assets/students/' + student.code + '/' + student.code + imagenumber.toString() + '.jpg')
@@ -104,25 +108,14 @@ export default {
 </script>
 
 <style lang="stylus">
-
-.video-bottom
-  width: 100%
-  transition opacity 1s ease
-
-li
-  text-align left
-  font-size 2vw
-  font-weight: 600
-  font-family: 'GT-Pressura', sans-serif
+.student-work-container
+    height: 100%
+    width: 100%
 
 .students
   height: 100%
   width: 100%
   background white
-
-.student-loop
-  height: 100%
-  width: 100%
 
 .studentinfo
   height: 100%
@@ -199,6 +192,8 @@ li.hooper-slide
   background #c1abd3
   border-radius 15px
   color black
+  text-transform: uppercase
+  font-family: 'GT-Pressura', sans-serif
 
 .selfie
   max-width: 90%
@@ -239,7 +234,8 @@ li.hooper-slide
   bottom 0
   font-size 1vw
   font-family: 'GT-Pressura', sans-serif
-  background black
+  background white
   color white
   padding 0 1%
+
 </style>
