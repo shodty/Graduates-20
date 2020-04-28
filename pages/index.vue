@@ -6,7 +6,9 @@
       b-col.left(cols="2")
         LeftMenu
       b-col.right(cols="10")
-        b-row.rightside
+        transition(name="fade")
+            video(v-if="show == 'welcome'" class="video-bottom" src="../assets/video/G20_MaskSpin.mp4" autoplay muted loop)
+        b-row.rightside(v-if="show !== 'welcome'")
             .student-loop(v-for="(student, index) in studentObject" v-if='currentTags.length == 0 || isInSelectedTags(student.tags)' :key='componentKey + index')
               StudentWork( :student='student' :index='index' )
 </template>
@@ -103,27 +105,6 @@ ul.leftul
   width 83.3333333%
   overflow-y auto
   overflow-x hidden
-
-.discipline
-  width: 100%
-  border-top 3px solid black
-  transition: height 1s;
-  height 7%
-  padding-left: 4%
-
-.graphic
-  border-top 0px
-  background-color #c1abd3
-
-.interior
-  background-color #b7dba7
-
-.photo
-  background-color #fbb03a
-
-.bigger
-  height: 86%;
-  transition: height 1s;
 
 .student-loop
   height: 100%

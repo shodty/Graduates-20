@@ -1,8 +1,6 @@
 <template lang="pug">
 .student-work-container
     b-col.work(cols="12")
-        transition(name="fade")
-        video(v-if="show == 'none'" class="video-bottom" src="../assets/video/G20_MaskSpin.mp4" autoplay muted loop)
         .students(v-if="show == 'graphic'")
             transition(name="slide")
             .studentinfo(v-if='!student.showWork')

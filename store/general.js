@@ -1,5 +1,5 @@
 export const state = () => ({
-  show: 'none'
+  show: 'welcome'
 })
 
 export const mutations = {
