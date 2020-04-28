@@ -6,7 +6,16 @@
         ul.leftul
             li.discipline.graphic(@click="showDiscipline('graphic') " :class="{ bigger: show == 'graphic'}") Graphic Design
                 transition(name="fade")
-                    img.discipline-logo(v-if="show == 'graphic'" src='../assets/img/graphic-logo.png')
+                    .graphic-things(v-if="show == 'graphic'")
+                            img.discipline-logo(src='../assets/img/graphic-logo.png')
+                            br
+                            label.shuffle(@click="shuffleStudents") SHUFFLE
+                            br
+                            ul
+                                li.taglist(v-for='tag in masterTags')
+                                    label(name='test') {{tag}}
+                                        input.check(type='checkbox' :name='tag' :value='tag' v-model='tags' @change='updateTags(tags)' display='none')
+                            br
             li.discipline.interior(@click="showDiscipline('interior')" :class="{ bigger: show == 'interior' }") Interior Architecture
                 transition(name="fade")
                     img.discipline-logo(v-if="show == 'interior'" src='../assets/img/interior-logo.png')
@@ -26,12 +35,16 @@ export default {
   },
   data () {
     return {
-      showslider: false
+      showslider: false,
+      tags: []
     }
   },
   computed: {
     studentObject () {
       return this.$store.state.students.studentObject
+    },
+    masterTags () {
+      return this.$store.getters['students/masterTags']
     },
     ...mapState({
       show: state => state.general.show
@@ -39,8 +52,13 @@ export default {
   },
   methods: {
     showDiscipline (discipline) {
-      this.$bus.$emit('shuffleStudents')
       this.$store.dispatch('general/showDiscipline', discipline)
+    },
+    updateTags (tags) {
+      this.$store.dispatch('students/toggleTags', tags)
+    },
+    shuffleStudents () {
+      this.$bus.$emit('shuffleStudents')
     }
   }
 }
@@ -54,9 +72,9 @@ export default {
   padding 50px 0
 
 .discipline-logo
-    width 70%
+    width 60%
     margin 0 auto
-    padding 5% 0
+    padding 5% 0 1% 0
 
 ul.leftul
   width 100%
@@ -95,4 +113,13 @@ li.discipline
   height: 86%;
   transition: height 1s;
 
+.taglist
+    padding-left 2%
+    font-size 16px
+
+.shuffle
+    font-size 18px
+
+.check
+    margin-left: 5px
 </style>

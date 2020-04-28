@@ -7,8 +7,8 @@
         LeftMenu
       b-col.right(cols="10")
         b-row.rightside
-            .student-loop(v-for="(student, index) in studentObject" :key='componentKey + index')
-              StudentWork(:student='student' :index='index')
+            .student-loop(v-for="(student, index) in studentObject" v-if='currentTags.length == 0 || isInSelectedTags(student.tags)' :key='componentKey + index')
+              StudentWork( :student='student' :index='index' )
 </template>
 
 <script>
@@ -47,6 +47,9 @@ export default {
     studentObject () {
       return this.$store.state.students.studentObject
     },
+    currentTags () {
+      return this.$store.state.students.currentTags
+    },
     ...mapState({
       show: state => state.general.show
     })
@@ -60,6 +63,10 @@ export default {
   methods: {
     forceRerender () {
       this.componentKey += 1
+    },
+    isInSelectedTags (studentTags) {
+      // console.log(this.currentTags)
+      return this.currentTags.some(tag => studentTags.includes(tag))
     }
   }
 }

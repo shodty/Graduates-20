@@ -82,8 +82,23 @@ export const state = () => ({
       text:
             'I am a graphic and motion designer based in California that specializes in brand solutions through design and animation. My passion lies in exploring the psychology of design and how it influences thinking and behavior. I have a focus centered around the incorporation of design within meaningful and intentional brand strategies that effectively connect businesses with their customers.'
     }
-  ]
+  ],
+  tags: ['type-design', 'identity', 'publication', 'installation'],
+  currentTags: []
 })
+
+export const getters = {
+  masterTags: (state) => {
+    const taglist = []
+    const students = state.studentObject
+    for (let i = 0; i < students.length; i++) {
+      for (let j = 0; j < students[i].tags.length; j++) {
+        if (!taglist.includes(students[i].tags[j])) { taglist.push(students[i].tags[j]) }
+      }
+    }
+    return taglist
+  }
+}
 
 export const mutations = {
   showStudentWork: (state, index) => {
@@ -101,6 +116,9 @@ export const mutations = {
   },
   fill: (state, index) => {
     state.studentObject[index].fill = !state.studentObject[index].fill
+  },
+  toggleTags: (state, tags) => {
+    state.currentTags = tags
   }
 }
 
@@ -113,5 +131,8 @@ export const actions = {
   },
   fill: (context, index) => {
     context.commit('fill', index)
+  },
+  toggleTags: (context, tags) => {
+    context.commit('toggleTags', tags)
   }
 }

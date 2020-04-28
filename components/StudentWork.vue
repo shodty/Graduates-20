@@ -136,6 +136,7 @@ export default {
   color black
   padding 0 2%
   font-family: 'Ciao-Regular', sans-serif
+  border-bottom 3px solid black
 
 .student-name
   font-size: 1.4vw
