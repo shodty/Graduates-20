@@ -5,12 +5,13 @@
     b-row
       b-col.left(cols="2")
         LeftMenu
-      b-col.right(cols="10")
+      b-col.right.overflow-hidden(cols="10")
         transition(name="fade")
-            video(v-if="show == 'welcome'" class="video-bottom" src="../assets/video/G20_MaskSpin.mp4" autoplay muted loop)
-        b-row.rightside(v-if="show !== 'welcome'")
-            .student-loop(v-for="(student, index) in studentObject" v-if='currentTags.length == 0 || isInSelectedTags(student.tags)' :key='componentKey + index')
-              StudentWork( :student='student' :index='index' )
+            video.video-bottom(v-if="show == 'welcome'" src="../assets/video/G20_MaskSpin_full.mp4" autoplay muted loop)
+        transition(name="fade")
+          b-row.rightside(v-if="show !== 'welcome'")
+              .student-loop(v-for="(student, index) in studentObject" v-if='currentTags.length == 0 || isInSelectedTags(student.tags)' :key='componentKey + index')
+                StudentWork( :student='student' :index='index' )
 </template>
 
 <script>
@@ -103,7 +104,7 @@ ul.leftul
   top 8%
   position fixed
   width 83.3333333%
-  overflow-y auto
+  overflow-y scroll
   overflow-x hidden
 
 .student-loop

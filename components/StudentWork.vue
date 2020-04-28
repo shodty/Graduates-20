@@ -192,7 +192,7 @@ li.hooper-slide
   font-family: 'GT-Pressura', sans-serif
 
 .selfie
-  max-width: 84%
+  width: 84%
   padding 5%
 
 .main-name, .view-work

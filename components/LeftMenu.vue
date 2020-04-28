@@ -5,23 +5,23 @@
     b-row.leftside
         ul.leftul
             li.discipline.welcome(@click="showDiscipline('welcome') " :class="{ bigger: show == 'welcome'}")
-                transition(name="fade")
-                    span Welcome
-                transition-group( v-if="show == 'welcome'" name="fade")
-                    img.main-logo(v-if="show == 'welcome'" src='../assets/img/main-logo.png' key='img')
-                    p.welcome-text(key='p') The horizontal logo (↑↑↑) emphasizes “S-20” by turning to outline, or by having “GRADUATES” be outlined, and “S-20” staying solid. Animal Soul Glyphs can be used on S-20, regardless of if it is outlined or not.
+                transition-group(name="fade")
+                  span(key='span') Welcome
+                  .group(v-if="show == 'welcome'" key='group')
+                    img.main-logo(src='../assets/img/main-logo.png')
+                    p.welcome-text The horizontal logo (↑↑↑) emphasizes “S-20” by turning to outline, or by having “GRADUATES” be outlined, and “S-20” staying solid. Animal Soul Glyphs can be used on S-20, regardless of if it is outlined or not.
             li.discipline.graphic(@click="showDiscipline('graphic') " :class="{ bigger: show == 'graphic'}") Graphic Design
                 transition(name="fade")
                     .graphic-things(v-if="show == 'graphic'")
-                            img.discipline-logo(src='../assets/img/graphic-logo.png')
-                            br
-                            label.shuffle(@click="shuffleStudents") SHUFFLE
-                            br
-                            ul
-                                li.taglist(v-for='tag in masterTags')
-                                    label(name='test') {{tag}}
-                                        input.check(type='checkbox' :name='tag' :value='tag' v-model='tags' @change='updateTags(tags)' display='none')
-                            br
+                        img.discipline-logo(src='../assets/img/graphic-logo.png')
+                        br
+                        label.shuffle(@click="shuffleStudents") SHUFFLE
+                        br
+                        ul
+                            li.taglist(v-for='tag in masterTags')
+                                label(name='test') {{tag}}
+                                    input.check(type='checkbox' :name='tag' :value='tag' v-model='tags' @change='updateTags(tags)' display='none')
+                        br
             li.discipline.interior(@click="showDiscipline('interior')" :class="{ bigger: show == 'interior' }") Interior Architecture
                 transition(name="fade")
                     img.discipline-logo(v-if="show == 'interior'" src='../assets/img/interior-logo.png')
@@ -107,10 +107,11 @@ li.discipline
   height 7%
   padding-left: 4%
   padding-top 4%
+
 .welcome-text
     padding: 7% 5%
-    font-size 14px
-
+    font-size 16px
+    font-family 'GT-Pressura', sans-serif
 .welcome
   border-top 0px
 
@@ -123,6 +124,7 @@ li.discipline
 .photo
   background-color #fbb03a
   border-bottom 3px solid black
+
 .bigger
   height: 79%;
   transition: height 1s;

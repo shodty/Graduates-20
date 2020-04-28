@@ -17,7 +17,7 @@
           h2 Robbie Landsburg
           h1(v-html="styleWord('Concept')")
           h2 Matt Vlach & Robbie Landsburg
-          h3
+          h3.concept
             | This website was conceptualized & created by Matt Vlach and Robbie Landsburg,
             | two alumnis of the 2018 & 2019 CSUS Graphic Design program in response to the
             | current global crisis preventing students from having formal ceremonies to showcase
@@ -36,7 +36,7 @@
           h2 Department of Design
           h2 design@csus.edu
           h2 www.design.com
-        video.video-background(v-if='showinfo' src='../assets/img/G20-ColorWarp.mp4' autoplay muted loop)
+        video.video-background(v-if='showinfo' src='../assets/video/G20-ColorWarp.mp4' autoplay muted loop)
 </template>
 
 <script>
@@ -94,7 +94,7 @@ export default {
   width 100%
   background white
   border-bottom 3px solid black
-  transition: height 1s, background 1s
+  transition: height 1s ease, background 1s ease
 
 .marquee
     width: 100vw;
@@ -159,4 +159,7 @@ h3
     z-index: 0
     filter:opacity(70%)
     overflow: hidden
+
+.concept
+  padding-right 15%
 </style>
