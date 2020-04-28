@@ -4,10 +4,10 @@
     b-row.header
         b-col.blankbg(cols="11" )
           .wrapped(@click="showDiscipline('welcome')")
-            img.logohorizontal(src='../assets/img/horizontal-logo.png')
+            img.logohorizontal.cursor-pointer(src='../assets/img/horizontal-logo.png')
         b-col.blankbg(cols="1" )
             b-col
-              p.info(@click="showInfo") Info
+              p.info.cursor-pointer(@click="showInfo") Info
     transition(name='fade')
       b-row.information.justify-content-center(v-if='showinfo')
         b-col.redbg(cols="3")
@@ -18,12 +18,12 @@
           h1(v-html="styleWord('Concept')")
           h2 Matt Vlach & Robbie Landsburg
           h3.concept
-            | This website was conceptualized & created by Matt Vlach and Robbie Landsburg,
-            | two alumnis of the 2018 & 2019 CSUS Graphic Design program in response to the
-            | current global crisis preventing students from having formal ceremonies to showcase
-            | their graduating work. We hope this online showcase helps the graduating students to connect with
-            | opportunities for work in this unprecedented new landscape and inspires them to adapt and find
-            | new avenues by which to realize their creative potential
+            | This website was conceptualized & created by Robbie Landsburg and Matt Vlach,
+            | two alumnis of the 2018 & 2019 CSUS Graphic Design program. The idea emerged in response to the
+            | current global health crisis preventing graduating students from having formal real-world ceremonies in which to showcase
+            | the culmination of their work. We hope this online showcase helps the graduating students to connect with
+            | opportunities for their future careers in this unprecedented new landscape and inspires them to adapt and find
+            | new avenues by which to realize their creative potential.
 
         b-col.bluebg(cols="3")
           h1(v-html="styleWord('Special Thanks')")
@@ -37,6 +37,7 @@
           h2 design@csus.edu
           h2 www.design.com
         video.video-background(v-if='showinfo' src='../assets/video/G20-ColorWarp.mp4' autoplay muted loop)
+        img.up-arrow.cursor-pointer(@click="showInfo" src='../assets/img/up.png')
 </template>
 
 <script>
@@ -162,4 +163,10 @@ h3
 
 .concept
   padding-right 15%
+
+.up-arrow
+  position fixed
+  bottom 2%
+  left 50%
+  height 1.5%
 </style>

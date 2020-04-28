@@ -133,4 +133,6 @@ p
     background-color: #000000;
 }
 
+.cursor-pointer
+  cursor pointer
 </style>
