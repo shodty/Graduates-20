@@ -2,7 +2,7 @@
 .left-menu
     //b-row
         Logo(v-if="!showGraphic" class="logo")
-    b-row.leftside
+    b-row.leftside.no-gutters
         ul.leftul
             li.discipline.welcome(@click="showDiscipline('welcome') " :class="{ bigger: show == 'welcome'}")
                 transition-group(name="fade")
@@ -20,8 +20,8 @@
                         br
                         ul
                             li.taglist(v-for='tag in masterTags')
-                                label(name='test') {{tag}}
-                                    input.check(type='checkbox' :name='tag' :value='tag' v-model='tags' @change='updateTags(tags)' display='none')
+                              input.check(type='checkbox' :id='tag' :name='tag' :value='tag' v-model='tags' @change='updateTags(tags)' )
+                              label.cursor-pointer.label-for-check(name='test' :for='tag') {{tag}}
                         br
             li.discipline.interior(@click="showDiscipline('interior')" :class="{ bigger: show == 'interior' }")
                 transition-group(name="fade")
@@ -47,7 +47,8 @@ export default {
   data () {
     return {
       showslider: false,
-      tags: []
+      tags: [],
+      checked: false
     }
   },
   computed: {
@@ -88,7 +89,8 @@ export default {
     padding 5% 0 1% 0
 
 .main-logo
-    width 90%
+    width 60%
+
 ul.leftul
   width 100%
   height 100%
@@ -98,12 +100,12 @@ li.discipline
   text-align left
   font-size 1.2vw
   font-family: 'Ciao-Regular', sans-serif
-
+  font-weight bold
 .leftside
   height: 92%
   top 8%
   position fixed
-  width 16.6666666%
+  width 25%
 
 .discipline
   width: 100%
@@ -111,12 +113,13 @@ li.discipline
   transition: height 1s;
   height 7%
   padding-left: 4%
-  padding-top 4%
+  padding-top 2%
 
 .welcome-text
-    padding: 7% 5%
+    width 60%
     font-size 16px
-    font-family 'GT-Pressura', sans-serif
+    font-family 'Ciao-Regular', sans-serif
+    font-weight bold
 .welcome
   border-top 0px
 
@@ -135,16 +138,26 @@ li.discipline
   transition: height 1s;
 
 .taglist
-    padding-left 2%
+    padding 0 1%
     font-size 16px
     font-family: 'GT-Pressura', sans-serif
     line-height: 0
     list-style-type: none
+    display: inline
+
+.label-for-check
+    background white
+    border-radius 15px
+    padding 2%
+
+.check:checked + .label-for-check {
+    background #fbb03a
+}
+
 .shuffle
     font-size 18px
     font-family: 'GT-Pressura', sans-serif
 
 .check
-    margin-left: 5px
-
+  display none
 </style>

@@ -56,6 +56,7 @@ export default {
   methods: {
     showDiscipline (discipline) {
       this.$store.dispatch('general/showDiscipline', discipline)
+      if (this.showinfo === true) { this.showInfo() }
     },
     showInfo () {
       this.showinfo = !this.showinfo

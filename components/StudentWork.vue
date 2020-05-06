@@ -3,24 +3,24 @@
     b-col.work(cols="12")
         .students(v-if="show == 'graphic'")
             transition(name="slide")
-            .studentinfo(v-if='!student.showWork')
-                b-row
-                    b-col(cols='4')
-                        img.selfie( :src='getSrc(student, 0)')
-                    b-col(close='8')
-                        span.main-name(v-html="styleName(student.name)")
-                        br
-                        ul.tagsone
-                            li.tags(v-for='tag in student.tags') {{tag}}
-                        p.main-text {{student.text}}
-                        button.view-work(@click="showStudentWork(index)") VIEW WORK
-            hooper(v-if='student.showWork' :settings='hooperSettings' class='student-work' style="height: 100%" )
-                slide(v-for="n in student.images" :key="student.code")
-                    video.vertical-center(v-if="student.ext[n-1] == 'mp4'" :class=" student.fill? 'project-image-fill' : 'project-image' " :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop)
-                    img.vertical-center(v-else :class="student.fill? 'project-image-fill' : 'project-image'" :src='getSrc(student, n)' :alt='student.image1')
-                hooper-navigation(slot='hooper-addons')
-            button.fillbutton(v-if='student.showWork' @click='fill(index)')
-                img(src='../assets/img/expand.png' height='20px')
+              .studentinfo(v-if='!student.showWork')
+                  b-row
+                      b-col(cols='4')
+                          img.selfie( :src='getSrc(student, 0)')
+                      b-col(close='8')
+                          span.main-name(v-html="styleName(student.name)")
+                          br
+                          ul.tagsone
+                              li.tags(v-for='tag in student.tags') {{tag}}
+                          p.main-text {{student.text}}
+                          button.view-work(@click="showStudentWork(index)") VIEW WORK
+              hooper(v-if='student.showWork' :settings='hooperSettings' class='student-work' style="height: 100%" )
+                  slide(v-for="n in student.images" :key="student.code")
+                      video.vertical-center(v-if="student.ext[n-1] == 'mp4'" :class=" student.fill? 'project-image-fill' : 'project-image' " :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop)
+                      img.vertical-center(v-else :class="student.fill? 'project-image-fill' : 'project-image'" :src='getSrc(student, n)' :alt='student.image1')
+                  hooper-navigation(slot='hooper-addons')
+              button.fillbutton(v-if='student.showWork' @click='fill(index)')
+                  img(src='../assets/img/expand.png' height='20px')
     b-col.projects(cols="12")
         .explanation(v-if="show == 'graphic'")
             .student-name
@@ -123,11 +123,12 @@ export default {
 
 .work
   height: 86%
+  padding 0
 
 .projects
   height: 14%
   width: 100%
-
+  padding 0
 .explanation
   height: 100%
   background white
@@ -152,8 +153,8 @@ export default {
   bottom 0
 
 .project-image
-  width: 80%
-  margin 0 -41%
+  width: 120vh
+  margin 0 -60vh
 
 .project-image-fill
   width: 108%

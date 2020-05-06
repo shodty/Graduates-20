@@ -2,16 +2,20 @@
 .container
   Header
   b-container.container-fluid
-    b-row
-      b-col.left(cols="2")
-        LeftMenu
-      b-col.right.overflow-hidden(cols="10")
-        transition(name="fade")
-            video.video-bottom(v-if="show == 'welcome'" src="../assets/video/G20_MaskSpin_full.mp4" autoplay muted loop)
-        transition(name="fade")
-          b-row.rightside(v-if="show !== 'welcome'")
-              .student-loop(v-for="(student, index) in studentObject" v-if='currentTags.length == 0 || isInSelectedTags(student.tags)' :key='componentKey + index')
-                StudentWork( :student='student' :index='index' )
+    b-row.no-gutters
+        .left(key='menu' :class=" showmenu? 'showing-menu' : 'hiding-menu'")
+            .stuff(v-if='showmenu')
+              LeftMenu
+              img.hide-menu.cursor-pointer(src='../assets/img/left.png' @click="hideMenu")
+        b-col.right.overflow-hidden( @mouseover="hover = true" @mouseleave="hover = false" key='work')
+          transition-group(name="fade")
+              video.video-bottom(v-if="show == 'welcome'" src="../assets/video/G20_MaskSpin_full.mp4" autoplay muted loop key='vid')
+              Introduction.overlay(v-if="hover" key='intro')
+          transition(name="fade")
+            b-row.no-gutters.rightside(v-if="show !== 'welcome'")
+                .student-loop(v-for="(student, index) in studentObject" v-if='currentTags.length == 0 || isInSelectedTags(student.tags)' :key='componentKey + index')
+                  StudentWork( :student='student' :index='index' )
+          img.show-menu.cursor-pointer(v-if="!showmenu" src='../assets/img/right.png' @click="hideMenu")
 </template>
 
 <script>
@@ -22,6 +26,7 @@ import Logo from '~/components/Logo.vue'
 import Header from '~/components/Header.vue'
 import LeftMenu from '~/components/LeftMenu.vue'
 import StudentWork from '~/components/StudentWork.vue'
+import Introduction from '~/components/Introduction.vue'
 import 'hooper/dist/hooper.css'
 
 export default {
@@ -32,12 +37,15 @@ export default {
     Logo,
     Header,
     LeftMenu,
-    StudentWork
+    StudentWork,
+    Introduction
   },
   data () {
     return {
       showslider: false,
       componentKey: 0,
+      hover: false,
+      showmenu: true,
       hooperSettings: {
         itemsToShow: 1,
         centerMode: true,
@@ -70,6 +78,9 @@ export default {
     isInSelectedTags (studentTags) {
       // console.log(this.currentTags)
       return this.currentTags.some(tag => studentTags.includes(tag))
+    },
+    hideMenu () {
+      this.showmenu = !this.showmenu
     }
   }
 }
@@ -85,14 +96,17 @@ export default {
 .left, .right
   height: 100vh
   margin 0 auto
+  padding 0
   background-color: white
 
+.col-2, .col-0, .left, .right, .row
+  transition: width 1s ease, margin 0.3s ease
 .right
   background-color: black
 
 .video-bottom
-  width: 100%
   transition opacity 1s ease
+  min-height: 100vh
 
 ul.leftul
   width 100%
@@ -103,7 +117,6 @@ ul.leftul
   height: 92%
   top 8%
   position fixed
-  width 83.3333333%
   overflow-y scroll
   overflow-x hidden
 
@@ -117,4 +130,29 @@ ul.leftul
   overflow: hidden
   position: relative
 
+.overlay
+  position absolute
+  height: 100%
+  width: 100%
+  background-color rgba(255,255,255,.9)
+  color black
+  left 0
+  top 8%
+  padding-bottom 10%
+  overflow auto
+
+.hide-menu, .show-menu
+  position absolute
+  right 75%
+  top 50%
+  height 3%
+
+.show-menu
+  left 0
+
+.hiding-menu
+  width 0
+
+.showing-menu
+  width 25%
 </style>
