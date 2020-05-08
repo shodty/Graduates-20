@@ -74,7 +74,7 @@
   }
 }
 .d
-  fill: #191919;
+  fill: #181819;
   stroke: none;
   stroke-miterlimit: 10;
 

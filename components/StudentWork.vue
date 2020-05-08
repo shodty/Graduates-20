@@ -1,27 +1,28 @@
 <template lang="pug">
 .student-work-container
     b-col.work(cols="12")
-        .students(v-if="show == 'graphic'")
-            transition(name="slide")
-              .studentinfo(v-if='!student.showWork')
-                  b-row
-                      b-col(cols='4')
+        b-col.students(v-if="show == 'graphic'")
+              .studentinfo(key='studentinfo')
+                  b-row.h-100
+                      b-col.left-section.col-4
                           img.selfie( :src='getSrc(student, 0)')
-                      b-col(close='8')
-                          span.main-name(v-html="styleName(student.name)")
-                          br
-                          ul.tagsone
-                              li.tags(v-for='tag in student.tags') {{tag}}
-                          p.main-text {{student.text}}
-                          button.view-work(@click="showStudentWork(index)") VIEW WORK
-              hooper(v-if='student.showWork' :settings='hooperSettings' class='student-work' style="height: 100%" )
-                  slide(v-for="n in student.images" :key="student.code")
-                      video.vertical-center(v-if="student.ext[n-1] == 'mp4'" :class=" student.fill? 'project-image-fill' : 'project-image' " :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop)
-                      img.vertical-center(v-else :class="student.fill? 'project-image-fill' : 'project-image'" :src='getSrc(student, n)' :alt='student.image1')
-                  hooper-navigation(slot='hooper-addons')
-              button.fillbutton(v-if='student.showWork' @click='fill(index)')
-                  img(src='../assets/img/expand.png' height='20px')
-    b-col.projects(cols="12")
+                      b-col.col-8.work-section
+                        transition-group(name="slide" mode='out-in')
+                          div.info-section(v-if='!student.showWork' key='info')
+                            span.main-name(v-html="styleName(student.name)")
+                            br
+                            ul.tagsone
+                                li.tags(v-for='tag in student.tags') {{tag}}
+                            p.main-text {{student.text}}
+                            button.view-work(@click="showStudentWork(index)") VIEW WORK
+                          hooper.student-work.h-100(v-if='student.showWork' :settings='hooperSettings' key='hooper' ref='hooper')
+                              slide.slide-image(v-for="n in student.images" :key="student.code")
+                                  video.vertical-center(v-if="student.ext[n-1] == 'mp4'" :class=" student.fill? 'project-image' : 'project-image' " :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop)
+                                  img.vertical-center(v-else :class="student.fill? 'project-image' : 'project-image'" :src='getSrc(student, n)' :alt='student.image1')
+                              hooper-navigation.nav(slot='hooper-addons')
+                          //button.fillbutton(v-if='student.showWork' @click='fill(index)' key='button')
+                              img(src='../assets/img/expand.png' height='20px')
+    //b-col.projects(cols="12")
         .explanation(v-if="show == 'graphic'")
             .student-name
                 span {{student.name}}
@@ -46,13 +47,12 @@ export default {
   },
   props: {
     student: { type: Object, default () { return { message: 'empty' } } },
-    index: { type: Number, default: 0 }
-
+    index: { type: Number, default: 0 },
+    menu: { type: Boolean, default: true }
   },
   data () {
     return {
       showslider: false,
-
       hooperSettings: {
         itemsToShow: 1,
         centerMode: true,
@@ -67,6 +67,12 @@ export default {
       studentObject: state => state.students.studentObject
     })
   },
+  mounted () {
+    this.$bus.$on('resizePane', () => {
+      this.testMethod()
+      window.dispatchEvent(new Event('resize'))
+    })
+  },
   methods: {
     getSrc (student, imagenumber) {
       if (imagenumber === 0) {
@@ -74,6 +80,9 @@ export default {
       } else {
         return require('../assets/students/' + student.code + '/' + student.code + imagenumber.toString() + '.' + student.ext[imagenumber - 1])
       }
+    },
+    testMethod () {
+      console.log('made it')
     },
     styleName (name) {
       const words = name.split(' ')
@@ -99,43 +108,65 @@ export default {
     },
     fill (index) {
       this.$store.dispatch('students/fill', index)
+    },
+    updateHoop () {
+      this.$refs.hooper.updateWidth()
     }
-
   }
 }
 </script>
 
 <style lang="stylus">
+
 .student-work-container
-    height: 100%
-    width: 100%
+  height: 94vh
+  @media(orientation:portrait) {
+    height: 47vh
+  }
+  // phone screens in portrait
+  @media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    height: 23.5vh
+  }
+  // phone screens in landscape
+  @media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    height: 94vh
+  }
+
+  // ipad portrait
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+      height: 31.3333vh
+  }
 
 .students
   height: 100%
   width: 100%
   background white
+  padding 1%
+  position relative
 
 .studentinfo
   height: 100%
   width: 100%
   overflow: hidden
-  position: relative
 
 .work
-  height: 86%
+  height: 100%
+  // height: 86%
   padding 0
+  border-bottom 3px solid #181819
 
 .projects
   height: 14%
   width: 100%
   padding 0
+
 .explanation
   height: 100%
   background white
-  color black
+  color #181819
   padding 0 2%
   font-family: 'Ciao-Regular', sans-serif
-  border-bottom 3px solid black
+  border-bottom 3px solid #181819
 
 .student-name
   font-size: 1.4vw
@@ -143,37 +174,32 @@ export default {
   text-transform: uppercase
 
 .student-work
-  width: 100%
-  padding: 1%
-  outline: none
-  position absolute
-  right 0
-  left 0
-  top 0
-  bottom 0
+  outline none
 
 .project-image
-  width: 120vh
-  margin 0 -60vh
+  width: 100%
 
 .project-image-fill
   width: 108%
   margin 0 -53%
 
-.vertical-center
-  position: absolute
-  top: 50%
-  transform: translateY(-50%)
+.work-section
+  padding-left 0
 
-li.hooper-slide
-  text-align center
-
+.info-section
+  height 100%
+  padding-left 2%
 .icon
-  fill: black
+  fill: #181819
 
 .hooper-next:focus, .hooper-prev:focus
   outline: none
 
+.hooper-prev, .hooper-next
+  background rgba(255,255,255,1)
+  margin 0 1%
+  padding .05%
+  top: 40%
 .tagsone
   display inline
 
@@ -188,36 +214,38 @@ li.hooper-slide
   padding 0 8px
   background #c1abd3
   border-radius 15px
-  color black
+  color #181819
   text-transform: uppercase
   font-family: 'GT-Pressura', sans-serif
 
 .selfie
-  width: 84%
-  padding 5%
-
+  width: 100%
+  position relative
+  padding-bottom 1%
+  object-fill: cover
+  z-index: 100
 .main-name, .view-work
-  color black
+  color #181819
   font-size 3vw
   text-transform: uppercase
   font-family: 'GT-Pressura', sans-serif
 
 .view-work
-  background black
+  background #181819
   color white
   margin-top 2%
   padding 0 2%
   outline none
 
 .main-text
-  color black
+  color #181819
   font-family: 'Ciao-Regular', sans-serif
   padding-right: 15%
   font-size 1.5vw
   padding-top: 2%
 
 .buttonpressed
-  background black
+  background #181819
   color white
   border 3px solid #c1abd3
 
@@ -229,7 +257,7 @@ li.hooper-slide
   position absolute
   right 1%
   bottom 0
-  background black
+  background #181819
   padding .3%
 
 </style>

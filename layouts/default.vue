@@ -15,8 +15,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overflow-y: scroll
 }
-
+html, body {
+    height: 100%;
+}
 *,
 *:before,
 *:after {
@@ -63,7 +66,6 @@ p
   @media(min-width: 1px) {
     max-width: 100%;
   }
-  padding 0
 
 @font-face {
     font-family: 'Ciao-Regular';
@@ -106,7 +108,7 @@ p
   transition: .5s
 
 .slide-enter
-  transform: translate(100%, 0)
+  transform: translate(-100%, 0)
 
 .slide-leave-to
   transform: translate(-100%, 0)
@@ -118,23 +120,35 @@ p
   opacity: 0;
 }
 
-::-webkit-scrollbar-track
-{
-    border-left 2px solid black;
-    background-color: #F5F5F5;
-}
+// ::-webkit-scrollbar-track
+// {
+//     border-left 2px solid black;
+//     background-color: #F5F5F5;
+// }
 
-::-webkit-scrollbar
-{
-    width: 10px;
-    background-color: #F5F5F5;
-}
+// ::-webkit-scrollbar
+// {
+//     width: 10px;
+//     background-color: #F5F5F5;
+// }
 
-::-webkit-scrollbar-thumb
-{
-    background-color: #000000;
-}
+// ::-webkit-scrollbar-thumb
+// {
+//     background-color: #000000;
+// }
 
 .cursor-pointer
   cursor pointer
+
+.hide-on-mobile {
+  @media(max-width: 767px) {
+    display: none !important
+  }
+}
+
+.hide-on-desktop {
+  @media(min-width: 768px) {
+    display: none !important;
+  }
+}
 </style>

@@ -119,6 +119,12 @@ export const mutations = {
   },
   toggleTags: (state, tags) => {
     state.currentTags = tags
+  },
+  hideAllStudentWork: (state) => {
+    const students = state.studentObject
+    for (let i = 0; i < students.length; i++) {
+      students[i].showWork = false
+    }
   }
 }
 
@@ -134,5 +140,8 @@ export const actions = {
   },
   toggleTags: (context, tags) => {
     context.commit('toggleTags', tags)
+  },
+  hideAllStudentWork: (context) => {
+    context.commit('hideAllStudentWork')
   }
 }

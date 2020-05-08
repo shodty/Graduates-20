@@ -5,11 +5,11 @@
         b-col.blankbg(cols="11" )
           .wrapped(@click="showDiscipline('welcome')")
             img.logohorizontal.cursor-pointer(src='../assets/img/horizontal-logo.png')
-        b-col.blankbg(cols="1" )
+        b-col.blankbg.p-0(cols="1" )
             b-col
               p.info.cursor-pointer(@click="showInfo") Info
     transition(name='fade')
-      b-row.information.justify-content-center(v-if='showinfo')
+      b-row.information.justify-content-center(v-show='showinfo')
         b-col.redbg(cols="3")
           h1(v-html="styleWord('Identity')")
           h2 Matt Vlach
@@ -36,7 +36,7 @@
           h2 Department of Design
           h2 design@csus.edu
           h2 www.design.com
-        video.video-background(v-if='showinfo' src='../assets/video/G20-ColorWarp.mp4' autoplay muted loop)
+        video.video-background( src='../assets/video/G20-ColorWarp.mp4' autoplay muted loop :class="showinfo? 'showingvideo' : 'hidingvideo' ")
         img.up-arrow.cursor-pointer(@click="showInfo" src='../assets/img/up.png')
 </template>
 
@@ -57,6 +57,7 @@ export default {
     showDiscipline (discipline) {
       this.$store.dispatch('general/showDiscipline', discipline)
       if (this.showinfo === true) { this.showInfo() }
+      if (discipline === 'welcome') { this.$store.dispatch('students/hideAllStudentWork') }
     },
     showInfo () {
       this.showinfo = !this.showinfo
@@ -88,20 +89,10 @@ export default {
 <style scoped lang="stylus">
 
 .main-header
-  position fixed
-  top 0
-  left 0
-  z-index 100
-  height 8%
-  width 100%
+  z-index 1000
   background white
-  border-bottom 3px solid black
+  border-bottom 3px solid #181819
   transition: height 1s ease, background 1s ease
-
-.marquee
-    width: 100vw;
-    margin: 0 auto;
-    text-align left
 
 .info
     font-family: 'GT-Pressura', sans-serif
@@ -110,11 +101,13 @@ export default {
     font-weight 700
     text-align center
     padding-top 15%
+
 .header
     z-index: 1000
+
 .pinkbg
   background-color #f4a1c6
-  border-left 3px solid black
+  border-left 3px solid #181819
 
 .logohorizontal
     height: 100%
@@ -122,7 +115,7 @@ export default {
     padding 1% .75%
 
 .showinginfo
-  height: 100%
+  height: 100vh
   background rgba(255,255,255,1)
 
 .information
@@ -154,13 +147,18 @@ h3
   z-index: 1000
 
 .video-background
-    position fixed
-    top 0
-    min-height: 100%
-    min-width: 100%
-    z-index: 0
-    filter:opacity(70%)
-    overflow: hidden
+  position fixed
+  top 0
+  min-width 100%
+  z-index: 0
+  filter:opacity(70%)
+  overflow: hidden
+  transition: height 1s ease
+
+.showingvideo
+
+  min-width 100vw
+  transition: height 1s ease
 
 .concept
   padding-right 15%
