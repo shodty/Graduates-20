@@ -28,7 +28,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/bus'
+    '~/plugins/bus',
+    { src: '~/plugins/vue-expandable-image', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -51,6 +52,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    transpile: ['vue-expandable-image'],
     extend (config, ctx) {
     }
   }
