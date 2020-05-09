@@ -1,35 +1,53 @@
 <template lang="pug">
 .left-menu
     b-row.leftside
-            b-col.col-12.discipline.welcome(@click="showDiscipline('welcome') " :class="{ bigger: show == 'welcome'}")
-                transition-group(name="fade")
-                  span.cursor-pointer(key='span') Welcome
-                  .group(v-if="show == 'welcome'" key='group')
-                    img.main-logo(src='../assets/img/main-logo.png')
-                    p.welcome-text The horizontal logo (↑↑↑) emphasizes “S-20” by turning to outline, or by having “GRADUATES” be outlined, and “S-20” staying solid. Animal Soul Glyphs can be used on S-20, regardless of if it is outlined or not.
-            b-col.col-12.discipline.graphic(@click="showDiscipline('graphic') " :class="{ bigger: show == 'graphic'}")
-                transition-group(name="fade")
-                    span.cursor-pointer(key='design') Graphic Design
-                    .graphic-things(v-if="show == 'graphic'" key='group')
-                        img.discipline-logo(src='../assets/img/graphic-logo.png')
-                        br
-                        label.shuffle(@click="shuffleStudents") SHUFFLE
-                        br
-                        ul
-                            li.taglist(v-for='tag in masterTags')
-                              input.check(type='checkbox' :id='tag' :name='tag' :value='tag' v-model='tags' @change='updateTags(tags)' )
-                              label.cursor-pointer.label-for-check(name='test' :for='tag') {{tag}}
-                        br
-            b-col.col-12.discipline.interior(@click="showDiscipline('interior')" :class="{ bigger: show == 'interior' }")
-                transition-group(name="fade")
-                  span.cursor-pointer(key='interior') Interior Architecture
-                  .graphic-things(v-if="show == 'interior'" key='group')
-                    img.discipline-logo(src='../assets/img/interior-logo.png')
-            b-col.col-12.discipline.photo(@click="showDiscipline('photo')" :class="{ bigger: show == 'photo' }")
-                transition-group(name="fade")
-                  span.cursor-pointer(key='photo') Photography
-                  .graphic-things(v-if="show == 'photo'" key='group')
-                    img.discipline-logo(src='../assets/img/photo-logo.png')
+      b-col.col-12.discipline.welcome(@click="showDiscipline('welcome') " :class="{ bigger: show == 'welcome'}")
+          transition-group(name="fade")
+            img.discipline-logo.cursor-pointer(src='../assets/img/welcome-h1.png' key='span')
+            .group(v-if="show == 'welcome'" key='group')
+              img.main-logo(src='../assets/img/main-logo.png')
+              br
+              br
+              p.welcome-text Click the disciplines below to display student work. <br><br> Click the arrow to the right to hide this menu. <br> <br>Sort student work by selecting various tags
+      b-col.col-12.discipline.graphic(@click="showDiscipline('graphic') " :class="{ bigger: show == 'graphic'}")
+          transition-group(name="fade")
+              img.discipline-logo.cursor-pointer(src='../assets/img/graphic-h1.png' key='graphic')
+              .graphic-things(v-if="show == 'graphic'" key='group')
+                  p.disc-desc The goal of the Graphic Design program is to provide the community with a comprehensive and adaptable problem solver. The program seeks to impart students with a strong aesthetic ability coupled with a clear understanding of the increasingly complex strategic, systemic and conceptual challenges facing them in practice,  as well as the ability to address these challenges.
+                  br
+                  label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
+                  br
+                  ul
+                      li.taglist(v-for='tag in graphicTags')
+                        input.check(type='checkbox' :id='tag' :name='tag' :value='tag' v-model='currentgraphictags' @change="updateTags(currentgraphictags, 'graphic')" )
+                        label.cursor-pointer.label-for-check(name='test' :for='tag') {{tag}}
+                  br
+      b-col.col-12.discipline.interior(@click="showDiscipline('interior')" :class="{ bigger: show == 'interior' }")
+          transition-group(name="fade")
+            img.discipline-logo.cursor-pointer(src='../assets/img/interior-h1.png' key='interior')
+            .graphic-things(v-if="show == 'interior'" key='group')
+              p.disc-desc The goal of the Interior Architecture program is to prepare students for professional practice and/or preparation for admission to graduate level study. The degree is intended for students who want to pursue careers in interior design, interior architecture and architecture.
+              br
+              label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
+              br
+              ul
+                  li.taglist(v-for='tag in interiorTags')
+                    input.check(type='checkbox' :id='tag' :name='tag' :value='tag' v-model='currentinteriortags' @change="updateTags(currentinteriortags, 'interior')" )
+                    label.cursor-pointer.label-for-check(name='test' :for='tag') {{tag}}
+              br
+      b-col.col-12.discipline.photo(@click="showDiscipline('photo')" :class="{ bigger: show == 'photo' }")
+          transition-group(name="fade")
+            img.discipline-logo.cursor-pointer(src='../assets/img/photo-h1.png' key='photo')
+            .graphic-things(v-if="show == 'photo'" key='group')
+              p.disc-desc The goal of the Photography program is aimed at educating students in contemporary photographic methodologies and in the current situation of photography, its use and its communicative effects. The curriculum is designed to give students a broad exposure to not only the technologies, processes, and models of contemporary practice, but also to introduce them to the aesthetic, cultural, and ethical dialogues surround the use and role of photography in our society.
+              br
+              label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
+              br
+              ul
+                  li.taglist(v-for='tag in photoTags')
+                    input.check(type='checkbox' :id='tag' :name='tag' :value='tag' v-model='currentphototags' @change="updateTags(currentphototags, 'photo')" )
+                    label.cursor-pointer.label-for-check(name='test' :for='tag') {{tag}}
+              br
 </template>
 
 <script>
@@ -44,7 +62,9 @@ export default {
   data () {
     return {
       showslider: false,
-      tags: [],
+      currentgraphictags: [],
+      currentinteriortags: [],
+      currentphototags: [],
       checked: false
     }
   },
@@ -52,8 +72,14 @@ export default {
     studentObject () {
       return this.$store.state.students.studentObject
     },
-    masterTags () {
-      return this.$store.getters['students/masterTags']
+    graphicTags () {
+      return this.$store.getters['students/graphicTags']
+    },
+    interiorTags () {
+      return this.$store.getters['students/interiorTags']
+    },
+    photoTags () {
+      return this.$store.getters['students/photoTags']
     },
     ...mapState({
       show: state => state.general.show
@@ -63,8 +89,8 @@ export default {
     showDiscipline (discipline) {
       this.$store.dispatch('general/showDiscipline', discipline)
     },
-    updateTags (tags) {
-      this.$store.dispatch('students/toggleTags', tags)
+    updateTags (tags, discipline) {
+      this.$store.dispatch('students/toggleTags', { tags, discipline })
     },
     shuffleStudents () {
       this.$bus.$emit('shuffleStudents')
@@ -81,9 +107,9 @@ export default {
   height 94%
 
 .discipline-logo, .main-logo
-    width 60%
+    width 80%
     margin 0 auto
-    padding 5% 0 1% 0
+    padding 2% 0 1% 0
 
 .main-logo
     width 80%
@@ -93,15 +119,14 @@ export default {
   border-top 3px solid #181819
   transition: height 1s;
   height 7%
-  padding-top 1%
   font-size 1vw
   font-family 'Ciao-Regular', sans-serif
   font-weight bold
-  padding 5% 0% 0% 6%
+  padding 2% 0% 0% 6%
 
 .welcome-text
     width 100%
-    padding 5%
+    padding 5% 5% 5% 0
     font-size 16px
     font-family 'Ciao-Regular', sans-serif
     font-weight bold
@@ -124,10 +149,11 @@ export default {
   transition: height 1s;
 
 .taglist
-    padding 0 1%
-    font-size 16px
+    padding 0
+    margin-right 2%
+    font-size 14px
     font-family: 'GT-Pressura', sans-serif
-    line-height: 0
+    line-height: .5
     list-style-type: none
     display: inline
 
@@ -135,9 +161,10 @@ export default {
     background white
     border-radius 15px
     padding 2%
+    margin 0
 
 .check:checked + .label-for-check {
-    background #fbb03a
+    background #f3a1c6
 }
 
 .shuffle
@@ -146,4 +173,9 @@ export default {
 
 .check
   display none
+
+.disc-desc
+  font-size 14px
+  font-weight 800
+  padding-right 4%
 </style>

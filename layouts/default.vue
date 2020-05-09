@@ -120,28 +120,28 @@ p
   opacity: 0;
 }
 
-// ::-webkit-scrollbar-track
-// {
-//     border-left 2px solid black;
-//     background-color: #F5F5F5;
-// }
+::-webkit-scrollbar-track
+{
+    border-left 2px solid black;
+    background-color: #F5F5F5;
+}
 
-// ::-webkit-scrollbar
-// {
-//     width: 10px;
-//     background-color: #F5F5F5;
-// }
+::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #F5F5F5;
+}
 
-// ::-webkit-scrollbar-thumb
-// {
-//     background-color: #000000;
-// }
+::-webkit-scrollbar-thumb
+{
+    background-color: #000000;
+}
 
 .cursor-pointer
   cursor pointer
 
 .hide-on-mobile {
-  @media(max-width: 767px) {
+  @media(max-width: 1200px) {
     display: none !important
   }
 }

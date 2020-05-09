@@ -56,6 +56,7 @@ export default {
   methods: {
     showDiscipline (discipline) {
       this.$store.dispatch('general/showDiscipline', discipline)
+      this.$bus.$emit('homeReset')
       if (this.showinfo === true) { this.showInfo() }
       if (discipline === 'welcome') { this.$store.dispatch('students/hideAllStudentWork') }
     },
@@ -97,10 +98,10 @@ export default {
 .info
     font-family: 'GT-Pressura', sans-serif
     text-transform uppercase
-    font-size 2vh
+    font-size 3vh
     font-weight 700
     text-align center
-    padding-top 15%
+    padding-top 5%
 
 .header
     z-index: 1000
@@ -110,17 +111,15 @@ export default {
   border-left 3px solid #181819
 
 .logohorizontal
-    height: 100%
-    width: 18%
-    padding 1% .75%
-
+    height: 5vh
+    padding-top .5%
 .showinginfo
   height: 100vh
   background rgba(255,255,255,1)
 
 .information
-  padding-top 5%
-  width: 90%
+  padding-top 3%
+  width: 94%
   margin 0 auto
 
 h1
@@ -134,7 +133,7 @@ h2
 h3
   padding-top 2%
   font-family: 'GT-Pressura', serif
-  font-size .8vw
+  font-size 1vw
 
 .redbg, .bluebg, .greenbg
   margin 0 .5%
@@ -150,6 +149,7 @@ h3
   position fixed
   top 0
   min-width 100%
+  min-height 100vh
   z-index: 0
   filter:opacity(70%)
   overflow: hidden
@@ -161,7 +161,7 @@ h3
   transition: height 1s ease
 
 .concept
-  padding-right 15%
+  padding-right 4%
 
 .up-arrow
   position fixed
