@@ -14,24 +14,24 @@ export const state = () => ({
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
       projecttext: [
         {
-          title: 'Edward Weston Brochure',
-          description: 'A brochure for Edward Weston giving light to his nature and landscape photographs.'
+          title: 'Odesza',
+          description: 'Poster and ticket design for Odesza concert system.'
         },
         {
-          title: 'Gig Posters',
-          description: 'Gig posters for multiple artists based on their playing style and feel.'
+          title: 'Festival of New American Music',
+          description: 'Festival of New American Music poster solution. One poster with minimal information and large visuals. The next poster with all festival information.'
         },
         {
-          title: 'Spring Show',
-          description: 'A design system for Sacramento State’s Spring Showcase.'
+          title: 'Wildfire Relief Snowboard Design.',
+          description: 'This passion project is centered around spreading awareness of animals affected by wildfires including the Macaw parrot in the Amazon Rainforest fires and the Koala in the Australian Bushfires.'
         },
         {
-          title: 'Gig Posters',
-          description: 'Gig posters for multiple artists based on their playing style and feel.'
+          title: 'Element Craft Candles & Brews',
+          description: 'Element Craft Candles & Brews packaging design. For this project we were tasked to create and brand a business and then expand that branding over a packaging system.'
         },
         {
-          title: 'Gig Posters',
-          description: 'Gig posters for multiple artists based on their playing style and feel.'
+          title: 'Campus Wayfinding',
+          description: 'Wayfinding Design for Herky Campus.'
         }
       ],
       showWork: false,
@@ -53,32 +53,32 @@ export const state = () => ({
       ext: ['mp4', 'gif', 'gif', 'png', 'gif', 'gif', 'gif'],
       projecttext: [
         {
-          title: 'Edward Weston Brochure',
-          description: 'A brochure for Edward Weston giving light to his nature and landscape photographs.'
+          title: 'Motion Reel No. 3',
+          description: 'A brief compilation of selected motion graphics and animations created between the time frame of mid 2017 to late 2019. Content includes university projects, personal work, and client commissions primarily residing within the Esports industry. View the full video here: https://vimeo.com/339933237.'
         },
         {
-          title: 'Gig Posters',
-          description: 'Gig posters for multiple artists based on their playing style and feel.'
+          title: 'Department of Design Spring Show No. 22',
+          description: 'The Spring Show is an exhibition which highlights the best work of the graduating seniors as well as many undergraduate students from the programs of Graphic Design, Interior Architecture, and Photography. The design collateral was influenced by the gathering of the three programs, using simplified abstract symbols to represent each department.'
         },
         {
-          title: 'Spring Show',
-          description: 'A design system for Sacramento State’s Spring Showcase.'
+          title: 'Festival of the Arts 2020',
+          description: 'The Festival of the Arts is an event hosted by Sacramento State University that celebrates the diversity of the Arts & Letters community. A design system was strategized, developed, and expanded through a series of campaign deliverables which showcased the message of discovery, creativity, and human expression.'
         },
         {
-          title: 'Gig Posters',
-          description: 'Gig posters for multiple artists based on their playing style and feel.'
+          title: 'Odesza',
+          description: 'Odesza is an electronic music duo from Bellingham, Washington. A scene was rendered with a focus of creating a piece of content that accurately reflects the stylistic qualities of the Odesza brand, pairing the geometry of their logo with visuals that compliment the two artists’ work.'
         },
         {
-          title: 'Gig Posters',
-          description: 'Gig posters for multiple artists based on their playing style and feel.'
+          title: 'The Ghost Town Rebellion',
+          description: 'The Ghost Town Rebellion is a band from Sacramento, California that defines their music genre and style as grit rock. The target for this project was to create a hand crafted and gritty visual system using vellum paper to simulate a ‘ghosting’ effect through the type.'
         },
         {
-          title: 'Gig Posters',
-          description: 'Gig posters for multiple artists based on their playing style and feel.'
+          title: 'Dang',
+          description: 'Dang is an international streetwear and lifestyle brand composed of a small team of diverse creatives that share the ideology of the company tagline “Dreams are Never Gone”. My mission as the Co-Founder and Brand Director was to strategize, collaborate, and develop the team’s creative talent from the ground up into a consistent and recognizable brand.'
         },
         {
-          title: 'Gig Posters',
-          description: 'Gig posters for multiple artists based on their playing style and feel.'
+          title: 'Refraction_',
+          description: 'Refraction_ is a thirty day personal challenge that acted as a daily exploration into animation within Adobe After Effects. It focuses on the theme of RGB color and the effects that can be created when utilizing it within a piece of art. The overall purpose of Refraction_ was to efficiently explore and develop skills within animation.'
         }
       ],
       showWork: false,

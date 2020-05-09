@@ -21,7 +21,7 @@ b-col.work(cols="12")
                                 button.view-work(@click="showStudentWork(index)") VIEW WORK
                             hooper.student-work.h-100(v-if='student.showWork' :settings='hooperSettings' key='hooper' ref='hooper' v-on:slide='doSomething')
                                 slide.slide-image(v-for="n in student.images" :key="student.code")
-                                    video.vertical-center(v-if="student.ext[n-1] == 'mp4'" :class=" student.fill? 'project-image' : 'project-image' " :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop)
+                                    video.vertical-center(v-if="student.ext[n-1] == 'mp4'" :class=" student.fill? 'project-image' : 'project-image' " :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop controls)
                                     img.vertical-center(v-else :class="student.fill? 'project-image' : 'project-image'" :src='getSrc(student, n)' :alt='student.image1')
                                 hooper-navigation.nav(slot='hooper-addons' )
                             //button.fillbutton(v-if='student.showWork' @click='fill(index)' key='button')
@@ -96,6 +96,7 @@ export default {
       return newWord
     },
     showStudentWork (index) {
+      this.currentImg = 1
       this.$store.dispatch('students/showStudentWork', index)
     },
     fill (index) {

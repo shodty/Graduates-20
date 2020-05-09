@@ -138,7 +138,6 @@ export default {
     position absolute
     min-height: 100vh
     width: 100%
-    background-color rgba(255,255,255,.9)
     color #181819
     left 0
     top 0

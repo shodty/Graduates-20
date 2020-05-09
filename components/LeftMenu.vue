@@ -14,8 +14,7 @@
               img.discipline-logo.cursor-pointer(src='../assets/img/graphic-h1.png' key='graphic')
               .graphic-things(v-if="show == 'graphic'" key='group')
                   p.disc-desc The goal of the Graphic Design program is to provide the community with a comprehensive and adaptable problem solver. The program seeks to impart students with a strong aesthetic ability coupled with a clear understanding of the increasingly complex strategic, systemic and conceptual challenges facing them in practice,  as well as the ability to address these challenges.
-                  br
-                  label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
+                  // label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
                   br
                   ul
                       li.taglist(v-for='tag in graphicTags')
@@ -27,8 +26,7 @@
             img.discipline-logo.cursor-pointer(src='../assets/img/interior-h1.png' key='interior')
             .graphic-things(v-if="show == 'interior'" key='group')
               p.disc-desc The goal of the Interior Architecture program is to prepare students for professional practice and/or preparation for admission to graduate level study. The degree is intended for students who want to pursue careers in interior design, interior architecture and architecture.
-              br
-              label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
+              // label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
               br
               ul
                   li.taglist(v-for='tag in interiorTags')
@@ -40,8 +38,7 @@
             img.discipline-logo.cursor-pointer(src='../assets/img/photo-h1.png' key='photo')
             .graphic-things(v-if="show == 'photo'" key='group')
               p.disc-desc The goal of the Photography program is aimed at educating students in contemporary photographic methodologies and in the current situation of photography, its use and its communicative effects. The curriculum is designed to give students a broad exposure to not only the technologies, processes, and models of contemporary practice, but also to introduce them to the aesthetic, cultural, and ethical dialogues surround the use and role of photography in our society.
-              br
-              label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
+              // label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
               br
               ul
                   li.taglist(v-for='tag in photoTags')
@@ -87,6 +84,7 @@ export default {
   },
   methods: {
     showDiscipline (discipline) {
+      this.shuffleStudents()
       this.$store.dispatch('general/showDiscipline', discipline)
     },
     updateTags (tags, discipline) {

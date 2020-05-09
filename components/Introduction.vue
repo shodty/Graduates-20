@@ -1,5 +1,5 @@
 <template lang="pug">
-b-container
+b-container(:class='next? "overlay-more" : "overlay"')
     b-row
         b-col.col-sm-8.offset-sm-2.col-lg-8.offset-lg-2.text-container
             p.intro-text(v-if='!next')
@@ -70,6 +70,13 @@ export default {
 </script>
 
 <style lang="stylus">
+
+.overlay
+    background rgba(255,255,255,.9)
+    transition background 1s ease
+.overlay-more
+    background rgba(243,161,198,.9)
+    transition background 1s ease
 
 .text-container
     padding-top 3%
