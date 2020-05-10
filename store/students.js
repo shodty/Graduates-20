@@ -1334,8 +1334,8 @@ export const state = () => ({
         website: 'www.kristyluong.com',
         linkedin: 'https://www.linkedin.com/in/kristyluong/'
       },
-      images: 6,
-      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      images: 8,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
       projecttext: [
         {
           title: 'Modern Typeface Spread',
@@ -1354,8 +1354,16 @@ export const state = () => ({
           description: 'Herky International(HI) provided a RPF seeking consulting services from qualified firms to provide professional user experience consulting services for a mixed-use Downtown Sacramento Herky Campus. For this project, I worked with the client to implement a cohesive touchpoint strategy for the new campus, which includes the development of a website, wayfinding strategy, and outbound marketing communication strategy.'
         },
         {
+          title: 'Herky Downtown',
+          description: 'Herky International(HI) provided a RPF seeking consulting services from qualified firms to provide professional user experience consulting services for a mixed-use Downtown Sacramento Herky Campus. For this project, I worked with the client to implement a cohesive touchpoint strategy for the new campus, which includes the development of a website, wayfinding strategy, and outbound marketing communication strategy.'
+        },
+        {
           title: 'Book Design',
           description: 'This project is a redesign of one of my favorite books with a typographical and illustrative style. The re-design for “The Glass Castle” was created with the intention of giving a visual essence of what the reader will experience in the book through the illustrations and and graphic elements.'
+        },
+        {
+          title: 'Camellia Brand and Packaging',
+          description: 'Camellia is a tea and honey concept that was developed into a brand made specifically for the local Sacramento area. This brand was designed emotionally-driven to create a memorable and lasting experience for the consumers. '
         },
         {
           title: 'Camellia Brand and Packaging',
