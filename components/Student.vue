@@ -2,27 +2,29 @@
 b-col.work(cols="12")
     b-col.students
             .studentinfo(key='studentinfo')
-                b-row.h-100
-                    b-col.left-section.col-4
-                        img.selfie(v-if='!student.showWork' :src='getSrc(student, 0)' )
-                        div(v-if='student.showWork')
+              b-container(fluid).h-100
+                b-row.h-100(align-v='start')
+                    b-col.col-4.left-section.col-4.d-flex.align-items-start
+                        // transition-group(name="fade" mode='out-in')
+                        img.selfie(v-if='!student.showWork' :src='getSrc(student, 0)' key='img')
+                        div(v-if='student.showWork' key='info')
                             span.main-name(v-html="styleName(student.name)")
                             h1.proj-title {{student.projecttext[currentImg].title}}
                             p.proj-desc {{student.projecttext[currentImg].description}}
                             button.aboutbutton(@click="showStudentWork(index)" :class="{ buttonpressed: !student.showWork}") ABOUT
-                    b-col.col-8.work-section
-                        transition-group(name="slide" mode='out-in')
-                            div.info-section(v-if='!student.showWork' key='info')
-                                span.main-name(v-html="styleName(student.name)")
+                    b-col.col-8.work-section.d-flex.align-items-center
+                            // transition-group(name="fade" mode='out-in')
+                            b-row.info-section.d-flex.align-items-center(v-if='!student.showWork' key='info')
+                                span.main-name.align-self-start.col-12.p-0(v-html="styleName(student.name)")
                                 br
-                                ul.tagsone
+                                ul.tagsone.col-12.p-0
                                     li.tags(v-for='tag in student.tags') {{tag}}
-                                p.main-text {{student.text}}
-                                button.view-work(@click="showStudentWork(index)") VIEW WORK
+                                p.main-text.col-12.p-0 {{student.text}}
+                                button.view-work.col-4.p-0(@click="showStudentWork(index)") VIEW WORK
                             hooper.student-work.h-100(v-if='student.showWork' :settings='hooperSettings' key='hooper' ref='hooper' v-on:slide='changeImageDesc')
-                                slide.slide-image(v-for="n in student.images" :key="student.code")
-                                    video.vertical-center(v-if="student.ext[n-1] == 'mp4'" :class=" student.fill? 'project-image' : 'project-image' " :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop controls)
-                                    expandable-image.vertical-center(v-else :class="student.fill? 'project-image' : 'project-image'" :src='getSrc(student, n)' :alt='student.image1')
+                                slide.h-100(v-for="n in student.images" :key="student.code")
+                                    video(v-if="student.ext[n-1] == 'mp4'" :class=" student.fill? 'project-image' : 'project-image' " :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop controls)
+                                    expandable-image(v-else :class="student.fill? 'project-image' : 'project-image'" :src='getSrc(student, n)' :alt='student.image1')
                                 hooper-navigation.nav(slot='hooper-addons' )
                             //button.fillbutton(v-if='student.showWork' @click='fill(index)' key='button')
                                 img(src='../assets/img/expand.png' height='20px')
@@ -54,7 +56,9 @@ export default {
         itemsToShow: 1,
         centerMode: true,
         infiniteScroll: true,
-        wheelControl: true
+        wheelControl: true,
+        mouseDrag: false,
+        trimWhiteSpace: true
       }
     }
   },
@@ -170,9 +174,8 @@ export default {
 
 .work-section
   padding-left 0
-
+  max-height 100%
 .info-section
-  height 100%
   padding-left 2%
 .icon
   fill: #181819
@@ -184,7 +187,6 @@ export default {
   background rgba(255,255,255,1)
   margin 0 1%
   padding .05%
-  top: 30%
 
 .tagsone
   display inline
@@ -260,4 +262,9 @@ export default {
   font-weight 800
   font-size 16px
   padding-top: 2%
+
+.vertical-center, .hooper-list
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 </style>

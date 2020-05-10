@@ -6,7 +6,7 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'UX/UI',
-        'print media'
+        'print'
       ],
       links: {
         website: 'designedbyrigo.com',
@@ -45,7 +45,6 @@ export const state = () => ({
         'packaging',
         'product design',
         'UX/UI',
-        'music artwork',
         'poster design',
         'layout'
       ],
@@ -101,7 +100,7 @@ export const state = () => ({
         email: 'wesley_bellingham@yahoo.com'
       },
       images: 6,
-      ext: ['png', 'png', 'png', 'png', 'png', 'png'],
+      ext: ['png', 'png', 'png', 'png', 'jpg', 'png'],
       projecttext: [
         {
           title: 'Museum Logos',
@@ -771,10 +770,31 @@ export const state = () => ({
       links: null,
       images: 5,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
-      projecttext: null,
+      projecttext: [
+        {
+          title: '',
+          description: ''
+        },
+        {
+          title: '',
+          description: ''
+        },
+        {
+          title: '',
+          description: ''
+        },
+        {
+          title: '',
+          description: ''
+        },
+        {
+          title: '',
+          description: ''
+        }
+      ],
       showWork: false,
       fill: false,
-      text: null
+      text: ''
     },
     {
       code: 'GilesK',
@@ -782,12 +802,12 @@ export const state = () => ({
       discipline: 'interior',
       tags: '',
       links: null,
-      images: 7,
-      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      images: 4,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg'],
       projecttext: [
         {
           title: 'Photo & Artwork',
-          description: null
+          description: ''
         },
         {
           title: 'River House',
@@ -847,12 +867,12 @@ export const state = () => ({
         'UI/UX',
         'typography',
         'layout',
-        'motion graphics',
+        'motion design',
         'web design',
         'logo design',
         'packaging',
-        'environmental graphics',
-        'print production',
+        'environmental design',
+        'print',
         'photography',
         'marketing'
       ],
@@ -1114,8 +1134,8 @@ export const state = () => ({
         'event branding',
         'UI',
         'type design',
-        'product photography',
-        'editorial photography'
+        'product photo',
+        'editorial photo'
       ],
       links: {
         website: 'https://dribbble.com/ekarchmit',
@@ -1204,7 +1224,7 @@ export const state = () => ({
       ],
       showWork: false,
       fill: false,
-      text: 'My name is Haley Lamos, I am an 8 year student, finally acquiring my Bachelors of Fine Arts in Interior Architecture, from Sacramento State University. Throughout my studies I have transitioned from Fashion Design to Art History and finally arriving at Interior Architecture. I believe that through my work you can see my dedication and my ability to accomplish beautiful projects. My recent work includes an introduction to energy modeling and NZE design project, a residential project the Stilt House, Sacramento Ca, and a cliff hanging Pavillion. Creativity through building has always been part of me. Growing up my Dad and I would always build something, it didn’t matter what it was, I just knew that I could always go and create something big or small. Growing up in a creative hands-on environment has allowed me to understand our built environment in a logical and creative way. I consider myself a creative self starter, always inherently thinking of things a little differently than others. (There is more than one way to accomplish something!) I always strive to do my best and to always stay busy with something big or small. In the coming years I hope to be enrolled in a Masters program for Architecture, and eventually sit for my exams. I want to help support the integration of green and net zero design into the field so we can live harmoniously and push into the future with our environment and our future children in mind. This is a sample portfolio that includes select images from my best projects completed during my Interior Architecture progam.'
+      text: 'I am an 8 year student, finally acquiring my Bachelors of Fine Arts in Interior Architecture. Throughout my studies I have transitioned from Fashion Design to Art History and finally arriving at Interior Architecture. I believe that through my work you can see my dedication and my ability to accomplish beautiful projects. Creativity through building has always been part of me. Growing up in a creative hands-on environment has allowed me to understand our built environment in a logical and creative way. I consider myself a creative self starter, always inherently thinking of things a little differently than others. In the coming years I hope to be enrolled in a Masters program for Architecture, and eventually sit for my exams. I want to help support the integration of green and net zero design into the field so we can live harmoniously and push into the future with our environment and our future children in mind.'
     },
     {
       code: 'LopezM',
@@ -1352,7 +1372,7 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'branding',
-        'motion',
+        'motion design',
         'UX/UI',
         'illustration'
       ],

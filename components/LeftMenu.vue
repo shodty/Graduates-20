@@ -13,10 +13,10 @@
           transition-group(name="fade")
               img.discipline-logo.cursor-pointer(src='../assets/img/graphic-h1.png' key='graphic')
               .graphic-things(v-if="show == 'graphic'" key='group')
-                  p.disc-desc The goal of the Graphic Design program is to provide the community with a comprehensive and adaptable problem solver. The program seeks to impart students with a strong aesthetic ability coupled with a clear understanding of the increasingly complex strategic, systemic and conceptual challenges facing them in practice,  as well as the ability to address these challenges.
+                  p.disc-desc(v-if='!sortGraphic') The goal of the Graphic Design program is to provide the community with a comprehensive and adaptable problem solver. The program seeks to impart students with a strong aesthetic ability coupled with a clear understanding of the increasingly complex strategic, systemic and conceptual challenges facing them in practice,  as well as the ability to address these challenges.
                   // label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
-                  br
-                  ul
+                  button.sortbutton.px-2.my-2(@click="sortGraphic = !sortGraphic") {{ sortGraphic ? 'Overview' : 'Sort' }}
+                  ul(v-if='sortGraphic')
                       li.taglist(v-for='tag in graphicTags')
                         input.check(type='checkbox' :id='tag' :name='tag' :value='tag' v-model='currentgraphictags' @change="updateTags(currentgraphictags, 'graphic')" )
                         label.cursor-pointer.label-for-check(name='test' :for='tag') {{tag}}
@@ -59,6 +59,9 @@ export default {
   data () {
     return {
       showslider: false,
+      sortGraphic: false,
+      sortInterior: false,
+      sortPhoto: false,
       currentgraphictags: [],
       currentinteriortags: [],
       currentphototags: [],
@@ -151,7 +154,7 @@ export default {
     margin-right 2%
     font-size 14px
     font-family: 'GT-Pressura', sans-serif
-    line-height: .5
+    line-height: 0
     list-style-type: none
     display: inline
 
@@ -176,4 +179,10 @@ export default {
   font-size 14px
   font-weight 800
   padding-right 4%
+
+.sortbutton
+  background black
+  color white
+  font-weight 800
+
 </style>
