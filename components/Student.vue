@@ -14,9 +14,25 @@ b-col.work(cols="12")
                             button.aboutbutton(@click="showStudentWork(index)" :class="{ buttonpressed: !student.showWork}") ABOUT
                     b-col.col-8.work-section.d-flex.align-items-center
                             // transition-group(name="fade" mode='out-in')
-                            b-row.info-section.d-flex.align-items-center(v-if='!student.showWork' key='info')
+                            b-row.info-section.d-flex.align-items-center.col-12(v-if='!student.showWork' key='info')
                                 span.main-name.align-self-start.col-12.p-0(v-html="styleName(student.name)")
                                 br
+                                ul.social-links.col-12.p-0
+                                    li(v-if="hasWeb")
+                                      a(:href='"https://www." + student.links.website' target="_blank")
+                                        img(src='../assets/img/website.png' )
+                                    li(v-if='hasIg')
+                                      a(:href='"https://www." + student.links.instagram' target="_blank")
+                                        img(src='../assets/img/instagram.png')
+                                    li(v-if='hasLi')
+                                      a(:href=' "https://www." + student.links.linkedin' target="_blank")
+                                        img(src='../assets/img/linkedin.png')
+                                    li(v-if='hasBe')
+                                      a(:href=' "https://www." + student.links.behance' target="_blank")
+                                        img(src='../assets/img/behance.png')
+                                    li(v-if='hasTw')
+                                      a(:href=' "https://www." + student.links.twitter' target="_blank")
+                                        img(src='../assets/img/twitter.png')
                                 ul.tagsone.col-12.p-0
                                     li.tags(v-for='tag in student.tags') {{tag}}
                                 p.main-text.col-12.p-0 {{student.text}}
@@ -65,7 +81,22 @@ export default {
   computed: {
     ...mapState({
       show: state => state.general.show
-    })
+    }),
+    hasWeb () {
+      return this.containsKey(this.student.links, 'website')
+    },
+    hasIg () {
+      return this.containsKey(this.student.links, 'instagram')
+    },
+    hasLi () {
+      return this.containsKey(this.student.links, 'linkedin')
+    },
+    hasBe () {
+      return this.containsKey(this.student.links, 'behance')
+    },
+    hasTw () {
+      return this.containsKey(this.student.links, 'twitter')
+    }
   },
   mounted () {
     this.$bus.$on('resetImgCount', () => {
@@ -73,6 +104,9 @@ export default {
     })
   },
   methods: {
+    containsKey (obj, key) {
+      if (typeof (obj) === 'object') { return Object.keys(obj).includes(key) } else { return false }
+    },
     getSrc (student, imagenumber) {
       if (imagenumber === 0) {
         return require('../assets/students/' + student.code + '/' + student.code + imagenumber.toString() + '.jpg')
@@ -267,4 +301,9 @@ export default {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
+
+.social-links li
+    display inline-block
+    padding-right 2%
+
 </style>

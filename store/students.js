@@ -10,8 +10,8 @@ export const state = () => ({
       ],
       links: {
         website: 'designedbyrigo.com',
-        instagram: '@designedbyrigo',
-        linkedin: 'https://www.linkedin.com/in/rigo-arreola'
+        instagram: 'instagram.com/designedbyrigo',
+        linkedin: 'linkedin.com/in/rigo-arreola'
       },
       images: 3,
       ext: ['jpg', 'jpg', 'jpg'],
@@ -49,9 +49,9 @@ export const state = () => ({
         'layout'
       ],
       links: {
-        website: 'https://biancaayala.myportfolio.com/',
+        website: 'biancaayala.myportfolio.com/',
         instagram: 'Instagram.com/biancagraphics',
-        linkedin: 'https://www.linkedin.com/in/biancagraphics'
+        linkedin: 'linkedin.com/in/biancagraphics'
       },
       images: 6,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -140,7 +140,7 @@ export const state = () => ({
         'collage'
       ],
       links: {
-        instagram: '@35mm_mullet'
+        instagram: 'instagram.com/35mm_mullet'
       },
       images: 6,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -270,7 +270,7 @@ export const state = () => ({
         'architecture'
       ],
       links: {
-        website: 'https://kristencantor.myportfolio.com'
+        website: 'kristencantor.myportfolio.com'
       },
       images: 6,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -319,7 +319,7 @@ export const state = () => ({
         'digital art'
       ],
       links: {
-        website: 'https://www.davidcarpio.com ',
+        website: 'davidcarpio.com ',
         instagram: 'instagram.com/davidcarpio/'
       },
       images: 9,
@@ -376,9 +376,9 @@ export const state = () => ({
         'type design'
       ],
       links: {
-        website: 'www.camillecarandang.com',
+        website: 'camillecarandang.com',
         instagram: 'c.camille.carandang',
-        linkedin: 'www.linked.com/in/camille-carandang'
+        linkedin: 'linked.com/in/camille-carandang'
       },
       images: 7,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -471,8 +471,8 @@ export const state = () => ({
         'architecture'
       ],
       links: {
-        website: 'https://craintaylor.wixsite.com/mysite',
-        linkedin: 'https://www.linkedin.com/in/taylor-crain-468570178/'
+        website: 'craintaylor.wixsite.com/mysite',
+        linkedin: 'linkedin.com/in/taylor-crain-468570178/'
       },
       images: 9,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'png', 'png', 'png', 'png', 'jpg'],
@@ -565,8 +565,8 @@ export const state = () => ({
         'photography'
       ],
       links: {
-        website: 'behance.net/cristiandi8acb',
-        instagram: '@the.typeguy'
+        website: 'behance.net/thetypeguy',
+        instagram: 'instagram.com/the.typeguy'
       },
       images: 5,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -605,7 +605,7 @@ export const state = () => ({
         'interior architecture'
       ],
       links: {
-        linkedin: 'www.linkedin.com/in/mariana-donato-761484175'
+        linkedin: 'linkedin.com/in/mariana-donato-761484175'
       },
       images: 5,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -647,7 +647,7 @@ export const state = () => ({
       ],
       links: {
         website: 'letterl.design',
-        instagram: '@l_i.r.l'
+        instagram: 'instagram.com/l_i.r.l'
       },
       images: 4,
       ext: ['jpg', 'jpg', 'jpg', 'jpg'],
@@ -731,8 +731,8 @@ export const state = () => ({
         'illustration'
       ],
       links: {
-        website: 'https://siennaengstrom.com ',
-        instagram: '@sienna.lux.e'
+        website: 'siennaengstrom.com ',
+        instagram: 'instagram.com/sienna.lux.e'
       },
       images: 5,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -767,7 +767,7 @@ export const state = () => ({
       name: 'Cameron Getty',
       discipline: 'photo',
       tags: '',
-      links: null,
+      links: {},
       images: 5,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
       projecttext: [
@@ -801,7 +801,7 @@ export const state = () => ({
       name: 'Kayla Giles',
       discipline: 'interior',
       tags: '',
-      links: null,
+      links: {},
       images: 4,
       ext: ['jpg', 'jpg', 'jpg', 'jpg'],
       projecttext: [
@@ -833,7 +833,7 @@ export const state = () => ({
       tags: [
         'illustration'
       ],
-      links: null,
+      links: {},
       images: 4,
       ext: ['jpg', 'jpg', 'jpg', 'jpg'],
       projecttext: [
@@ -877,7 +877,7 @@ export const state = () => ({
         'marketing'
       ],
       links: {
-        website: 'https://www.behance.net/rgsdesigns'
+        website: 'behance.net/rgsdesigns'
       },
       images: 7,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -920,7 +920,7 @@ export const state = () => ({
       name: 'Grace Haselmann',
       discipline: 'interior',
       tags: '',
-      links: '',
+      links: {},
       images: 10,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
       projecttext: [
@@ -979,9 +979,9 @@ export const state = () => ({
         'publishing'
       ],
       links: {
-        website: 'https://www.ashleysdesigns.com',
-        linkedin: 'https://www.linkedin.com/in/ashley-huck-27776a160/',
-        blog: 'https://ashleyhuck.wixsite.com/mysite/blog'
+        website: 'ashleysdesigns.com',
+        linkedin: 'linkedin.com/in/ashley-huck-27776a160/',
+        blog: 'ashleyhuck.wixsite.com/mysite/blog'
       },
       images: 10,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -1043,9 +1043,9 @@ export const state = () => ({
         'UX/UI'
       ],
       links: {
-        website: 'https://www.behance.net/kaileehutchison',
-        instagram: '@lil.k.lee',
-        linkedin: 'https://www.linkedin.com/in/kailee-hutchison-72599719b/'
+        website: 'behance.net/kaileehutchison',
+        instagram: 'instagram.com/lil.k.lee',
+        linkedin: 'linkedin.com/in/kailee-hutchison-72599719b/'
       },
       images: 6,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -1091,7 +1091,7 @@ export const state = () => ({
       ],
       links: {
         website: 'morethanhdesigns.webflow.io',
-        instagram: '@morethanhdesigns'
+        instagram: 'instagram.com/morethanhdesigns'
       },
       images: 6,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -1138,9 +1138,9 @@ export const state = () => ({
         'editorial photo'
       ],
       links: {
-        website: 'https://dribbble.com/ekarchmit',
-        instagram: '@the_kernest',
-        linkedin: 'https://www.linkedin.com/in/ernest-karchmit-3b58b5123'
+        website: 'dribbble.com/ekarchmit',
+        instagram: 'instagram.com/the_kernest',
+        linkedin: 'linkedin.com/in/ernest-karchmit-3b58b5123'
       },
       images: 6,
       ext: ['gif', 'gif', 'gif', 'gif', 'gif', 'gif'],
@@ -1184,7 +1184,7 @@ export const state = () => ({
         'art installations'
       ],
       links: {
-        website: 'https://issuu.com/hlamos17/docs/spring_show_portfolio'
+        website: 'issuu.com/hlamos17/docs/spring_show_portfolio'
       },
       images: 8,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -1236,7 +1236,7 @@ export const state = () => ({
         'print'
       ],
       links: {
-        instagram: '@marco_the_creator'
+        instagram: 'instagram.com/marco_the_creator'
       },
       images: 5,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -1277,7 +1277,7 @@ export const state = () => ({
       ],
       links: {
         website: 'aaronlouiedesign.com',
-        instagram: '@aaronlouie',
+        instagram: 'instagram.com/aaronlouie',
         linkedin: 'linkedin.com/in/aaron-louie'
       },
       images: 8,
@@ -1331,8 +1331,8 @@ export const state = () => ({
         'visual identity'
       ],
       links: {
-        website: 'www.kristyluong.com',
-        linkedin: 'https://www.linkedin.com/in/kristyluong/'
+        website: 'kristyluong.com',
+        linkedin: 'linkedin.com/in/kristyluong/'
       },
       images: 8,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -1432,8 +1432,8 @@ export const state = () => ({
       ],
       links: {
         website: 'yasmeenmu.myportfolio.com',
-        instagram: '@yasmeen.designs',
-        linkedin: 'https://www.linkedin.com/in/yasmeen-muhareb-8250b8153'
+        instagram: 'instagram.com/yasmeen.designs',
+        linkedin: 'linkedin.com/in/yasmeen-muhareb-8250b8153'
       },
       images: 5,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -1473,12 +1473,19 @@ export const state = () => ({
         'typography',
         'layout'
       ],
+      links: {
+        website: 'nowack.design',
+        instagram: 'instagram.com/nowackdesign',
+        linkedin: 'linkedin.com/in/nowackdesign',
+        behance: 'behance.net/nowack',
+        twitter: 'twitter.com/nowackdesign'
+      },
       images: 7,
       ext: ['mp4', 'gif', 'gif', 'png', 'gif', 'gif', 'gif'],
       projecttext: [
         {
           title: 'Motion Reel No. 3',
-          description: 'A brief compilation of selected motion graphics and animations created between the time frame of mid 2017 to late 2019. Content includes university projects, personal work, and client commissions primarily residing within the Esports industry. View the full video here: https://vimeo.com/339933237.'
+          description: 'A brief compilation of selected motion graphics and animations created between the time frame of mid 2017 to late 2019. Content includes university projects, personal work, and client commissions primarily residing within the Esports industry. View the full video here: vimeo.com/339933237.'
         },
         {
           title: 'Department of Design Spring Show No. 22',
@@ -1567,7 +1574,7 @@ export const state = () => ({
       ],
       links: {
         website: 'sierrashepherd.com',
-        instagram: '@Sierrashepherd_designs',
+        instagram: 'instagram.com/Sierrashepherd_designs',
         linkedin: 'linkedin.com/in/sierra-shepherd'
       },
       images: 5,
@@ -1611,7 +1618,7 @@ export const state = () => ({
       ],
       links: {
         website: 'Megansinclair.com',
-        instagram: '@_megan.sinclair',
+        instagram: 'instagram.com/_megan.sinclair',
         linkedin: ''
       },
       images: 7,
