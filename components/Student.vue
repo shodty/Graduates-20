@@ -19,7 +19,7 @@ b-col.work(cols="12")
                                     li.tags(v-for='tag in student.tags') {{tag}}
                                 p.main-text {{student.text}}
                                 button.view-work(@click="showStudentWork(index)") VIEW WORK
-                            hooper.student-work.h-100(v-if='student.showWork' :settings='hooperSettings' key='hooper' ref='hooper' v-on:slide='doSomething')
+                            hooper.student-work.h-100(v-if='student.showWork' :settings='hooperSettings' key='hooper' ref='hooper' v-on:slide='changeImageDesc')
                                 slide.slide-image(v-for="n in student.images" :key="student.code")
                                     video.vertical-center(v-if="student.ext[n-1] == 'mp4'" :class=" student.fill? 'project-image' : 'project-image' " :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop controls)
                                     expandable-image.vertical-center(v-else :class="student.fill? 'project-image' : 'project-image'" :src='getSrc(student, n)' :alt='student.image1')
@@ -54,7 +54,7 @@ export default {
         itemsToShow: 1,
         centerMode: true,
         infiniteScroll: true,
-        wheelControl: false
+        wheelControl: true
       }
     }
   },
@@ -105,10 +105,12 @@ export default {
     updateHoop () {
       this.$refs.hooper.updateWidth()
     },
-    doSomething (slide) {
+    changeImageDesc (slide) {
       if (slide.currentSlide > slide.slideFrom) {
         this.currentImg++
-        if (this.currentImg === this.student.images) { this.currentImg = 0 }
+        if (this.currentImg === this.student.images) {
+          this.currentImg = 0
+        }
       } else {
         this.currentImg--
         if (this.currentImg < 0) { this.currentImg = this.student.images + this.currentImg }
@@ -212,6 +214,7 @@ export default {
 .main-name, .view-work
   color #181819
   font-size 3vw
+  line-height 1.2
   text-transform: uppercase
   font-family: 'GT-Pressura', sans-serif
 
