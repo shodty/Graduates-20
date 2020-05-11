@@ -34,9 +34,9 @@ b-col.work(cols="12")
                                             a(:href=' "https://" + student.links.twitter' target="_blank")
                                                 img.social-img(src='../assets/img/twitter.png')
                                 ul.tagsone.col-12
-                                    li.tags(v-for='tag in student.tags') {{tag}}  |
+                                    li.tags(v-for='tag in student.tags') {{tag}} /
                                 .main-text.col-12.p-0 {{student.text}}
-                                button.view-work.col-sm-12.p-0(@click="showStudentWork(index)") VIEW WORK
+                                button.view-work.col-sm-12.p-0(@click="showStudentWork(index)") WORK⟶
                             hooper.student-work.h-100( v-if='student.showWork' :settings='hooperSettings' key='hooper' ref='hooper' v-on:slide='changeImageDesc')
                                 slide.h-100( v-for="n in student.images" :key="student.code")
                                     video.video-slide(v-if="student.ext[n-1] == 'mp4'" :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop controls)
@@ -235,12 +235,11 @@ export default {
 .tags
   font-size 1.3vw
   display inline-block
-  padding-right 4%
   color #181819
   text-transform: uppercase
   font-family: 'GT-Pressura', sans-serif
   line-height 1
-
+  padding-right 2%
 .selfie
   width: 100%
   position relative
@@ -269,7 +268,7 @@ export default {
 
 .main-text
   color #181819
-  font-family: 'GT-Pressura', sans-serif
+  font-family: 'Ciao-Regular', sans-serif
   font-weight 800
   padding-right: 15%
   font-size 1.2vw
@@ -285,9 +284,12 @@ export default {
 .aboutbutton, .workbutton
   margin-top 5%
   margin-right 1%
-  padding 0 1%
+  padding 0 3%
   font-family: 'GT-Pressura', sans-serif
   font-size 2vw
+  color white
+  background #181819
+  border none
 .fillbutton
   position absolute
   right 1%
@@ -301,7 +303,7 @@ export default {
 
 .proj-desc
   color #181819
-  font-family: 'GT-Pressura', sans-serif
+  font-family: 'Ciao-Regular', sans-serif
   font-weight 800
   font-size 1vw
   padding-top: 2%
@@ -353,7 +355,7 @@ ul
     right 0
     border none
     color white
-    background black
+    background #181819
     padding 0 2%
   }
 </style>

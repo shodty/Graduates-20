@@ -1,7 +1,7 @@
 <template lang="pug">
 b-container(:class='next? "overlay-more" : "overlay"')
     b-row
-        b-col.col-sm-8.offset-sm-2.col-lg-8.offset-lg-2.text-container
+        b-col.col-xs-8.offset-xs-2.col-lg-8.offset-lg-2.text-container
             p.intro-text(v-if='!next')
                 | <span class="welcome-header">We<span style='font-family: Animal-Soul'>l</span>co<span style='font-family: Animal-Soul'>m</span>e</span>
                 | <br><br>
@@ -38,12 +38,13 @@ b-container(:class='next? "overlay-more" : "overlay"')
                 |Furthermore, the Department seeks to prepare students to be articulate in their discipline: to be able to discuss and present their work, both in writing and in conversation, from the perspective of the functional and aesthetic concepts that underlay the work and how their decisions in these areas frame and solve a given problem.
             br
             .images
-                img.cursor-pointer(v-if='!next' src='../assets/img/more.png' @click='next = !next')
+                img.cursor-pointer.more(v-if='!next' src='../assets/img/more.png' @click='next = !next')
                 img.cursor-pointer(v-if='next' src='../assets/img/back.png' @click='next = !next')
             br
-            button.next.gb(@click="showDiscipline('graphic')") GRAPHIC
-            button.next.ib(@click="showDiscipline('interior')") INTERIOR
-            button.next.pb(@click="showDiscipline('photo')") PHOTO
+            //.col-12
+                button.next.gb.col-4(@click="showDiscipline('graphic')") GRAPHIC
+                button.next.ib.col-4(@click="showDiscipline('interior')") INTERIOR
+                button.next.pb.col-4(@click="showDiscipline('photo')") PHOTO
 </template>
 
 <script>
@@ -85,19 +86,26 @@ export default {
     font-family: 'Ciao-Regular', sans-serif
     font-size 20px
     font-weight 800
-
+    padding 0 2%
 .welcome-header
     font-family: 'GT-Pressura', sans-serif
     font-size 5vw
     text-transform uppercase
-    letter-spacing 15px
+    letter-spacing 12px
     line-height 1
-
+    @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+        font-size 5vh
+        line-height 1.5
+    }
 .next
-  margin-right 1%
-  padding 0 1%
   font-family: 'GT-Pressura', sans-serif
   font-size 2vw
+  color #181819
+  border: none
+  @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+        font-size 2vh
+        line-height 1.5
+  }
 
 .gb
     background #c1abd3
@@ -110,4 +118,7 @@ export default {
 
 .images
     text-align right
+
+.more
+    padding-right 4%
 </style>

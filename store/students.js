@@ -1214,7 +1214,7 @@ export const state = () => ({
       ],
       showWork: false,
       fill: false,
-      text: 'I am an 8 year student, finally acquiring my Bachelors of Fine Arts in Interior Architecture. Throughout my studies I have transitioned from Fashion Design to Art History and finally arriving at Interior Architecture. I believe that through my work you can see my dedication and my ability to accomplish beautiful projects. Creativity through building has always been part of me. Growing up in a creative hands-on environment has allowed me to understand our built environment in a logical and creative way. I consider myself a creative self starter, always inherently thinking of things a little differently than others. In the coming years I hope to be enrolled in a Masters program for Architecture, and eventually sit for my exams. I want to help support the integration of green and net zero design into the field so we can live harmoniously and push into the future with our environment and our future children in mind.'
+      text: 'I believe that through my work you can see my dedication and my ability to accomplish beautiful projects. Creativity through building has always been part of me. Growing up in a creative, hands-on environment has allowed me to understand our built environment in a logical and creative way. In the coming years I hope to be enrolled in a Masters program for Architecture, and eventually sit for my exams. I want to help support the integration of green and net zero design into the field so we can live harmoniously and push into the future with our environment and our future children in mind.'
     },
     {
       code: 'LopezM',
@@ -1949,7 +1949,7 @@ export const state = () => ({
       ],
       showWork: false,
       fill: false,
-      text: 'My name is Christian Jeanette Reynoso and I am a photography senior student at California State University Sacramento.  I was born in Fontana, California, but I grew up in Jalostotitlan, Jalisco Mexico.  I have been involved in professional photography for about 10 years and during this time I found the desire to portray who I am, where I come from, and the love I have for my culture through my photographs. My senior year at Sacramento State gave me the freedom to work on a project that fulfills my needs as a visual artist, photographer and as an individual. My project is a collection of images that portray the colorful components of the Mexican immigrant culture in Sacramento. My purpose as an artist is to promote my cultural heritage to enable members of my community to feel identified and represented in the artistic world. Also, I want to share my desire for inclusion and support of my culture in the city I live.'
+      text: 'I was born in Fontana, California, but I grew up in Jalostotitlan, Jalisco Mexico.  My desire as a photographer is to portray who I am, where I come from, and the love I have for my culture through my photographs. My project is a collection of images that portray the colorful components of the Mexican immigrant culture in Sacramento. My purpose as an artist is to promote my cultural heritage to enable members of my community to feel identified and represented in the artistic world. Also, I want to share my desire for inclusion and support of my culture in the city I live.'
     },
     {
       code: 'RomeroA',
@@ -2342,7 +2342,7 @@ export const state = () => ({
       ],
       showWork: false,
       fill: false,
-      text: 'My name is Julie Storozhuk and I am an architectural designer. I studied Interior Architecture at Sacramento State University and graduated with a Bachelors Spring 2020. Alongside school, I have been working at and engineering and design firm creating custom homes for people all around Sacramento. I am passionate about finding the best solution to any design problem while working directly with clients. I love traveling and dream to immerse myself in hospitality and travel accommodation design all around the globe. I love the aesthetic of simplicity and believe that comfort lies in a perfect combination of minimalistic yet rich choice in materials. Lastly, sustainable design has made a huge impact on me and I dream to be a part of creating architectural solutions not only for the wealthy but also for those living in third-world countries'
+      text: 'I am passionate about finding the best solution to any design problem while working directly with clients. I love traveling and dream to immerse myself in hospitality and travel accommodation design all around the globe. I love the aesthetic of simplicity and believe that comfort lies in a perfect combination of minimalistic yet rich choice in materials. Lastly, sustainable design has made a huge impact on me and I dream to be a part of creating architectural solutions not only for the wealthy but also for those living in third-world countries. Alongside school, I have been working at and engineering and design firm creating custom homes for people all around Sacramento. '
     },
     {
       code: 'TanT',
@@ -2556,7 +2556,7 @@ export const state = () => ({
       ],
       showWork: false,
       fill: false,
-      text: 'Hello, my name is Nuchee Vang. I am from Sacramento, Ca. I am Hmong American, raised by Hmong immigrants. In my family, I would be the first grandchild to graduate from a University. I am one of the oldest grandchildren, which makes it important to me to be a good leader for my younger sisters and cousins. I am currently graduating from Sac State, with a BFA in Interior Architecture. This year, our graduation ceremony was cancelled due to the current pandemic. This means that I would not be able to celebrate with my family, until the lockdown is lifted. Despite the troubles of this pandemic, I would like to showcase how I have improved my design projects through my education at Sac State. My education at Sac State has been incredibly rewarding; I found something that I would enjoy doing for the rest of my life. In my design journey, I have found my own style. Throughout my projects, I enjoy creating functional and minimalist design. My portfolio will demonstrate how I have grown as a designer in my own style, throughout my education at Sac State. Thank you for your time.  '
+      text: 'I am Hmong American, raised by Hmong immigrants. In my family, I would be the first grandchild to graduate from a University. I am one of the oldest grandchildren, which makes it important to me to be a good leader for my younger sisters and cousins. This year, our graduation ceremony was cancelled due to the current pandemic. This means that I would not be able to celebrate with my family, until the lockdown is lifted. Despite the troubles of this pandemic, I would like to showcase how I have improved my design projects through my education at Sac State. My education at Sac State has been incredibly rewarding; I found something that I would enjoy doing for the rest of my life. In my design journey, I have found my own style. Throughout my projects, I enjoy creating functional and minimalist design. '
     },
     {
       code: 'VargasS',

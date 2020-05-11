@@ -108,8 +108,10 @@ export default {
 
 <style scoped lang="stylus">
 .mobile-header
-
   height 100%
+
+body, p, h1, h2, h3
+ color #181819
 
 .header-graphic, .header-interior, .header-photo
   min-height 100%
@@ -117,11 +119,11 @@ export default {
   text-transform uppercase
   font-size 2vh
 .header-graphic
-  border-right 3px solid black
+  border-right 3px solid #181819
   background-color #c1abd3
 
 .header-interior
-  border-right 3px solid black
+  border-right 3px solid #181819
   background-color #b7dba7
 
 .header-photo

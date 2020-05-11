@@ -122,7 +122,7 @@ p
 
 ::-webkit-scrollbar-track
 {
-    border-left 2px solid black;
+    border-left 2px solid #181819;
     background-color: #F5F5F5;
 }
 
@@ -134,7 +134,7 @@ p
 
 ::-webkit-scrollbar-thumb
 {
-    background-color: #000000;
+    background-color: #181819;
 }
 
 .cursor-pointer

@@ -122,7 +122,7 @@ export default {
 
 .hide-menu, .show-menu
     position fixed
-    right 83.133%
+    right 83.233%
     top 50%
     height 25px
 
