@@ -55,6 +55,10 @@ export default {
       this.$store.dispatch('students/shuffleStudents')
       this.forceRerender()
     })
+    this.$bus.$on('alphabetizeStudents', (dir) => {
+      this.$store.dispatch('students/alphabetizeStudents', dir)
+      this.forceRerender()
+    })
     this.$bus.$on('homeReset', () => {
       this.showmenu = true
     })

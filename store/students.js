@@ -6,7 +6,7 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'UX/UI',
-        'print media'
+        'print'
       ],
       links: {
         website: 'designedbyrigo.com',
@@ -40,14 +40,11 @@ export const state = () => ({
       tags: [
         'type design',
         'typography',
-        'logo design',
         'illustration',
         'packaging',
         'product design',
         'UX/UI',
-        'music artwork',
-        'poster design',
-        'layout'
+        'poster design'
       ],
       links: {
         website: 'biancaayala.myportfolio.com/',
@@ -93,8 +90,7 @@ export const state = () => ({
       tags: [
         'illustration',
         'branding',
-        'UX/UI',
-        'visual design'
+        'UX/UI'
       ],
       links: {
         website: 'behance.net/wesleybelling',
@@ -219,7 +215,6 @@ export const state = () => ({
       name: 'Billy Bowles',
       discipline: 'graphic',
       tags: [
-        'visual design',
         'typography',
         'web design'
       ],
@@ -312,7 +307,7 @@ export const state = () => ({
       tags: [
         'portraits',
         'sacramento art',
-        'creative',
+        'creative content',
         'contemporary photography',
         '4x5 film',
         'manual process',
@@ -525,7 +520,6 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'illustration',
-        'visual design',
         'typography',
         'web design'
       ],
@@ -642,7 +636,6 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'concepting',
-        'visual design',
         'typography',
         'editorial design'
       ],
@@ -725,7 +718,7 @@ export const state = () => ({
       name: 'Sienna Engstrom',
       discipline: 'graphic',
       tags: [
-        'print design',
+        'print',
         'packaging',
         'branding',
         'copywriting',
@@ -865,15 +858,12 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'branding',
-        'UI/UX',
+        'UX/UI',
         'typography',
-        'layout',
-        'motion graphics',
+        'motion',
         'web design',
-        'logo design',
         'packaging',
-        'environmental graphics',
-        'print production',
+        'print',
         'photography',
         'marketing'
       ],
@@ -976,7 +966,7 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'brand identity',
-        'page layout',
+        'layout',
         'publishing'
       ],
       links: {
@@ -1037,8 +1027,7 @@ export const state = () => ({
       name: 'Kailee Hutchison',
       discipline: 'graphic',
       tags: [
-        'visual design',
-        'photogrpahy',
+        'photography',
         'branding',
         'layout',
         'UX/UI'
@@ -1085,9 +1074,9 @@ export const state = () => ({
       name: 'Timothy Huynh',
       discipline: 'graphic',
       tags: [
-        'visual identity',
+        'identity',
         'environmental design',
-        'publication design',
+        'publication ',
         'marketing'
       ],
       links: {
@@ -1133,7 +1122,7 @@ export const state = () => ({
       tags: [
         'identity',
         'event branding',
-        'UI',
+        'UX/UI',
         'type design',
         'product photography',
         'editorial photography'
@@ -1233,7 +1222,6 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'illustration',
-        'visual design',
         'print'
       ],
       links: {
@@ -1481,7 +1469,7 @@ export const state = () => ({
       tags: [
         'branding',
         'packaging',
-        'hand lettering'
+        'lettering'
       ],
       links: {
         website: 'yasmeenmu.myportfolio.com',
@@ -1523,7 +1511,6 @@ export const state = () => ({
       tags: [
         'branding',
         'web design',
-        'visuals',
         'packaging'
       ],
       links: {
@@ -1576,7 +1563,7 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'brand strategy',
-        'motion design',
+        'motion',
         'typography',
         'layout'
       ],
@@ -1722,7 +1709,7 @@ export const state = () => ({
         'packaging',
         'web design',
         'photography',
-        'publication design'
+        'publication '
       ],
       links: {
         website: 'dashthedesigner.com',
@@ -2362,7 +2349,7 @@ export const state = () => ({
       name: 'Jinkun (Tom) Tan',
       discipline: 'graphic',
       tags: [
-        'packaging,',
+        'packaging',
         'UX/UI',
         'poster design'
       ],
@@ -2419,8 +2406,7 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'UX/UI',
-        'typography',
-        'visual design'
+        'typography'
       ],
       links: {
       },
@@ -2479,7 +2465,7 @@ export const state = () => ({
       tags: [
         'functional design',
         'minimalist design',
-        'sustainable design'
+        'sustainability'
       ],
       links: {
         website: 'issuu.com/nucheevanggg '
@@ -2578,7 +2564,7 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'branding',
-        'publication design',
+        'publication ',
         'web design',
         'packaging'
       ],
@@ -2752,6 +2738,13 @@ export const mutations = {
     }
     state.studentObject = students
   },
+  alphabetizeStudents (state, dir) {
+    const students = state.studentObject
+    if (dir) {
+      students.sort((a, b) => (a.code > b.code) ? 1 : -1)
+    } else { students.sort((a, b) => (a.code > b.code) ? -1 : 1) }
+    state.studentObject = students
+  },
   fill: (state, index) => {
     state.studentObject[index].fill = !state.studentObject[index].fill
   },
@@ -2772,6 +2765,9 @@ export const actions = {
   },
   shuffleStudents: (context) => {
     context.commit('shuffleStudents')
+  },
+  alphabetizeStudents: (context, dir) => {
+    context.commit('alphabetizeStudents', dir)
   },
   fill: (context, index) => {
     context.commit('fill', index)
