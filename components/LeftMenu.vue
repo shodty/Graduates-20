@@ -18,6 +18,7 @@
                   button.sortbutton.px-2.my-2(@click="sortGraphic = !sortGraphic") {{ sortGraphic ? 'Overview' : 'Tags' }}
                   button.sortbutton.px-2.my-2(@click="alphabetizeStudents(true)") A-Z
                   button.sortbutton.px-2.my-2(@click="alphabetizeStudents(false)") Z-A
+                  button.sortbutton.px-2.my-2(@click="shuffleStudents") ?
                   ul(v-if='sortGraphic')
                       li.taglist(v-for='tag in graphicTags')
                         input.check(type='checkbox' :id='tag' :name='tag' :value='tag' v-model='currentgraphictags' @change="updateTags(currentgraphictags, 'graphic')" )
@@ -32,6 +33,7 @@
               button.sortbutton.px-2.my-2(@click="sortInterior = !sortInterior") {{ sortInterior ? 'Overview' : 'Tags' }}
               button.sortbutton.px-2.my-2(@click="alphabetizeStudents(true)") A-Z
               button.sortbutton.px-2.my-2(@click="alphabetizeStudents(false)") Z-A
+              button.sortbutton.px-2.my-2(@click="shuffleStudents") ?
               ul(v-if='sortInterior')
                   li.taglist(v-for='tag in interiorTags')
                     input.check(type='checkbox' :id='tag' :name='tag' :value='tag' v-model='currentinteriortags' @change="updateTags(currentinteriortags, 'interior')" )
@@ -46,6 +48,7 @@
               button.sortbutton.px-2.my-2(@click="sortPhoto = !sortPhoto") {{ sortPhoto ? 'Overview' : 'Tags' }}
               button.sortbutton.px-2.my-2(@click="alphabetizeStudents(true)") A-Z
               button.sortbutton.px-2.my-2(@click="alphabetizeStudents(false)") Z-A
+              button.sortbutton.px-2.my-2(@click="shuffleStudents") ?
               ul(v-if='sortPhoto')
                   li.taglist(v-for='tag in photoTags')
                     input.check(type='checkbox' :id='tag' :name='tag' :value='tag' v-model='currentphototags' @change="updateTags(currentphototags, 'photo')" )
