@@ -555,7 +555,7 @@ export const state = () => ({
       name: 'Cristiano Diaz',
       discipline: 'graphic',
       tags: [
-        'brand identity',
+        'branding',
         'lettering',
         'photography'
       ],

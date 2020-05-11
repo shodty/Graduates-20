@@ -151,4 +151,10 @@ p
     display: none !important;
   }
 }
+
+.hide-on-ipad {
+ @media(min-width: 1200px) {
+    display: none !important;
+  }
+}
 </style>

@@ -1,6 +1,6 @@
 <template lang="pug">
 .main-header
-  b-container.container-fluid.header.static-container.d-none.d-lg-block
+  b-container.container-fluid.header.static-container.d-none.d-lg-block.hide-on-mobile
     b-row.header.align-items-center
         .col-10.blankbg.align-self-center.h-100.d-inline-block
           .wrapped.h-100.d-flex(@click="showDiscipline('welcome')")
@@ -29,18 +29,25 @@
 
         .col-3.bluebg
           h1(v-html="styleWord('Special Thanks')")
-          h2 Leah for Animal Soul
-          h2 Massimo for Ciao
+          h2 Animal Soul
+          h2 Leah Moldanado
+          br
+          h2 G2 Ciao
+          h2 Massimiliano Audretsch
+          br
+          h2 GT Pressura (Educational)
+          h2 Grilli Type
+          br
           h2 Lauren Kelly
           h2 Eric Howard
         .col-3.greenbg
           h1(v-html="styleWord('CSUS Design')")
           h2 Department of Design
           h2 design@csus.edu
-          h2 www.design.com
+          h2 csus.edu/college/arts-letters/design/
         video.video-background( src='../assets/video/G20-ColorWarp.mp4' autoplay muted loop :class="showinfo? 'showingvideo' : 'hidingvideo' ")
         img.up-arrow.cursor-pointer(@click="showInfo" src='../assets/img/up.png')
-    b-row.mobile-header.align-items-center.d-md-block.d-lg-none
+    b-row.mobile-header.align-items-center.hide-on-ipad
       .col-4.align-self-center.p-0.m-0.h-100.d-inline-block
         .header-graphic.d-flex.justify-content-center(@click="showDiscipline('graphic')")
           .align-self-center Graphic
@@ -209,4 +216,7 @@ h3
   left 50%
   height 1.5%
 
+.d-md-block {
+  display: flex !important
+}
 </style>

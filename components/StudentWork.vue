@@ -46,12 +46,9 @@ export default {
   @media(max-width: 1000px) {
     height: 47vh
   }
-  @media(max-width: 1000px) {
-    height: 47vh
-  }
   // phone screens in portrait
   @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    height: 23.5vh
+    height: 47vh
   }
   // phone screens in landscape
   @media only screen and (min-device-width: 0px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
