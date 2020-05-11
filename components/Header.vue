@@ -1,23 +1,25 @@
 <template lang="pug">
-.main-header(:class="{ showinginfo: showinfo }")
-  b-container.container-fluid.header.info-container
-    b-row.header
-        b-col.blankbg(cols="11" )
-          .wrapped(@click="showDiscipline('welcome')")
-            img.logohorizontal.cursor-pointer(src='../assets/img/horizontal-logo.png')
-        b-col.blankbg.p-0(cols="1" )
-            b-col
-              p.info.cursor-pointer(@click="showInfo") Info
+.main-header
+  b-container.container-fluid.header.static-container.d-none.d-lg-block
+    b-row.header.align-items-center
+        .col-10.blankbg.align-self-center.h-100.d-inline-block
+          .wrapped.h-100.d-flex(@click="showDiscipline('welcome')")
+            img.logohorizontal.cursor-pointer.align-self-center.p-0(src='../assets/img/horizontal-logo.png')
+        .col-2.blankbg.h-100.d-inline-block
+            .d-flex.h-100.justify-content-end
+              .align-self-center
+                p.info.cursor-pointer(@click="showInfo") Info
+  b-container.container-fluid.header.info-container.info-main.p-0(:class="{ showinginfo: showinfo }")
     transition(name='fade')
       b-row.information.justify-content-center(v-show='showinfo')
-        b-col.redbg(cols="3")
+        .col-3.redbg
           h1(v-html="styleWord('Identity')")
           h2 Matt Vlach
           h1(v-html="styleWord('Website')")
           h2 Robbie Landsburg
-          h1(v-html="styleWord('Concept')")
+          h1(v-html="styleWord('Concept')") info
           h2 Matt Vlach & Robbie Landsburg
-          h3.concept
+          h3.concept.w-100
             | This website was conceptualized & created by Robbie Landsburg and Matt Vlach,
             | two alumnis of the 2018 & 2019 CSUS Graphic Design program. The idea emerged in response to the
             | current global health crisis preventing graduating students from having formal real-world ceremonies in which to showcase
@@ -25,19 +27,29 @@
             | opportunities for their future careers in this unprecedented new landscape and inspires them to adapt and find
             | new avenues by which to realize their creative potential.
 
-        b-col.bluebg(cols="3")
+        .col-3.bluebg
           h1(v-html="styleWord('Special Thanks')")
           h2 Leah for Animal Soul
           h2 Massimo for Ciao
           h2 Lauren Kelly
           h2 Eric Howard
-        b-col.greenbg(cols="3")
+        .col-3.greenbg
           h1(v-html="styleWord('CSUS Design')")
           h2 Department of Design
           h2 design@csus.edu
           h2 www.design.com
         video.video-background( src='../assets/video/G20-ColorWarp.mp4' autoplay muted loop :class="showinfo? 'showingvideo' : 'hidingvideo' ")
         img.up-arrow.cursor-pointer(@click="showInfo" src='../assets/img/up.png')
+    b-row.mobile-header.align-items-center.d-md-block.d-lg-none
+      .col-4.align-self-center.p-0.m-0.h-100.d-inline-block
+        .header-graphic.d-flex.justify-content-center(@click="showDiscipline('graphic')")
+          .align-self-center Graphic
+      .col-4.align-self-center.p-0.m-0.h-100.d-inline-block
+        .header-interior.d-flex.justify-content-center(@click="showDiscipline('interior')")
+          .align-self-center Interior
+      .col-4.p-0.m-0.h-100.d-inline-block
+        .header-photo.d-flex.justify-content-center(@click="showDiscipline('photo')")
+          .align-self-center Photo
 </template>
 
 <script>
@@ -88,39 +100,60 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+.mobile-header
+
+  height 100%
+
+.header-graphic, .header-interior, .header-photo
+  min-height 100%
+  font-family: 'GT-Pressura', sans-serif
+  text-transform uppercase
+  font-size 2vh
+.header-graphic
+  border-right 3px solid black
+  background-color #c1abd3
+
+.header-interior
+  border-right 3px solid black
+  background-color #b7dba7
+
+.header-photo
+  background-color #fbb03a
 
 .main-header
   z-index 1000
   background white
-  border-bottom 3px solid #181819
-  transition: height 1s ease, background 1s ease
 
+.info-main
+    border-bottom 3px solid #181819
+    height 100%
 .info
     font-family: 'GT-Pressura', sans-serif
     text-transform uppercase
     font-size 3vh
     font-weight 700
-    text-align center
-    padding-top 5%
+    text-align right
 
 .header
     z-index: 1000
+    height 100%
 
 .pinkbg
   background-color #f4a1c6
   border-left 3px solid #181819
 
 .logohorizontal
-    height: 5vh
+    height: 70%
     padding-top .5%
+
 .showinginfo
   height: 100vh
   background rgba(255,255,255,1)
 
 .information
-  padding-top 3%
-  width: 94%
-  margin 0 auto
+  padding-top 9%
+  width: 100%
+  margin 0
 
 h1
   font-family: 'GT-Pressura', sans-serif
@@ -136,19 +169,27 @@ h3
   font-size 1vw
 
 .redbg, .bluebg, .greenbg
-  margin 0 .5%
   z-index: 1000
 
 .blankbg
   z-index 1000
 
+.static-container
+  position fixed
+  left 0
+  top 0
+  height 6vh
+  z-index: 1000
+
 .info-container
   z-index: 1000
+  transition: height 1s ease, background 1s ease
+  background white
 
 .video-background
   position fixed
   top 0
-  min-width 100%
+  min-width 100vw
   min-height 100vh
   z-index: 0
   filter:opacity(70%)
@@ -156,7 +197,6 @@ h3
   transition: height 1s ease
 
 .showingvideo
-
   min-width 100vw
   transition: height 1s ease
 
@@ -168,4 +208,5 @@ h3
   bottom 2%
   left 50%
   height 1.5%
+
 </style>

@@ -2,7 +2,7 @@
 b-col.work(cols="12")
     b-col.students
             .studentinfo(key='studentinfo')
-              b-container(fluid).h-100
+              b-container.h-100
                 b-row.h-100(align-v='start')
                     b-col.col-4.left-section.col-4.d-flex.align-items-start
                         // transition-group(name="fade" mode='out-in')
@@ -12,29 +12,29 @@ b-col.work(cols="12")
                             h1.proj-title {{student.projecttext[currentImg].title}}
                             p.proj-desc {{student.projecttext[currentImg].description}}
                             button.aboutbutton(@click="showStudentWork(index)" :class="{ buttonpressed: !student.showWork}") ABOUT
-                    b-col.col-8.work-section.d-flex.align-items-center
+                    b-col.col-8.work-section
                             // transition-group(name="fade" mode='out-in')
-                            b-row.info-section.d-flex.align-items-center.col-12(v-if='!student.showWork' key='info')
-                                span.main-name.align-self-start.col-12.p-0(v-html="styleName(student.name)")
-                                br
-                                ul.social-links.col-12.p-0
-                                    li(v-if="hasWeb")
-                                      a(:href='"https://www." + student.links.website' target="_blank")
-                                        img(src='../assets/img/website.png' )
-                                    li(v-if='hasIg')
-                                      a(:href='"https://www." + student.links.instagram' target="_blank")
-                                        img(src='../assets/img/instagram.png')
-                                    li(v-if='hasLi')
-                                      a(:href=' "https://www." + student.links.linkedin' target="_blank")
-                                        img(src='../assets/img/linkedin.png')
-                                    li(v-if='hasBe')
-                                      a(:href=' "https://www." + student.links.behance' target="_blank")
-                                        img(src='../assets/img/behance.png')
-                                    li(v-if='hasTw')
-                                      a(:href=' "https://www." + student.links.twitter' target="_blank")
-                                        img(src='../assets/img/twitter.png')
-                                ul.tagsone.col-12.p-0
-                                    li.tags(v-for='tag in student.tags') {{tag}}
+                            b-row.info-section.col-12(v-if='!student.showWork' key='info')
+                                span.main-name.col-12.p-0(v-html="styleName(student.name)")
+                                .links-container.col-12.p-0
+                                    ul.social-links
+                                        li(v-if="hasWeb")
+                                            a(:href='"https://www." + student.links.website' target="_blank")
+                                                img.social-img(src='../assets/img/website.png' )
+                                        li(v-if='hasIg')
+                                            a(:href='"https://www." + student.links.instagram' target="_blank")
+                                                img.social-img(src='../assets/img/instagram.png')
+                                        li(v-if='hasLi')
+                                            a(:href=' "https://www." + student.links.linkedin' target="_blank")
+                                                img.social-img(src='../assets/img/linkedin.png')
+                                        li(v-if='hasBe')
+                                            a(:href=' "https://www." + student.links.behance' target="_blank")
+                                                img.social-img(src='../assets/img/behance.png')
+                                        li(v-if='hasTw')
+                                            a(:href=' "https://www." + student.links.twitter' target="_blank")
+                                                img.social-img(src='../assets/img/twitter.png')
+                                ul.tagsone.col-12
+                                    li.tags(v-for='tag in student.tags') {{tag}}  |
                                 p.main-text.col-12.p-0 {{student.text}}
                                 button.view-work.col-4.p-0(@click="showStudentWork(index)") VIEW WORK
                             hooper.student-work.h-100(v-if='student.showWork' :settings='hooperSettings' key='hooper' ref='hooper' v-on:slide='changeImageDesc')
@@ -209,6 +209,7 @@ export default {
 .work-section
   padding-left 0
   max-height 100%
+
 .info-section
   padding-left 2%
 .icon
@@ -224,21 +225,21 @@ export default {
 
 .tagsone
   display inline
+  padding 1% 0 4% 0
+  line-height 0
 
 .tagstoo
   display inline
   padding-left 2%
 
 .tags
-  font-size 1vw
+  font-size 1.3vw
   display inline-block
-  margin-right 2%
-  padding 0 8px
-  background #c1abd3
-  border-radius 15px
+  padding-right 4%
   color #181819
   text-transform: uppercase
   font-family: 'GT-Pressura', sans-serif
+  line-height 1
 
 .selfie
   width: 100%
@@ -294,7 +295,7 @@ export default {
   color #181819
   font-family: 'Ciao-Regular', sans-serif
   font-weight 800
-  font-size 16px
+  font-size 1vw
   padding-top: 2%
 
 .vertical-center, .hooper-list
@@ -303,7 +304,17 @@ export default {
     vertical-align: middle;
 
 .social-links li
-    display inline-block
-    padding-right 2%
+    display inline
+
+.social-img
+    width 5%
+    padding-right 1%
+ul
+    margin 0
+    padding-top 0
+
+.links-container, .social-links
+    padding  1% 0 2% 0
+    line-height 0
 
 </style>
