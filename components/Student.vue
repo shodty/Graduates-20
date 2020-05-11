@@ -19,23 +19,23 @@ b-col.work(cols="12")
                                 .links-container.col-12.p-0
                                     ul.social-links
                                         li(v-if="hasWeb")
-                                            a(:href='"https://www." + student.links.website' target="_blank")
+                                            a(:href='"https://" + student.links.website' target="_blank")
                                                 img.social-img(src='../assets/img/website.png' )
                                         li(v-if='hasIg')
-                                            a(:href='"https://www." + student.links.instagram' target="_blank")
+                                            a(:href='"https://" + student.links.instagram' target="_blank")
                                                 img.social-img(src='../assets/img/instagram.png')
                                         li(v-if='hasLi')
-                                            a(:href=' "https://www." + student.links.linkedin' target="_blank")
+                                            a(:href=' "https://" + student.links.linkedin' target="_blank")
                                                 img.social-img(src='../assets/img/linkedin.png')
                                         li(v-if='hasBe')
-                                            a(:href=' "https://www." + student.links.behance' target="_blank")
+                                            a(:href=' "https://" + student.links.behance' target="_blank")
                                                 img.social-img(src='../assets/img/behance.png')
                                         li(v-if='hasTw')
-                                            a(:href=' "https://www." + student.links.twitter' target="_blank")
+                                            a(:href=' "https://" + student.links.twitter' target="_blank")
                                                 img.social-img(src='../assets/img/twitter.png')
                                 ul.tagsone.col-12
                                     li.tags(v-for='tag in student.tags') {{tag}}  |
-                                p.main-text.col-12.p-0 {{student.text}}
+                                .main-text.col-12.p-0 {{student.text}}
                                 button.view-work.col-4.p-0(@click="showStudentWork(index)") VIEW WORK
                             hooper.student-work.h-100(v-if='student.showWork' :settings='hooperSettings' key='hooper' ref='hooper' v-on:slide='changeImageDesc')
                                 slide.h-100(v-for="n in student.images" :key="student.code")

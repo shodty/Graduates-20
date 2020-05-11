@@ -6,12 +6,12 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'UX/UI',
-        'print'
+        'print media'
       ],
       links: {
         website: 'designedbyrigo.com',
         instagram: 'instagram.com/designedbyrigo',
-        linkedin: 'linkedin.com/in/rigo-arreola'
+        linkedin: 'www.linkedin.com/in/rigo-arreola'
       },
       images: 3,
       ext: ['jpg', 'jpg', 'jpg'],
@@ -45,13 +45,14 @@ export const state = () => ({
         'packaging',
         'product design',
         'UX/UI',
+        'music artwork',
         'poster design',
         'layout'
       ],
       links: {
         website: 'biancaayala.myportfolio.com/',
         instagram: 'Instagram.com/biancagraphics',
-        linkedin: 'linkedin.com/in/biancagraphics'
+        linkedin: 'www.linkedin.com/in/biancagraphics'
       },
       images: 6,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -319,7 +320,7 @@ export const state = () => ({
         'digital art'
       ],
       links: {
-        website: 'davidcarpio.com ',
+        website: 'www.davidcarpio.com ',
         instagram: 'instagram.com/davidcarpio/'
       },
       images: 9,
@@ -376,9 +377,9 @@ export const state = () => ({
         'type design'
       ],
       links: {
-        website: 'camillecarandang.com',
+        website: 'www.camillecarandang.com',
         instagram: 'c.camille.carandang',
-        linkedin: 'linked.com/in/camille-carandang'
+        linkedin: 'www.linked.com/in/camille-carandang'
       },
       images: 7,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -472,26 +473,26 @@ export const state = () => ({
       ],
       links: {
         website: 'craintaylor.wixsite.com/mysite',
-        linkedin: 'linkedin.com/in/taylor-crain-468570178/'
+        linkedin: 'www.linkedin.com/in/taylor-crain-468570178/'
       },
       images: 9,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'png', 'png', 'png', 'png', 'jpg'],
       projecttext: [
         {
           title: 'Garden Highway House',
-          description: 'The Garden Highway house is a design plan for a plot of land along the Garden Highway. The land is located in the flood plane so structures must be built up 10 feet. My plan for the house was to allude to the house opening up to the river. My design plays with a path to discovery, framing the view of the river, and creating a large, open central space for entertaining. The front of the house differs significantly from the back, with the roofline alluding to the grandness of the exterior landscape in the backyard. The house is spatially divided into three regions which can be determined from interior walls but also from the material division on the front façade. The main central space is double height on one half where the dining area and living area reside. The staircase is also in this area and leads up to a upper living area that is flanked by private living spaces. The design is meant to be simple and to blend with its surroundings so as not to take away from the natural environment. '
+          description: 'The Garden Highway house is a design plan for a plot of land along the Garden Highway. The land is located in the flood plane so structures must be built up 10\'. My plan for the house was to allude to the house opening up to the river. My design plays with a path to discovery, framing the view of the river, and creating a large, open central space for entertaining. The front of the house differs significantly from the back, with the roofline alluding to the grandness of the exterior landscape in the backyard. The house is spatially divided into three regions which can be determined from interior walls but also from the material division on the front façade. The main central space is double height on one half where the dining area and living area reside. The staircase is also in this area and leads up to a upper living area that is flanked by private living spaces. The design is meant to be simple and to blend with its surroundings so as not to take away from the natural environment. '
         },
         {
           title: 'Garden Highway House',
-          description: 'The Garden Highway house is a design plan for a plot of land along the Garden Highway. The land is located in the flood plane so structures must be built up 10 feet. My plan for the house was to allude to the house opening up to the river. My design plays with a path to discovery, framing the view of the river, and creating a large, open central space for entertaining. The front of the house differs significantly from the back, with the roofline alluding to the grandness of the exterior landscape in the backyard. The house is spatially divided into three regions which can be determined from interior walls but also from the material division on the front façade. The main central space is double height on one half where the dining area and living area reside. The staircase is also in this area and leads up to a upper living area that is flanked by private living spaces. The design is meant to be simple and to blend with its surroundings so as not to take away from the natural environment. '
+          description: 'The Garden Highway house is a design plan for a plot of land along the Garden Highway. The land is located in the flood plane so structures must be built up 10\'. My plan for the house was to allude to the house opening up to the river. My design plays with a path to discovery, framing the view of the river, and creating a large, open central space for entertaining. The front of the house differs significantly from the back, with the roofline alluding to the grandness of the exterior landscape in the backyard. The house is spatially divided into three regions which can be determined from interior walls but also from the material division on the front façade. The main central space is double height on one half where the dining area and living area reside. The staircase is also in this area and leads up to a upper living area that is flanked by private living spaces. The design is meant to be simple and to blend with its surroundings so as not to take away from the natural environment. '
         },
         {
           title: 'Garden Highway House',
-          description: 'The Garden Highway house is a design plan for a plot of land along the Garden Highway. The land is located in the flood plane so structures must be built up 10 feet. My plan for the house was to allude to the house opening up to the river. My design plays with a path to discovery, framing the view of the river, and creating a large, open central space for entertaining. The front of the house differs significantly from the back, with the roofline alluding to the grandness of the exterior landscape in the backyard. The house is spatially divided into three regions which can be determined from interior walls but also from the material division on the front façade. The main central space is double height on one half where the dining area and living area reside. The staircase is also in this area and leads up to a upper living area that is flanked by private living spaces. The design is meant to be simple and to blend with its surroundings so as not to take away from the natural environment. '
+          description: 'The Garden Highway house is a design plan for a plot of land along the Garden Highway. The land is located in the flood plane so structures must be built up 10\'. My plan for the house was to allude to the house opening up to the river. My design plays with a path to discovery, framing the view of the river, and creating a large, open central space for entertaining. The front of the house differs significantly from the back, with the roofline alluding to the grandness of the exterior landscape in the backyard. The house is spatially divided into three regions which can be determined from interior walls but also from the material division on the front façade. The main central space is double height on one half where the dining area and living area reside. The staircase is also in this area and leads up to a upper living area that is flanked by private living spaces. The design is meant to be simple and to blend with its surroundings so as not to take away from the natural environment. '
         },
         {
           title: 'Garden Highway House',
-          description: 'The Garden Highway house is a design plan for a plot of land along the Garden Highway. The land is located in the flood plane so structures must be built up 10 feet. My plan for the house was to allude to the house opening up to the river. My design plays with a path to discovery, framing the view of the river, and creating a large, open central space for entertaining. The front of the house differs significantly from the back, with the roofline alluding to the grandness of the exterior landscape in the backyard. The house is spatially divided into three regions which can be determined from interior walls but also from the material division on the front façade. The main central space is double height on one half where the dining area and living area reside. The staircase is also in this area and leads up to a upper living area that is flanked by private living spaces. The design is meant to be simple and to blend with its surroundings so as not to take away from the natural environment. '
+          description: 'The Garden Highway house is a design plan for a plot of land along the Garden Highway. The land is located in the flood plane so structures must be built up 10\'. My plan for the house was to allude to the house opening up to the river. My design plays with a path to discovery, framing the view of the river, and creating a large, open central space for entertaining. The front of the house differs significantly from the back, with the roofline alluding to the grandness of the exterior landscape in the backyard. The house is spatially divided into three regions which can be determined from interior walls but also from the material division on the front façade. The main central space is double height on one half where the dining area and living area reside. The staircase is also in this area and leads up to a upper living area that is flanked by private living spaces. The design is meant to be simple and to blend with its surroundings so as not to take away from the natural environment. '
         },
         {
           title: 'Richard Meier House',
@@ -565,7 +566,7 @@ export const state = () => ({
         'photography'
       ],
       links: {
-        website: 'behance.net/thetypeguy',
+        website: 'behance.net/cristiandi8acb',
         instagram: 'instagram.com/the.typeguy'
       },
       images: 5,
@@ -605,7 +606,7 @@ export const state = () => ({
         'interior architecture'
       ],
       links: {
-        linkedin: 'linkedin.com/in/mariana-donato-761484175'
+        linkedin: 'www.linkedin.com/in/mariana-donato-761484175'
       },
       images: 5,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -766,7 +767,7 @@ export const state = () => ({
       code: 'GettyC',
       name: 'Cameron Getty',
       discipline: 'photo',
-      tags: '',
+      tags: [],
       links: {},
       images: 5,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -794,20 +795,20 @@ export const state = () => ({
       ],
       showWork: false,
       fill: false,
-      text: ''
+      text: null
     },
     {
       code: 'GilesK',
       name: 'Kayla Giles',
       discipline: 'interior',
-      tags: '',
+      tags: [],
       links: {},
       images: 4,
       ext: ['jpg', 'jpg', 'jpg', 'jpg'],
       projecttext: [
         {
           title: 'Photo & Artwork',
-          description: ''
+          description: null
         },
         {
           title: 'River House',
@@ -867,17 +868,17 @@ export const state = () => ({
         'UI/UX',
         'typography',
         'layout',
-        'motion design',
+        'motion graphics',
         'web design',
         'logo design',
         'packaging',
-        'environmental design',
-        'print',
+        'environmental graphics',
+        'print production',
         'photography',
         'marketing'
       ],
       links: {
-        website: 'behance.net/rgsdesigns'
+        website: 'www.behance.net/rgsdesigns'
       },
       images: 7,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -919,7 +920,7 @@ export const state = () => ({
       code: 'HaselmannG',
       name: 'Grace Haselmann',
       discipline: 'interior',
-      tags: '',
+      tags: [],
       links: {},
       images: 10,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -967,7 +968,7 @@ export const state = () => ({
       ],
       showWork: false,
       fill: false,
-      text: ''
+      text: null
     },
     {
       code: 'HuckA',
@@ -979,8 +980,8 @@ export const state = () => ({
         'publishing'
       ],
       links: {
-        website: 'ashleysdesigns.com',
-        linkedin: 'linkedin.com/in/ashley-huck-27776a160/',
+        website: 'www.ashleysdesigns.com',
+        linkedin: 'www.linkedin.com/in/ashley-huck-27776a160/',
         blog: 'ashleyhuck.wixsite.com/mysite/blog'
       },
       images: 10,
@@ -1043,9 +1044,9 @@ export const state = () => ({
         'UX/UI'
       ],
       links: {
-        website: 'behance.net/kaileehutchison',
+        website: 'www.behance.net/kaileehutchison',
         instagram: 'instagram.com/lil.k.lee',
-        linkedin: 'linkedin.com/in/kailee-hutchison-72599719b/'
+        linkedin: 'www.linkedin.com/in/kailee-hutchison-72599719b/'
       },
       images: 6,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -1085,7 +1086,7 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'visual identity',
-        'enivronmental design',
+        'environmental design',
         'publication design',
         'marketing'
       ],
@@ -1134,13 +1135,13 @@ export const state = () => ({
         'event branding',
         'UI',
         'type design',
-        'product photo',
-        'editorial photo'
+        'product photography',
+        'editorial photography'
       ],
       links: {
         website: 'dribbble.com/ekarchmit',
         instagram: 'instagram.com/the_kernest',
-        linkedin: 'linkedin.com/in/ernest-karchmit-3b58b5123'
+        linkedin: 'www.linkedin.com/in/ernest-karchmit-3b58b5123'
       },
       images: 6,
       ext: ['gif', 'gif', 'gif', 'gif', 'gif', 'gif'],
@@ -1331,8 +1332,8 @@ export const state = () => ({
         'visual identity'
       ],
       links: {
-        website: 'kristyluong.com',
-        linkedin: 'linkedin.com/in/kristyluong/'
+        website: 'www.kristyluong.com',
+        linkedin: 'www.linkedin.com/in/kristyluong/'
       },
       images: 8,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -1380,7 +1381,7 @@ export const state = () => ({
       discipline: 'graphic',
       tags: [
         'branding',
-        'motion design',
+        'motion',
         'UX/UI',
         'illustration'
       ],
@@ -1422,6 +1423,58 @@ export const state = () => ({
       text: "I'm a designer who values research and learning, and understanding the world around me. I find simplicity, functionality, and accessibility in design fascinating, but also enjoy more When I'm not designing, I enjoy drawing and playing video games."
     },
     {
+      code: 'MeszarosA',
+      name: 'Aniko Meszaros',
+      discipline: 'photo',
+      tags: [
+        'photographer',
+        'fine art',
+        'portraiture',
+        'self-portraiture',
+        'branding'
+      ],
+      links: {
+        website: 'anikomphotography.com',
+        instagram: 'instagram.com/Anikomphoto ',
+        linkedin: 'www.linkedin.com/in/aniko-meszaros-258b59115/'
+      },
+      images: 7,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'Untitled',
+          description: 'Shapes and form as well absurdness and humor are main elements in my photography. Captured with 120 Medium format camera'
+        },
+        {
+          title: 'Untitled',
+          description: '“Old River Road” Project. Personally, one of my favorite school assignments. I used the landscape as my stage. I carefully picked my location where I brought my props to create a mood/feeling to capture how that location inspired me. This series was taken with a Large Format (4x5) camera.'
+        },
+        {
+          title: 'Untitled',
+          description: '“Old River Road” Project. Personally, one of my favorite school assignments. I used the landscape as my stage. I carefully picked my location where I brought my props to create a mood/feeling to capture how that location inspired me. This series was taken with a Large Format (4x5) camera.'
+        },
+        {
+          title: '"Let it"',
+          description: 'Freedom and release. This piece is a representation of how sometimes we don’t feel the weight of the weightless. Carrying things from the past, and holding on to them too long can became our own trap. To “Let it” go or “Let it” be it\'s on the viewer to decide which direction to take. Taken with 120 Medium format camera. Manipulated in the darkroom then scanned.'
+        },
+        {
+          title: '“Balance”',
+          description: 'For my Senior Project I have moved from film photography to digital photography. I have visited my friend for the first time in a cabin. I saw that table and wood panel I have immediately imagined myself using that space in my photography. Next time when I went to visit I took a dress with me and I look around in the house to collect objects to create an image.'
+        },
+        {
+          title: 'Untitled',
+          description: 'Don’t see, Don’t Hear, Don’t Speak. Quick shooting in the studio.'
+        },
+        {
+          title: 'April of 2020',
+          description: ''
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'I am a visual artist and I use photography as my tool to make my ideas come alive. During my university years Fine Art and Self-portraiture has grown close to me. My series started out in the lack of time and finding models. But then, I found self-portraits are such a direct and honest way of expressing yourself. It involves lots of freedom, creativity, and problem solving. Creating a scene and making yourself to be the main character of your story.  To me, I great photographs have always been the ones that gave me a lot of feelings or questions, that touched me on some level. My series are filled with a lot of symbolism. I invite my viewer to my world not necessary to find an answer but to have many questions. '
+    },
+    {
       code: 'MuharebY',
       name: 'Yasmeen Muhareb',
       discipline: 'graphic',
@@ -1433,7 +1486,7 @@ export const state = () => ({
       links: {
         website: 'yasmeenmu.myportfolio.com',
         instagram: 'instagram.com/yasmeen.designs',
-        linkedin: 'linkedin.com/in/yasmeen-muhareb-8250b8153'
+        linkedin: 'www.linkedin.com/in/yasmeen-muhareb-8250b8153'
       },
       images: 5,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -1462,6 +1515,60 @@ export const state = () => ({
       showWork: false,
       fill: false,
       text: "I'm Yasmeen Muhareb, a Graphic Designer currently based in Sacramento, CA. I love typography and cannot pass up noticing my favorite typefaces in the wild. When I'm not sitting at my desk designing, (pre-pandemic)  you could find me at a concert, traveling, or painting. I love solving problems with creative design solutions."
+    },
+    {
+      code: 'NguyenJ',
+      name: 'Jay Nguyen',
+      discipline: 'graphic',
+      tags: [
+        'branding',
+        'web design',
+        'visuals',
+        'packaging'
+      ],
+      links: {
+        website: 'www.jdesigr.com',
+        instagram: 'instagram.com/jdesigr'
+      },
+      images: 8,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'Hooked',
+          description: 'Branding. Business system, UI'
+        },
+        {
+          title: 'Puppet',
+          description: 'Branding, Brand Identity '
+        },
+        {
+          title: 'Herky',
+          description: 'Branding, Business system, Email Marketing, & UI '
+        },
+        {
+          title: 'Spring Show 2020',
+          description: 'Concepting, Branding, products '
+        },
+        {
+          title: 'Gig Posters  ',
+          description: ' Visual, Messages'
+        },
+        {
+          title: ' Typography Postcards',
+          description: 'Layout, Messages '
+        },
+        {
+          title: ' Dorothea Lange Honoring Brochure',
+          description: 'Honoring, typography, layout '
+        },
+        {
+          title: 'Camellia',
+          description: ' Branding, Business System, Packaging Products'
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'I’m a visual communicator who values the process of creativity.'
     },
     {
       code: 'NowackG',
@@ -1515,7 +1622,53 @@ export const state = () => ({
       showWork: false,
       fill: false,
       text:
-              'I am a graphic and motion designer based in California that specializes in brand solutions through design and animation. My passion lies in exploring the psychology of design and how it influences thinking and behavior. I have a focus centered around the incorporation of design within meaningful and intentional brand strategies that effectively connect businesses with their customers.'
+            'I am a graphic and motion designer based in California that specializes in brand solutions through design and animation. My passion lies in exploring the psychology of design and how it influences thinking and behavior. I have a focus centered around the incorporation of design within meaningful and intentional brand strategies that effectively connect businesses with their customers.'
+    },
+    {
+      code: 'OliverB',
+      name: 'Brent Oliver',
+      discipline: 'graphic',
+      tags: [
+        'branding',
+        'marketing',
+        'motion'
+      ],
+      links: {
+        website: 'brentoliver.io',
+        instagram: 'Instagram.com/btographics',
+        twitter: 'twitter.com/BrentsLiver'
+      },
+      images: 6,
+      ext: ['png', 'jpg', 'png', 'jpg', 'jpg', 'mp4'],
+      projecttext: [
+        {
+          title: 'Logos',
+          description: 'Collection of logos for a variety of projects.'
+        },
+        {
+          title: 'Book',
+          description: 'Full book design for H.G Wells’ War of the Worlds.'
+        },
+        {
+          title: 'Music Posters',
+          description: 'Posters for different musical artists.'
+        },
+        {
+          title: 'Varial',
+          description: 'Product design for skateboarding company Varial.'
+        },
+        {
+          title: 'Tank Series',
+          description: 'Poster series for an event at the Bovington Tank Museum.'
+        },
+        {
+          title: 'FotA',
+          description: 'Brief repeating motion graphic for the Festival of the Arts.'
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'I have an ever-present desire to create. I need to construct new and interesting pieces in order to feel like I have accomplished something. Due to this, I left my original degree as an Aeronautical Engineer and switched to Graphic Design. The ability to create visually interesting projects that have a purpose, a motivation, and a system has been a great experience that I want to continue into my future.'
     },
     {
       code: 'OwensM',
@@ -1559,6 +1712,445 @@ export const state = () => ({
       showWork: false,
       fill: false,
       text: "I am a graphic designer with a love for craft and positive impacts. I enjoy the process of branding design and finding the tone and look of a brand then implementing it as a system. One of the best things I have experienced with graphic design is the community that comes with it and I'm looking forward to making more connections going forward in my career."
+    },
+    {
+      code: 'PalmeroA',
+      name: 'Ashlyn Palmero',
+      discipline: 'graphic',
+      tags: [
+        'branding',
+        'packaging',
+        'web design',
+        'photography',
+        'publication design'
+      ],
+      links: {
+        website: 'dashthedesigner.com',
+        instagram: 'instagram.com/dash.the.designer '
+      },
+      images: 6,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'mp4'],
+      projecttext: [
+        {
+          title: 'My First Summer in the Sierra',
+          description: 'Book design for John Muir’s My First Summer in the Sierra. The case was designed to serve as  a visual interpretation of Muir’s journal. '
+        },
+        {
+          title: 'My First Summer in the Sierra',
+          description: 'Book design for John Muir’s My First Summer in the Sierra. The case was designed to serve as  a visual interpretation of Muir’s journal. '
+        },
+        {
+          title: 'Wundrhaus Sacramento',
+          description: 'An identity system for a fictitious, family-friendly interactive mural museum in Sacramento.'
+        },
+        {
+          title: 'Festival of the Arts',
+          description: 'A visual identity system for the annual Festival of the Arts celebrating the nine departments within the Sac State College of Arts & Letters. This event is all ages and open to the public. All nine departments celebrate creativity, which brought about the concept of “Outside the Box” and is visually presented in a way that is fun, new, inclusive, and bold.'
+        },
+        {
+          title: 'I Will Not Get Very Far With This Attitude',
+          description: 'A Bart Simpson chalkboard gag designed in the style of David Carson. Just for fun (and extra credit).'
+        },
+        {
+          title: 'The Garage',
+          description: 'A quick logo animation for a fictitious private bouldering gym in an old auto museum. In addition to creating the visual identity, I also learned about UI design by designing a desktop and mobile website. '
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'Hello, my name is Dash, and I am a graphic designer. I strive to create work that reflects my own appreciation of nature, freedom and simplicity by igniting curiosity and instilling a sense of adventure in whoever comes across it.'
+    },
+    {
+      code: 'ParksN',
+      name: 'Natalie Parks',
+      discipline: 'graphic',
+      tags: [
+        'illustration',
+        'typography',
+        'branding',
+        'packaging'
+      ],
+      links: {
+        website: 'www.natalieparksdesign.com/',
+        instagram: 'instagram.com/ncp.graphics',
+        linkedin: 'www.linkedin.com/in/natalie-parks98'
+      },
+      images: 5,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'Untitled',
+          description: 'Concert gig poster series. These informational concert posters were personally illustrated. Conceptual school project in which one poster was designed every two weeks.'
+        },
+        {
+          title: 'Untitled',
+          description: 'Sacramento State Parking Sturcture 2 redesign. Murals were per-sonally illustrated. '
+        },
+        {
+          title: 'Untitled',
+          description: 'Typography spread exercise. Research and layout exploration for a slab serif typeface. '
+        },
+        {
+          title: 'Untitled',
+          description: 'Packaging design and branding exploration. Label graphics are self illustrated. Company was conceptualized and built all the way from branding to package design. '
+        },
+        {
+          title: 'Untitled',
+          description: 'Sacramento State’s Spring Show campaign. Campaign purpose was to advertise the Department of Design’s Annual Spring Show to a wide range of audience members to boost attendance.'
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'Being a very visual person, I am constantly discovering new tech-niques and new ways to approach my designs in the world around me. I love to travel, and I have found that the large amount that I travel consistently keeps me open minded, which carries over into my design work. I am always open to try new styles—whether it is a new style of illustration, or a new style of typography. While I am adept in many aspects of design, I love every opportunity to utilize my illustration skills in my design work, and I often marry my illustrations with typography. I am constantly seeking to push my boundaries and to make the world we live in a more beautiful place.'
+    },
+    {
+      code: 'PenaJ',
+      name: 'Jess Pena',
+      discipline: 'photo',
+      tags: [
+        'intimate portraiture',
+        'weddings',
+        'film photography',
+        'story telling',
+        'portraiture'
+      ],
+      links: {},
+      images: 10,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'mp4', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'Interludes of Intimacy',
+          description: "Interludes of Intimacy is a project that is a visual experience of intimate moments in relationships with one's partner or one's self."
+        },
+        {
+          title: 'Interludes of Intimacy',
+          description: "Interludes of Intimacy is a project that is a visual experience of intimate moments in relationships with one's partner or one's self."
+        },
+        {
+          title: 'Intoxicated: Behind Bars',
+          description: 'Intoxicated: Behind Bars is a project consisting of a series of photographs featuring couples that find themselves in bars. In this series I take it further by challenging each couple with their comfortability in a very public vicinity and showing that through colors, gestures, and emotions; providing the viewers with the narrative.'
+        },
+        {
+          title: 'Intoxicated: Behind Bars',
+          description: 'Intoxicated: Behind Bars is a project consisting of a series of photographs featuring couples that find themselves in bars. In this series I take it further by challenging each couple with their comfortability in a very public vicinity and showing that through colors, gestures, and emotions; providing the viewers with the narrative.'
+        },
+        {
+          title: 'Chaney & Bryan',
+          description: 'Chaney & Bryan a short video to express the wholesome relationship between two individuals.'
+        },
+        {
+          title: 'Untitled',
+          description: 'The series is meant to represent what we simply can’t forget, to realize what means most to us, and to be okay with what we wish would consume us again.'
+        },
+        {
+          title: 'Untitled',
+          description: 'The series is meant to represent what we simply can’t forget, to realize what means most to us, and to be okay with what we wish would consume us again.'
+        },
+        {
+          title: 'Phil, Burger Patch, 2019',
+          description: 'Phil, Burger Patch, 2019 is an environmental portrait for the owner, Phil Horn, of the vegan restaurant Burger Patch in Sacramento, Ca.'
+        },
+        {
+          title: 'Quarantine Walk',
+          description: 'Quarantine Walk is a collection of photographs that serve as a visual experience during the COVID-19 pandemic.'
+        },
+        {
+          title: 'Quarantine Walk',
+          description: 'Quarantine Walk is a collection of photographs that serve as a visual experience during the COVID-19 pandemic.'
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: "I have always been fascinated with people, the connections they share with others, the way hands create conversations, and how eyes can speak through black and whites in the world due to their very own colors. There are a few mantras I carry in my back pocket when taking photographs, one is the ability to give a full experience of what I experience through my photographs even if it's just a sliver. The other is, when photographing people I want the viewers to be reminded of a real raw connection they had, have, and could have. As my progression as an artist continues, I’m continuing my path into the education system to further my passion by educating upcoming artists with their own."
+    },
+    {
+      code: 'RecioA',
+      name: 'Ariel-Luna Recio',
+      discipline: 'photo',
+      tags: [
+        'art photography'
+      ],
+      links: {
+        instagram: 'instagram.com/luunar_'
+      },
+      images: 6,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'Cut By',
+          description: '#illusion #digital #newformalism'
+        },
+        {
+          title: 'Cut Through',
+          description: '#illusion #digital #newformalism'
+        },
+        {
+          title: 'Sweep and Slide ',
+          description: '#diptychs #naturevmanmade'
+        },
+        {
+          title: 'Leafy Song',
+          description: '#diptychs #naturevmanmade'
+        },
+        {
+          title: 'Exhausted Ripple ',
+          description: '#naturevmankind #diptychs '
+        },
+        {
+          title: 'Cracked and Bake',
+          description: '#naturevmankind #diptychs '
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'I love the simplicity and complexity of the world we live in and I love being able to showcase it through photography. Whether it is the beauty of nature and infrastructure or the trickery of a mirror- being able to express myself and my views through this medium is so fun.  '
+    },
+    {
+      code: 'ReynosoJ',
+      name: 'Christian Jeanette Reynoso',
+      discipline: 'photo',
+      tags: [
+        'photography',
+        'mexican immigrant culture'
+      ],
+      links: {
+        instagram: 'Jeanr_photo '
+      },
+      images: 10,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'El mural',
+          description: 'This photograph represents the art in a Mexican neighborhood. '
+        },
+        {
+          title: 'La Quinseañera ',
+          description: 'This photograph represents traditional Mexican events.'
+        },
+        {
+          title: 'Los Zarapes',
+          description: 'This photograph represents the artisanal and different styles of belts from different Mexican regions. '
+        },
+        {
+          title: 'Los Fajos',
+          description: 'This photograph represents the artisanal and different styles of belts from different Mexican regions. '
+        },
+        {
+          title: 'El mandado ',
+          description: 'This photograph represents the activity of Mexican people doing their grocery shopping using these traditional bags. '
+        },
+        {
+          title: 'El Luchador',
+          description: 'This photograph represents las luchas (Mexican wrestling), Mexican entertainment events. '
+        },
+        {
+          title: 'El Chile',
+          description: 'This photograph represents one of the most used ingredients in Mexican cuisine. '
+        },
+        {
+          title: 'El Elotero',
+          description: 'This photograph represents Mexican snacking culture'
+        },
+        {
+          title: 'El Jornalero',
+          description: 'This photograph represents all the Mexican immigrants hard workers in the USA.'
+        },
+        {
+          title: 'El Orgullo',
+          description: 'This photograph represent how proud Mexicans feel about their culture. '
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'My name is Christian Jeanette Reynoso and I am a photography senior student at California State University Sacramento.  I was born in Fontana, California, but I grew up in Jalostotitlan, Jalisco Mexico.  I have been involved in professional photography for about 10 years and during this time I found the desire to portray who I am, where I come from, and the love I have for my culture through my photographs. My senior year at Sacramento State gave me the freedom to work on a project that fulfills my needs as a visual artist, photographer and as an individual. My project is a collection of images that portray the colorful components of the Mexican immigrant culture in Sacramento. My purpose as an artist is to promote my cultural heritage to enable members of my community to feel identified and represented in the artistic world. Also, I want to share my desire for inclusion and support of my culture in the city I live.'
+    },
+    {
+      code: 'RomeroA',
+      name: 'Arilene Romero-Aleman',
+      discipline: 'graphic',
+      tags: [
+        'branding',
+        'print',
+        'illustrations',
+        'UX/UI'
+      ],
+      links: {
+        instagram: 'instagram.com/romerodsgns',
+        linkedin: 'www.linkedin.com/in/arilene-romero-aleman-bb0406198/'
+      },
+      images: 5,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'Spring Show',
+          description: 'The Spring Show is an annual event held by the Department of Design where students can showcase their design work. The purpose of this project was to come up with a theme that equally represents the department’s three programs: Graphic Design, Photography, and Architecture.'
+        },
+        {
+          title: 'Gig Posters',
+          description: 'Throughout this series of posters, I experimented with different design styles. These two posters stood out to me, because they’re a style I was more comfortable working with. However, I would like to try out different styles that could help me become a better graphic designer'
+        },
+        {
+          title: 'Typography',
+          description: 'Typography is an interest of mine, thanks to this project. It was a fun project that allowed me to create a custom design. I tried to come up with something different using circular forms to make each letter. The corners were the trickiest part of this project.'
+        },
+        {
+          title: 'Illustrations',
+          description: 'Illustration has recently become an interest of mine due to a branding project that heavily uses illustrations. These illustrations, in particular, are part of that project and were used for candle packaging.'
+        },
+        {
+          title: 'Branding',
+          description: 'This is branding for a fictious archery academy called Center Focus. The logo is custom made. The typography is an original design that was made to match the look of an arrow.'
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'Hello! My name is Arilene. I like to listen to music and play video games on my free time. Video games have always been an interest of mine that helped me make the decision to pursue Graphic Design. However, I’m still developing my design skills and since then my interests have changed. I’m currently interested in packaging design, print design, branding, and UI/UX design. I’m open to many styles, as I’ve tried many of them. Yes, I’m searching for my own unique style, but being versatile is a quality that would benefit me as a graphic designer.'
+    },
+    {
+      code: 'SandersR',
+      name: 'Rachel Sanders',
+      discipline: 'graphic',
+      tags: [
+        'typography',
+        'illustration'
+      ],
+      links: {
+      },
+      images: 18,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'png', 'png', 'png', 'png', 'jpg', 'jpg', 'jpg', 'png', 'jpg', 'jpg', 'png', 'png', 'jpg'],
+      projecttext: [
+        {
+          title: 'Syzygy',
+          description: 'Typeface Design'
+        },
+        {
+          title: 'The Great Gatsby',
+          description: 'Publication Design'
+        },
+        {
+          title: 'The Great Gatsby',
+          description: 'Publication Design'
+        },
+        {
+          title: 'Defy Studio',
+          description: 'Brand Design/Letterhead Collateral'
+        },
+        {
+          title: 'Defy Studio',
+          description: 'Brand Design/Letterhead Collateral'
+        },
+        {
+          title: 'Rinko Kawauchi',
+          description: 'Website Design'
+        },
+        {
+          title: 'Rinko Kawauchi',
+          description: 'Website Design'
+        },
+        {
+          title: 'Rinko Kawauchi',
+          description: 'Website Design'
+        },
+        {
+          title: 'Rinko Kawauchi',
+          description: 'Website Design'
+        },
+        {
+          title: 'Gig Poster Sample',
+          description: 'Rituals of Mine, Odesza, Woodkid'
+        },
+        {
+          title: 'Gig Poster Sample',
+          description: 'Rituals of Mine, Odesza, Woodkid'
+        },
+        {
+          title: 'Gig Poster Sample',
+          description: 'Rituals of Mine, Odesza, Woodkid'
+        },
+        {
+          title: 'Festival of New American Music',
+          description: 'Event Campaign (Posters, website, and brochure as pictured)'
+        },
+        {
+          title: 'Festival of New American Music',
+          description: 'Event Campaign (Posters, website, and brochure as pictured)'
+        },
+        {
+          title: 'Festival of New American Music',
+          description: 'Event Campaign (Posters, website, and brochure as pictured)'
+        },
+        {
+          title: 'Festival of New American Music',
+          description: 'Event Campaign (Posters, website, and brochure as pictured)'
+        },
+        {
+          title: 'Festival of New American Music',
+          description: 'Event Campaign (Posters, website, and brochure as pictured)'
+        },
+        {
+          title: 'Gridsmas cards',
+          description: 'Greeting card set'
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'Rachel began Sac State’s design program in 2018. Her favorite design work so far includes typeface design, publication design and packaging design.'
+    },
+    {
+      code: 'SatterlieC',
+      name: 'Caitlin Satterlie',
+      discipline: 'interior',
+      tags: [
+        'interior architecture',
+        'interior design',
+        'space planning'
+      ],
+      links: {
+        website: 'issuu.com/csatterlie/docs/csatterlie_portfolio'
+      },
+      images: 9,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'NEXT Office Tenant Improvement Project ',
+          description: 'NEXT is a Tenant Improvement Project for a commercial and project management office in Denver. Much like the bustling downtown of the building’s location, the plan of this office contains few enclosed spaces so employees can easily collaborate and interact.'
+        },
+        {
+          title: 'NEXT Office Tenant Improvement Project ',
+          description: 'NEXT is a Tenant Improvement Project for a commercial and project management office in Denver. Much like the bustling downtown of the building’s location, the plan of this office contains few enclosed spaces so employees can easily collaborate and interact.'
+        },
+        {
+          title: 'Garden Highway House ',
+          description: 'The Garden Highway Project encompasses a single-family home located on the levee of the Sacramento River.  This project addresses the issue of river flooding on the property and emphasizes views through multiple windows and large deck.'
+        },
+        {
+          title: 'Garden Highway House ',
+          description: 'The Garden Highway Project encompasses a single-family home located on the levee of the Sacramento River.  This project addresses the issue of river flooding on the property and emphasizes views through multiple windows and large deck.'
+        },
+        {
+          title: 'Garden Highway House ',
+          description: 'The Garden Highway Project encompasses a single-family home located on the levee of the Sacramento River.  This project addresses the issue of river flooding on the property and emphasizes views through multiple windows and large deck.'
+        },
+        {
+          title: 'Private Gallery',
+          description: 'RThe Gallery Project scope includes a space for a private collector’s books, artifacts, statues, maps, and more.  The mezzanine level holds the collection of books whereas the first level spaces hold mainly maps, artifacts, and sculptures in organized spaces.'
+        },
+        {
+          title: 'Private Gallery',
+          description: 'The Gallery Project scope includes a space for a private collector’s books, artifacts, statues, maps, and more.  The mezzanine level holds the collection of books whereas the first level spaces hold mainly maps, artifacts, and sculptures in organized spaces.'
+        },
+        {
+          title: 'Richard Meier Inspired House ',
+          description: 'This project is inspired by the work of Richard Meier and is organized into public and private spaces in the form of a Richard Meier A-B-A system.  Using the program Rhino, a decorative dropped ceiling and second floor railing was created to add additional interest to the space.'
+        },
+        {
+          title: 'Richard Meier Inspired House ',
+          description: 'This project is inspired by the work of Richard Meier and is organized into public and private spaces in the form of a Richard Meier A-B-A system.  Using the program Rhino, a decorative dropped ceiling and second floor railing was created to add additional interest to the space.'
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'I first became passionate about architecture as a little girl when I visited some of Boston’s beautiful, old buildings and churches.  I knew this was an industry I wanted to be a part of as I got older.  I am a creative thinker and problem solver, and am always looking for ways to improve design.'
     },
     {
       code: 'ShepherdS',
@@ -1658,12 +2250,56 @@ export const state = () => ({
       text: 'Megan Sinclair creates both analog and digital self-portraits with ongoing motifs of identity, consciousness, and connection to place. Her focus on in-camera framing and natural lighting paired with existential concepts encourage the viewer to reflect on the multidimensional minds that we all carry within. Her work is influenced by artists such as Francesca Woodman, Marina Abramovich, Collier Schorr, Doug and Mike Starn, and Andy Goldsworthy, along with philosophers Martin Heidegger, Friedrich Nietzsche, and Soren Kierkegaard'
     },
     {
+      code: 'SmithL',
+      name: 'Lissa Smith',
+      discipline: 'graphic',
+      tags: [
+      ],
+      links: {
+      },
+      images: 7,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'Move Brand Identity Image',
+          description: 'The goal of this project was to create a unique brand for a training based business in the Sacramento Region. I reimagined the Warehouse Artist Lofts on R Street downtown to include a progressive dance studio. I branded the conceptual business based on market research and the brands voice. '
+        },
+        {
+          title: 'Musician Editorial',
+          description: 'This project brief was structured to create an editorial two-page spread based on an existing article about a musician.  A compositional focus on communicating the tone and message of the artist, while concisely organizing complex information with clarity and rhythm.'
+        },
+        {
+          title: 'IPP Posters',
+          description: 'Conceptual poster designs for Khalid and Jason Isbell and the 400 Unit with a focus on photographic imagery to communicate tone and message.'
+        },
+        {
+          title: 'Brochure',
+          description: 'The project brief outlined the necessary parameters to highlight a selection of a photographers work. While setting the copy and imagery, the design must not distract from the work of the photographer and create a flow and narrative when exploring the layout of the brochure. '
+        },
+        {
+          title: 'Brochure',
+          description: 'The project brief outlined the necessary parameters to highlight a selection of a photographers work. While setting the copy and imagery, the design must not distract from the work of the photographer and create a flow and narrative when exploring the layout of the brochure. '
+        },
+        {
+          title: 'Secondary identity Tree Fork',
+          description: 'This is a secondary branding project that coincided with a conceptual children’s museum. The primary identity was created and taken into account the message of the museum while designing a secondary identity within the establishment. Tree Fork is a children’s healthy snack tree fort on the premise of the tree museum. '
+        },
+        {
+          title: 'Brand Package Design',
+          description: 'This is a selection of packaging pieces that I designed in collaboration with a group of colleagues. We worked together to create a brand identity for a brewery and bakery. I contributed the illustrated Golden signature, while my colleagues contributed setting the typographic elements. Once we branded the bakery and brewery we expanded to package design communicated the tone and message of the overarching brand.'
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: ''
+    },
+    {
       code: 'StorozhukJ',
       name: 'Julie Storozhuk',
       discipline: 'interior',
       tags: [
         'architecture',
-        'interior dDesign',
+        'interior design',
         'residential architecture',
         'sustainability'
       ],
@@ -1720,6 +2356,271 @@ export const state = () => ({
       showWork: false,
       fill: false,
       text: 'My name is Julie Storozhuk and I am an architectural designer. I studied Interior Architecture at Sacramento State University and graduated with a Bachelors Spring 2020. Alongside school, I have been working at and engineering and design firm creating custom homes for people all around Sacramento. I am passionate about finding the best solution to any design problem while working directly with clients. I love traveling and dream to immerse myself in hospitality and travel accommodation design all around the globe. I love the aesthetic of simplicity and believe that comfort lies in a perfect combination of minimalistic yet rich choice in materials. Lastly, sustainable design has made a huge impact on me and I dream to be a part of creating architectural solutions not only for the wealthy but also for those living in third-world countries'
+    },
+    {
+      code: 'TanT',
+      name: 'Jinkun (Tom) Tan',
+      discipline: 'graphic',
+      tags: [
+        'packaging,',
+        'UX/UI',
+        'poster design'
+      ],
+      links: {
+        website: 'jinkuntan007.myportfolio.com/'
+      },
+      images: 9,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'Festival of New American Music Campaign Front and Back Poster and Marketings',
+          description: 'This 16x20 double-sided poster is to inform CSUS students and locals of our annual music festival. The uniqueness of this musical genre inspired the design of blue(represents modernism, new, and unique) submerging the red curtain(classical, traditional music).'
+        },
+        {
+          title: 'Festival of New American Music Campaign Front and Back Poster and Marketings',
+          description: 'This 16x20 double-sided poster is to inform CSUS students and locals of our annual music festival. The uniqueness of this musical genre inspired the design of blue(represents modernism, new, and unique) submerging the red curtain(classical, traditional music).'
+        },
+        {
+          title: 'Festival of New American Music Campaign Front and Back Poster and Marketings',
+          description: 'This 16x20 double-sided poster is to inform CSUS students and locals of our annual music festival. The uniqueness of this musical genre inspired the design of blue(represents modernism, new, and unique) submerging the red curtain(classical, traditional music).'
+        },
+        {
+          title: 'Swimming with Sharks-Plastic Pollution Awareness poster.',
+          description: 'Plastic pollution has always been my number one cause for the environment. I portrayed three plastic bottles as circling sharks to indicate how such disposable products can be a dangerous predator to our environment, especially to the ocean.'
+        },
+        {
+          title: 'Poster for Duke Silver',
+          description: 'Even though Duke Silver is a fictional saxophone player but he’s the most memorable artist to me out of all the one that I like. The illustration comes from one of the scenes he played in the show and I believe that shot shows how great he is hence the artwork of this poster.'
+        },
+        {
+          title: 'Edward Weston B&W Photographer Brochure',
+          description: 'Edward Weston was one of the famous black and white photographers. The specialties of contrast and curve in his works inspired the graphics in this brochure.'
+        },
+        {
+          title: 'Tea Product Package ',
+          description: 'Camellia is a tea and honey shop my design group came up with for our packaging design. I focused on loose-leaf, teabags, and bottle tea designs with simple illustrations of its flavor and a sense of hierarchy helping customers to find their preferred flavor and type of tea. '
+        },
+        {
+          title: 'Aerial Gymnastic Brand System ',
+          description: 'Aerial is a gender-inclusive local Gymnastics. Vibrant magenta indicates females and muted cyan for the males with a mild scripted font to show the characteristics of gymnastic being graceful and fluid.'
+        },
+        {
+          title: 'Career Center Retractable Banner ',
+          description: 'The objectives and goals of the CSUS Career Center inspired the design of networking, connecting, and the globe because they are what this department is about and what they do to the students.  '
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'I believe in designs that have simple visuals but speak loudly with prominent hierarchy and appendant graphics. My interests in design shift throughout the past years in Upper Division though my love in packaging and UX/UX in design have never changed. In the design world, a cover that catches audiences’ eyes is a successful design, to begin with.'
+    },
+    {
+      code: 'TolokM',
+      name: 'Mary Tolok',
+      discipline: 'graphic',
+      tags: [
+        'UX/UI',
+        'typography',
+        'visual design'
+      ],
+      links: {
+      },
+      images: 3,
+      ext: ['jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'Gig Posters',
+          description: 'Gig posters for Khalid and Musica Nuda, genres ranging from pop to jazz.'
+        },
+        {
+          title: 'Jane Eyre Book Jacket',
+          description: 'A full redesign of a popular classic, Jane Eyre.'
+        },
+        {
+          title: 'Herky International Website',
+          description: 'User interface design for a mixed-use campus.'
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'A graphic design graduate obsessed with the way people think and experience life, books, reading, and solving problems.'
+    },
+    {
+      code: 'TorreA',
+      name: 'Alejandra De La Torre',
+      discipline: 'photo',
+      tags: [
+        'still life',
+        'creative content',
+        'colorful'
+      ],
+      links: {
+        instagram: 'adltphotos'
+      },
+      images: 2,
+      ext: ['jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'Alternate Worlds Combined',
+          description: 'My still lifes are about creating a juxtaposition to everyday objects, the sublime relationship between these objects creates a delightful and imaginative subject that breaks their boundaries.'
+        },
+        {
+          title: 'Alternate Worlds Combined',
+          description: 'My still lifes are about creating a juxtaposition to everyday objects, the sublime relationship between these objects creates a delightful and imaginative subject that breaks their boundaries.'
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'As a photographer I like to create images that touch and explore my creativity as well as bring joy to the viewers. For this project I created different combination of everyday object to create delightful still lifes. '
+    },
+    {
+      code: 'VangN',
+      name: 'Nuchee Vang',
+      discipline: 'interior',
+      tags: [
+        'functional design',
+        'minimalist design',
+        'sustainable design'
+      ],
+      links: {
+        website: 'issuu.com/nucheevanggg '
+      },
+      images: 20,
+      ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'Adobe Spark Office Design',
+          description: 'For this project, I designed an entrance for the Adobe Spark Office. It is a computer graphics design company and site. Users of Ado-be Spark are able to create graphics to showcase their  message, idea, concept, etc. For my design concept, I decided to show different parts of a book. Specifically, the Reception Area Wall is curved to be shaped like an open book, so the occupants feel invited into the space. Additionally, the Feature Wall shows pages stacked on top of eachother. These pages symbolize people coming to Adobe Spark to share their message, idea, concept, etc. As a result, my design concept interprets a book as Adobe Spark, where the pages show the ideas of the individuals.  '
+        },
+        {
+          title: 'Adobe Spark Office Design',
+          description: 'For this project, I designed an entrance for the Adobe Spark Office. It is a computer graphics design company and site. Users of Ado-be Spark are able to create graphics to showcase their  message, idea, concept, etc. For my design concept, I decided to show different parts of a book. Specifically, the Reception Area Wall is curved to be shaped like an open book, so the occupants feel invited into the space. Additionally, the Feature Wall shows pages stacked on top of eachother. These pages symbolize people coming to Adobe Spark to share their message, idea, concept, etc. As a result, my design concept interprets a book as Adobe Spark, where the pages show the ideas of the individuals.  '
+        },
+        {
+          title: 'Urban Cafe',
+          description: 'For this project, I designed an Urban Cafe. This cafe is 5,500 square feet. This cafe has an open plan. The plan  consists of a Dining Area, Booth Seating Area, Bar, Second Floor Lounge Area, and Patio Seating. '
+        },
+        {
+          title: 'Urban Cafe',
+          description: 'For this project, I designed an Urban Cafe. This cafe is 5,500 square feet. This cafe has an open plan. The plan  consists of a Dining Area, Booth Seating Area, Bar, Second Floor Lounge Area, and Patio Seating. '
+        },
+        {
+          title: 'Urban Cafe',
+          description: 'For this project, I designed an Urban Cafe. This cafe is 5,500 square feet. This cafe has an open plan. The plan  consists of a Dining Area, Booth Seating Area, Bar, Second Floor Lounge Area, and Patio Seating. '
+        },
+        {
+          title: 'Urban Cafe',
+          description: 'For this project, I designed an Urban Cafe. This cafe is 5,500 square feet. This cafe has an open plan. The plan  consists of a Dining Area, Booth Seating Area, Bar, Second Floor Lounge Area, and Patio Seating. '
+        },
+        {
+          title: 'House on Garden Highway',
+          description: 'For this project, I designed a house on Garden Highway, located in Sacramento, CA. This house is located near the Sacramento River. Due to the flooding during the rainy season, this house is built on a raised concrete structure. This house is designed for a family of five, who enjoys the outdoors view of the Sacramento River. Throughout the plan of the house, the family is led to the Grand Living Room, where they are able to enjoy the views through many large windows. The Grand Living Room also leads to the Patio, where they can relax and enjoy the beautiful outdoors of Sacramento.  '
+        },
+        {
+          title: 'House on Garden Highway',
+          description: 'For this project, I designed a house on Garden Highway, located in Sacramento, CA. This house is located near the Sacramento River. Due to the flooding during the rainy season, this house is built on a raised concrete structure. This house is designed for a family of five, who enjoys the outdoors view of the Sacramento River. Throughout the plan of the house, the family is led to the Grand Living Room, where they are able to enjoy the views through many large windows. The Grand Living Room also leads to the Patio, where they can relax and enjoy the beautiful outdoors of Sacramento.  '
+        },
+        {
+          title: 'House on Garden Highway',
+          description: 'For this project, I designed a house on Garden Highway, located in Sacramento, CA. This house is located near the Sacramento River. Due to the flooding during the rainy season, this house is built on a raised concrete structure. This house is designed for a family of five, who enjoys the outdoors view of the Sacramento River. Throughout the plan of the house, the family is led to the Grand Living Room, where they are able to enjoy the views through many large windows. The Grand Living Room also leads to the Patio, where they can relax and enjoy the beautiful outdoors of Sacramento.  '
+        },
+        {
+          title: 'House on Garden Highway',
+          description: 'For this project, I designed a house on Garden Highway, located in Sacramento, CA. This house is located near the Sacramento River. Due to the flooding during the rainy season, this house is built on a raised concrete structure. This house is designed for a family of five, who enjoys the outdoors view of the Sacramento River. Throughout the plan of the house, the family is led to the Grand Living Room, where they are able to enjoy the views through many large windows. The Grand Living Room also leads to the Patio, where they can relax and enjoy the beautiful outdoors of Sacramento.  '
+        },
+        {
+          title: 'Flower Pavilion ',
+          description: 'For this pavilion, I was inspired by the Botanical Garden, located in San Francisco, CA. The Botanical Garden consists of plants and flowers from all over the world. Additionally, this garden has many rest spots, where people can have picnics and enjoy the scenery. As a result, I decided to design a pavilion for the public, where they can rest and enjoy the outdoors. I designed petal steps that make up a flower, which people can sit and play to enjoy the scenery.  '
+        },
+        {
+          title: 'Flower Pavilion ',
+          description: 'For this pavilion, I was inspired by the Botanical Garden, located in San Francisco, CA. The Botanical Garden consists of plants and flowers from all over the world. Additionally, this garden has many rest spots, where people can have picnics and enjoy the scenery. As a result, I decided to design a pavilion for the public, where they can rest and enjoy the outdoors. I designed petal steps that make up a flower, which people can sit and play to enjoy the scenery.  '
+        },
+        {
+          title: 'Richard Meier House',
+          description: 'This house is inspired by the design principles of Richard Meier. In his designs, he creates linear homes that have an organized plan with many white open spaces. Additionally, his homes are divided by closed private spaces and open public spaces. Based on his design principles, I have designed a linear house, with closed private spaces and open public spaces through the glass walls that leads towards the outdoors. '
+        },
+        {
+          title: 'Richard Meier House',
+          description: 'This house is inspired by the design principles of Richard Meier. In his designs, he creates linear homes that have an organized plan with many white open spaces. Additionally, his homes are divided by closed private spaces and open public spaces. Based on his design principles, I have designed a linear house, with closed private spaces and open public spaces through the glass walls that leads towards the outdoors. '
+        },
+        {
+          title: 'Richard Meier House',
+          description: 'This house is inspired by the design principles of Richard Meier. In his designs, he creates linear homes that have an organized plan with many white open spaces. Additionally, his homes are divided by closed private spaces and open public spaces. Based on his design principles, I have designed a linear house, with closed private spaces and open public spaces through the glass walls that leads towards the outdoors. '
+        },
+        {
+          title: 'Richard Meier House',
+          description: 'This house is inspired by the design principles of Richard Meier. In his designs, he creates linear homes that have an organized plan with many white open spaces. Additionally, his homes are divided by closed private spaces and open public spaces. Based on his design principles, I have designed a linear house, with closed private spaces and open public spaces through the glass walls that leads towards the outdoors. '
+        },
+        {
+          title: 'Communal Corner',
+          description: 'The existing site is located on 1022 10th Street Sacramento, Ca. (95814) It is in the heart of Sacramento, downtown area. Specifically, this building is placed on the corner of two major cross streets (10th and K Street), which also includes a light rail station on K Street. In this area, there are many neighboring commercial buildings like restaurants, retail, and hotels. This existing building is a 1960 2 story commercial building, which consists of 16,290 SF. The floor to floor height is 18’ which makes the building 36’ high, with an addition of a 4’ parapet, which results in a 40’ building. Additionally, the parapet shows a ribbing pattern that wraps on the East and South of the building . The program for the revitalized building will be the new headquarters for AIA California, AIA Central Valley and the California Center for Architec-ture. The new space will highlight and demonstrate the AIA’s new Framework for Design Excellence. The first floor consists of mostly public spaces, which includes the Bookstore, Branding Area, Cafe, Gallery and Multipurpose Classroom. The second floor consists of workspaces, meeting rooms, and private offices. '
+        },
+        {
+          title: 'Communal Corner',
+          description: 'The existing site is located on 1022 10th Street Sacramento, Ca. (95814) It is in the heart of Sacramento, downtown area. Specifically, this building is placed on the corner of two major cross streets (10th and K Street), which also includes a light rail station on K Street. In this area, there are many neighboring commercial buildings like restaurants, retail, and hotels. This existing building is a 1960 2 story commercial building, which consists of 16,290 SF. The floor to floor height is 18’ which makes the building 36’ high, with an addition of a 4’ parapet, which results in a 40’ building. Additionally, the parapet shows a ribbing pattern that wraps on the East and South of the building . The program for the revitalized building will be the new headquarters for AIA California, AIA Central Valley and the California Center for Architec-ture. The new space will highlight and demonstrate the AIA’s new Framework for Design Excellence. The first floor consists of mostly public spaces, which includes the Bookstore, Branding Area, Cafe, Gallery and Multipurpose Classroom. The second floor consists of workspaces, meeting rooms, and private offices. '
+        },
+        {
+          title: 'Communal Corner',
+          description: 'The existing site is located on 1022 10th Street Sacramento, Ca. (95814) It is in the heart of Sacramento, downtown area. Specifically, this building is placed on the corner of two major cross streets (10th and K Street), which also includes a light rail station on K Street. In this area, there are many neighboring commercial buildings like restaurants, retail, and hotels. This existing building is a 1960 2 story commercial building, which consists of 16,290 SF. The floor to floor height is 18’ which makes the building 36’ high, with an addition of a 4’ parapet, which results in a 40’ building. Additionally, the parapet shows a ribbing pattern that wraps on the East and South of the building . The program for the revitalized building will be the new headquarters for AIA California, AIA Central Valley and the California Center for Architec-ture. The new space will highlight and demonstrate the AIA’s new Framework for Design Excellence. The first floor consists of mostly public spaces, which includes the Bookstore, Branding Area, Cafe, Gallery and Multipurpose Classroom. The second floor consists of workspaces, meeting rooms, and private offices. '
+        },
+        {
+          title: 'Communal Corner',
+          description: 'The existing site is located on 1022 10th Street Sacramento, Ca. (95814) It is in the heart of Sacramento, downtown area. Specifically, this building is placed on the corner of two major cross streets (10th and K Street), which also includes a light rail station on K Street. In this area, there are many neighboring commercial buildings like restaurants, retail, and hotels. This existing building is a 1960 2 story commercial building, which consists of 16,290 SF. The floor to floor height is 18’ which makes the building 36’ high, with an addition of a 4’ parapet, which results in a 40’ building. Additionally, the parapet shows a ribbing pattern that wraps on the East and South of the building . The program for the revitalized building will be the new headquarters for AIA California, AIA Central Valley and the California Center for Architec-ture. The new space will highlight and demonstrate the AIA’s new Framework for Design Excellence. The first floor consists of mostly public spaces, which includes the Bookstore, Branding Area, Cafe, Gallery and Multipurpose Classroom. The second floor consists of workspaces, meeting rooms, and private offices. '
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'Hello, my name is Nuchee Vang. I am from Sacramento, Ca. I am Hmong American, raised by Hmong immigrants. In my family, I would be the first grandchild to graduate from a University. I am one of the oldest grandchildren, which makes it important to me to be a good leader for my younger sisters and cousins. I am currently graduating from Sac State, with a BFA in Interior Architecture. This year, our graduation ceremony was cancelled due to the current pandemic. This means that I would not be able to celebrate with my family, until the lockdown is lifted. Despite the troubles of this pandemic, I would like to showcase how I have improved my design projects through my education at Sac State. My education at Sac State has been incredibly rewarding; I found something that I would enjoy doing for the rest of my life. In my design journey, I have found my own style. Throughout my projects, I enjoy creating functional and minimalist design. My portfolio will demonstrate how I have grown as a designer in my own style, throughout my education at Sac State. Thank you for your time.  '
+    },
+    {
+      code: 'VargasS',
+      name: 'Samantha Vargas',
+      discipline: 'graphic',
+      tags: [
+        'branding',
+        'publication design',
+        'web design',
+        'packaging'
+      ],
+      links: {
+        website: 'srvargas22.myportfolio.com/',
+        instagram: 'instagram.com/sam_renevargas'
+      },
+      images: 7,
+      ext: ['png', 'png', 'jpg', 'png', 'jpg', 'jpg', 'jpg'],
+      projecttext: [
+        {
+          title: 'Atrium',
+          description: 'Logo and identity system for interactive tree museum in Sacramento dedicated to educating children about conservation.'
+        },
+        {
+          title: 'Hello Nasty ',
+          description: 'Explorative typographic postcard series for an end of semester class gathering. Final postcards right-hand side.  '
+        },
+        {
+          title: 'Dr. Jekyll & Mr. Hyde ',
+          description: 'Cover and interior text of a classic novel reimaged and redesigned. The cover solutions highlight an important chapter of the book as well as play off each other. '
+        },
+        {
+          title: 'PSA Series',
+          description: 'Poster series featuring one typographic only and one vector illustration solution for a PSA geared towards college students.  '
+        },
+        {
+          title: 'Masters of Photography Series Brochure',
+          description: 'Brochure showcasing the works and history of master photographer Edward Weston. '
+        },
+        {
+          title: 'Photographer Exhibit Website',
+          description: 'Website design for photographer Sebastian Hidalgo exhibit featuring a gallery page showcasing the artist’s work and artist bio.  '
+        },
+        {
+          title: 'Musician Magazine Spread',
+          description: 'Single spread for an interview article of The White Stripes. Self-directed and produced photography featured within the spread. '
+        }
+      ],
+      showWork: false,
+      fill: false,
+      text: 'I am a visual explorer. As a designer, I strive to create solutions that are visually impactful, sound, and playful. I look forward to new opportunities and explorations as growth and education are a constant in my journey as a visual communicator. '
     },
     {
       code: 'VelasquezR',
