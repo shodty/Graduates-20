@@ -4,15 +4,15 @@ b-col.work(cols="12")
             .studentinfo(key='studentinfo')
               b-container.h-100.mobile-cont
                 b-row.h-100(align-v='start')
-                    b-col.col-md-4.col-sm-12.left-section.d-flex.align-items-start
+                    b-col.left-section.h-100(cols='5' md='4')
                         // transition-group(name="fade" mode='out-in')
                         img.selfie(v-if='!student.showWork' :src='getSrc(student, 0)' key='img')
                         div.col-sm-12(v-if='student.showWork' key='info')
                             span.main-name(v-html="styleName(student.name)")
                             h1.proj-title {{student.projecttext[currentImg].title}}
                             p.proj-desc {{student.projecttext[currentImg].description}}
-                            button.aboutbutton(@click="showStudentWork(index)" :class="{ buttonpressed: !student.showWork}") ABOUT
-                    b-col.col-md-8.col-sm-12.work-section
+                        button.aboutbutton(v-if='student.showWork' @click="showStudentWork(index)" :class="{ buttonpressed: !student.showWork}") ⟵
+                    b-col.work-section(cols='7' md='8')
                             // transition-group(name="fade" mode='out-in')
                             b-row.info-section.col-12(v-if='!student.showWork' key='info')
                                 span.main-name.col-12.p-0(v-html="styleName(student.name)")
@@ -37,11 +37,12 @@ b-col.work(cols="12")
                                     li.tags(v-for='tag in student.tags') {{tag}} /
                                 .main-text.col-12.p-0 {{student.text}}
                                 button.view-work.col-sm-12.p-0(@click="showStudentWork(index)") WORK⟶
-                            hooper.student-work.h-100( v-if='student.showWork' :settings='hooperSettings' key='hooper' ref='hooper' v-on:slide='changeImageDesc')
+                            hooper.student-work.h-100(v-if='student.showWork'  :settings='hooperSettings' key='hooper' ref='hooper' v-on:slide='changeImageDesc')
                                 slide.h-100( v-for="n in student.images" :key="student.code")
-                                    video.video-slide(v-if="student.ext[n-1] == 'mp4'" :src='getSrc(student, n)' :alt='student.image1' autoplay muted loop controls)
+                                    video.video-slide(v-if="student.ext[n-1] == 'mp4'" :src='getSrc(student, n)' :alt='student.image1' muted loop controls)
                                     expandable-image(v-else :src='getSrc(student, n)' :alt='student.image1')
                                 hooper-navigation.nav(slot='hooper-addons' )
+                            p.slide-number( v-if='student.showWork') {{currentImg + 1}} / {{student.images}}
                 //button.workbutton(@click="showStudentWork(index)" :class="{ buttonpressed: student.showWork}") WORK
 
 </template>
@@ -204,6 +205,11 @@ export default {
 
 .video-slide
     width 100%
+
+.left-section
+  @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    height 10% !important
+  }
 .work-section
   padding-left 0
   max-height 100%
@@ -240,6 +246,9 @@ export default {
   font-family: 'GT-Pressura', sans-serif
   line-height 1
   padding-right 2%
+  @media only screen and (min-device-width: 0px) and (max-device-width: 800px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    font-size 1.2vh
+  }
 .selfie
   width: 100%
   position relative
@@ -265,6 +274,7 @@ export default {
   margin-top 2%
   padding 0 2%
   outline none
+  border none
 
 .main-text
   color #181819
@@ -275,7 +285,7 @@ export default {
   padding-top: 2%
   overflow-y auto
   @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    font-size 1vh
+    font-size 1.2vh
   }
 .buttonpressed
   background #181819
@@ -286,7 +296,7 @@ export default {
   margin-right 1%
   padding 0 3%
   font-family: 'GT-Pressura', sans-serif
-  font-size 2vw
+  font-size 3vw !important
   color white
   background #181819
   border none
@@ -322,6 +332,9 @@ export default {
 .social-img
     width 5%
     padding-right 1%
+    @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+      width 10%
+    }
 ul
     margin 0
     padding-top 0
@@ -349,13 +362,29 @@ ul
   }
 
 .aboutbutton
+  position absolute
+  bottom 0
+  line-height 1.2
+  font-size 2vw !important
   @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     position absolute
+    height 40%
     top 0
     right 0
     border none
     color white
     background #181819
     padding 0 2%
+  }
+
+.slide-number
+  color #989590
+  text-align center
+  font-size .8vw
+  padding-top 1%
+  font-family: 'Ciao-Regular', sans-serif
+  @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    padding-top 5%
+    font-size 2vw
   }
 </style>

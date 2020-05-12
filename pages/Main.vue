@@ -8,8 +8,11 @@
                 img.hide-menu.cursor-pointer(src='../assets/img/left.png' @click="hideMenu")
         b-col.p-0.col-12( @mouseover="hover = true" @mouseleave="hover = false" :id="showmenu? 'right' : 'rightfull'")
             transition-group(name="fade")
-                video.splash-video(v-if="show == 'welcome'" src="../assets/video/G20_MaskSpin_full.mp4" autoplay muted loop key='vid' :class="showmenu? 'splash-video' : 'w-100'")
+                video.splash-video.hide-on-mobile(v-if="show == 'welcome'" src="../assets/video/G20_MaskSpin_full.mp4" autoplay muted loop key='vid' :class="showmenu? 'splash-video' : 'w-100'")
+                img.splash-gif.hide-on-ipad(v-if="show == 'welcome'" src="../assets/video/G20_mobile.gif" key='gif')
+                span.enter.hide-on-ipad(v-if="show == 'welcome' && !hover " key='enter') ENT<span style="font-family: Animal-Soul">E</span>R
                 Introduction.overlay(v-if="hover && show == 'welcome'" key='intro')
+
             transition-group(name="fade")
                 b-row.rightside(v-if="show !== 'welcome'" key='students')
                     .student-loop(v-for="(student, index) in studentObject" v-if='isInSelectedTags(student)' :key='componentKey + index')
@@ -138,6 +141,16 @@ export default {
     border-left 3px solid #181819
     transition width 1s ease
 
+.splash-gif
+  position fixed
+  top 0
+  left 0
+  transition opacity 1s ease
+  width 100%
+  height 100%
+  object-fit: cover
+  overflow hidden
+
 .overlay
     position absolute
     min-height: 100vh
@@ -153,4 +166,14 @@ export default {
 .student-loop
     height: 100%
     width 100%
+
+.enter
+  position fixed
+  bottom 5%
+  width 100%
+  z-index 500
+  color white
+  text-align center
+  font-family 'GT-Pressura', sans-serif
+  font-size 42px
 </style>

@@ -16,7 +16,7 @@
                   p.disc-desc(v-if='!sortGraphic') The goal of the Graphic Design program is to provide the community with a comprehensive and adaptable problem solver. The program seeks to impart students with a strong aesthetic ability coupled with a clear understanding of the increasingly complex strategic, systemic and conceptual challenges facing them in practice,  as well as the ability to address these challenges.
                   // label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
                   br
-                  h2.sort-head SORT
+                  h2.sort-head SORT:
                   button.sortbutton.px-2.my-2(@click="sortGraphic = !sortGraphic") {{ sortGraphic ? 'Overview' : 'Tags' }}
                   button.sortbutton.px-2.my-2(@click="alphabetizeStudents(true)") A-Z
                   button.sortbutton.px-2.my-2(@click="alphabetizeStudents(false)") Z-A
@@ -33,7 +33,7 @@
               p.disc-desc(v-if='!sortInterior') The goal of the Interior Architecture program is to prepare students for professional practice and/or preparation for admission to graduate level study. The degree is intended for students who want to pursue careers in interior design, interior architecture and architecture.
               // label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
               br
-              h2.sort-head SORT
+              h2.sort-head SORT:
               button.sortbutton.px-2.my-2(@click="sortInterior = !sortInterior") {{ sortInterior ? 'Overview' : 'Tags' }}
               button.sortbutton.px-2.my-2(@click="alphabetizeStudents(true)") A-Z
               button.sortbutton.px-2.my-2(@click="alphabetizeStudents(false)") Z-A
@@ -50,7 +50,7 @@
               p.disc-desc(v-if='!sortPhoto') The goal of the Photography program is to educate students in contemporary photographic methodologies and in the current situation of photography, its use and its communicative effects. The curriculum is designed to give students a broad exposure to not only the technologies, processes, and models of contemporary practice, but also to introduce them to the aesthetic, cultural, and ethical dialogues surround the use and role of photography in our society.
               // label.shuffle.cursor-pointer(@click="shuffleStudents") SHUFFLE
               br
-              h2.sort-head SORT
+              h2.sort-head SORT:
               button.sortbutton.px-2.my-2(@click="sortPhoto = !sortPhoto") {{ sortPhoto ? 'Overview' : 'Tags' }}
               button.sortbutton.px-2.my-2(@click="alphabetizeStudents(true)") A-Z
               button.sortbutton.px-2.my-2(@click="alphabetizeStudents(false)") Z-A
@@ -197,6 +197,7 @@ export default {
   font-size 14px
   font-weight 800
   padding-right 4%
+  font-family: 'GT-Pressura', sans-serif
 
 .sortbutton
   background #181819

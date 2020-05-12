@@ -6,17 +6,16 @@ b-container(:class='next? "overlay-more" : "overlay"')
                 | <span class="welcome-header">We<span style='font-family: Animal-Soul'>l</span>co<span style='font-family: Animal-Soul'>m</span>e</span>
                 | <br><br>
                 | We are the Department of Design. We solve problems. We have a part in how we communicate
-                | to and shape the world we live in. This comes through the questions we ask of others and
+                | to and shape the world in which we live. This comes through the questions we ask of others and of
                 | ourselves. Through image and word, form and color, texture and space our answers have a
                 | substantial impact on how we live.
                 | <br><br>
-                | The disruption we are all working through is difficult. It is a loss being cut off from working
+                | The disruption we are all working through is difficult. It is a loss to be cut off from working
                 | directly with colleagues that have been held close for years while entering the final weeks of a
                 | long journey. The moments of celebration to mark achievements have vanished but not the
-                | achievements themselves. While acknowledging this loss we must remember as members of
-                | the creative community our capacity to adapt to what is given and make something new.
+                | achievements themselves.
                 | <br><br>
-                | With the support of some giving alumni and dedicated faculty we have prepared this
+                | With the support of some giving alumni and dedicated faculty, we have prepared this
                 | celebration of our graduating seniors while acknowledging the moment we are all enduring.
                 | This cannot replace the rather raucous celebration that is our annual spring show, but it can
                 | reveal to the world the talent, dedication and achievements of our students as they move on to
@@ -39,9 +38,9 @@ b-container(:class='next? "overlay-more" : "overlay"')
             br
             .images
                 img.cursor-pointer.more(v-if='!next' src='../assets/img/more.png' @click='next = !next')
-                img.cursor-pointer(v-if='next' src='../assets/img/back.png' @click='next = !next')
+                img.cursor-pointer.more(v-if='next' src='../assets/img/back.png' @click='next = !next')
             br
-            //.col-12
+            .col-12
                 button.next.gb.col-4(@click="showDiscipline('graphic')") GRAPHIC
                 button.next.ib.col-4(@click="showDiscipline('interior')") INTERIOR
                 button.next.pb.col-4(@click="showDiscipline('photo')") PHOTO
@@ -86,7 +85,7 @@ export default {
     font-family: 'Ciao-Regular', sans-serif
     font-size 20px
     font-weight 800
-    padding 0 2%
+    padding 0 10%
 .welcome-header
     font-family: 'GT-Pressura', sans-serif
     font-size 5vw
@@ -101,7 +100,7 @@ export default {
   font-family: 'GT-Pressura', sans-serif
   font-size 2vw
   color #181819
-  border: none
+  border: 3px solid #181919
   @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
         font-size 2vh
         line-height 1.5

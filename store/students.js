@@ -597,7 +597,7 @@ export const state = () => ({
       discipline: 'interior',
       tags: [
         'interior design',
-        'interior architecture'
+        'architecture'
       ],
       links: {
         linkedin: 'www.linkedin.com/in/mariana-donato-761484175'
@@ -794,7 +794,10 @@ export const state = () => ({
       code: 'GilesK',
       name: 'Kayla Giles',
       discipline: 'interior',
-      tags: [],
+      tags: [
+        'interior design',
+        'architecture'
+      ],
       links: {},
       images: 4,
       ext: ['jpg', 'jpg', 'jpg', 'jpg'],
@@ -910,7 +913,10 @@ export const state = () => ({
       code: 'HaselmannG',
       name: 'Grace Haselmann',
       discipline: 'interior',
-      tags: [],
+      tags: [
+        'architecture',
+        'interior design'
+      ],
       links: {},
       images: 10,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -1415,7 +1421,6 @@ export const state = () => ({
       name: 'Aniko Meszaros',
       discipline: 'photo',
       tags: [
-        'photographer',
         'fine art',
         'portraiture',
         'self-portraiture',
@@ -1855,7 +1860,8 @@ export const state = () => ({
       name: 'Ariel-Luna Recio',
       discipline: 'photo',
       tags: [
-        'art photography'
+        'art photography',
+        'abstract'
       ],
       links: {
         instagram: 'instagram.com/luunar_'
@@ -1897,7 +1903,6 @@ export const state = () => ({
       name: 'Christian Jeanette Reynoso',
       discipline: 'photo',
       tags: [
-        'photography',
         'mexican immigrant culture'
       ],
       links: {
@@ -2088,7 +2093,7 @@ export const state = () => ({
       name: 'Caitlin Satterlie',
       discipline: 'interior',
       tags: [
-        'interior architecture',
+        'architecture',
         'interior design',
         'space planning'
       ],
@@ -2342,7 +2347,7 @@ export const state = () => ({
       ],
       showWork: false,
       fill: false,
-      text: 'I am passionate about finding the best solution to any design problem while working directly with clients. I love traveling and dream to immerse myself in hospitality and travel accommodation design all around the globe. I love the aesthetic of simplicity and believe that comfort lies in a perfect combination of minimalistic yet rich choice in materials. Lastly, sustainable design has made a huge impact on me and I dream to be a part of creating architectural solutions not only for the wealthy but also for those living in third-world countries. Alongside school, I have been working at and engineering and design firm creating custom homes for people all around Sacramento. '
+      text: 'I am passionate about finding the best solution to any design problem while working directly with clients. I love the aesthetic of simplicity and believe that comfort lies in a perfect combination of minimalistic yet rich choice in materials. Lastly, sustainable design has made a huge impact on me and I dream to be a part of creating architectural solutions not only for the wealthy but also for those living in third-world countries. Alongside school, I have been working at and engineering and design firm creating custom homes for people all around Sacramento. '
     },
     {
       code: 'TanT',
@@ -2556,7 +2561,7 @@ export const state = () => ({
       ],
       showWork: false,
       fill: false,
-      text: 'I am Hmong American, raised by Hmong immigrants. In my family, I would be the first grandchild to graduate from a University. I am one of the oldest grandchildren, which makes it important to me to be a good leader for my younger sisters and cousins. This year, our graduation ceremony was cancelled due to the current pandemic. This means that I would not be able to celebrate with my family, until the lockdown is lifted. Despite the troubles of this pandemic, I would like to showcase how I have improved my design projects through my education at Sac State. My education at Sac State has been incredibly rewarding; I found something that I would enjoy doing for the rest of my life. In my design journey, I have found my own style. Throughout my projects, I enjoy creating functional and minimalist design. '
+      text: 'I am Hmong American, raised by Hmong immigrants. In my family, I would be the first grandchild to graduate from a University. I am one of the oldest grandchildren, which makes it important to me to be a good leader for my younger sisters and cousins. This year, our graduation ceremony was cancelled due to the current pandemic. This means that I would not be able to celebrate with my family, until the lockdown is lifted. Despite the troubles of this pandemic, I would like to showcase how I have improved my design projects through my education at Sac State. I have found my own style. Throughout my projects, I enjoy creating functional and minimalist design. '
     },
     {
       code: 'VargasS',
@@ -2614,6 +2619,8 @@ export const state = () => ({
       discipline: 'interior',
       tags: [
         'commercial',
+        'interior design',
+        'architecture',
         'photography'
       ],
       links: {
