@@ -8,12 +8,12 @@
                 img.hide-menu.cursor-pointer(src='../assets/img/left.png' @click="hideMenu")
         b-col.p-0.col-12( @mouseover="hover = true" @mouseleave="hover = false" :id="showmenu? 'right' : 'rightfull'")
             transition-group(name="fade")
-                video.splash-video.hide-on-mobile(v-if="show == 'welcome'" src="../assets/video/G20_MaskSpin_full.mp4" autoplay muted loop key='vid' :class="showmenu? 'splash-video' : 'w-100'")
+                video.splash-video.hide-on-mobile(v-if="show == 'welcome'" src="../assets/video/G20_MaskSpin.mp4" autoplay muted loop key='vid' :class="showmenu? 'splash-video' : 'w-100'")
                 img.splash-gif.hide-on-ipad(v-if="show == 'welcome'" src="../assets/video/G20_mobile.gif" key='gif')
                 span.enter.hide-on-ipad(v-if="show == 'welcome' && !hover " key='enter') ENT<span style="font-family: Animal-Soul">E</span>R
                 Introduction.overlay(v-if="hover && show == 'welcome'" key='intro')
 
-            transition-group(name="fade")
+            transition-group(name="fade" )
                 b-row.rightside(v-if="show !== 'welcome'" key='students')
                     .student-loop(v-for="(student, index) in studentObject" v-if='isInSelectedTags(student)' :key='componentKey + index')
                         StudentWork( :student='student' :index='index' ref='studentwork')
@@ -134,7 +134,7 @@ export default {
 
 .splash-video
     position fixed
-    transition opacity 1s ease
+    top 0
     min-width: 84%
     min-height 100%
     overflow hidden
@@ -145,7 +145,6 @@ export default {
   position fixed
   top 0
   left 0
-  transition opacity 1s ease
   width 100%
   height 100%
   object-fit: cover

@@ -158,6 +158,7 @@ export default {
       this.interior = false
       this.photo = false
       this.showmobileinfo = false
+      console.log(this.showmobileinfo)
       if (this.showinfo === true) { this.showInfo() }
       if (discipline === 'welcome') { this.$store.dispatch('students/hideAllStudentWork') }
     },
@@ -432,7 +433,7 @@ h3
 
 .home-icon
   height 30px
-
+  z-index 2000
 a
   color #f26b64
   text-decoration underline
