@@ -7,7 +7,6 @@
             .group(v-if="show == 'welcome'" key='group')
               img.main-logo(src='../assets/img/main-logo.png')
               br
-              br
               p.welcome-text Click the disciplines below to see the 2020 graduating students. <br><br> Click the arrow to the right to hide this menu. <br> <br>Sort student work by selecting tags, A-Z, Z-A, or Random!
       b-col.col-12.discipline.graphic( :class="{ bigger: show == 'graphic'}")
           transition-group(name="fade")

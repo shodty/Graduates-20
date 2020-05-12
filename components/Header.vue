@@ -19,8 +19,6 @@
           h1(v-html="styleWord('Website')")
           h2
             a(href='https://www.instagram.com/shodty/' target="_blank") Robbie Landsburg
-          h1(v-html="styleWord('Concept')") info
-          h2 Matt Vlach & Robbie Landsburg
           h3.concept.w-100
             | This website was conceptualized & created by Robbie Landsburg and Matt Vlach,
             | two alumnis of the 2018 & 2019 CSUS Graphic Design program. The idea emerged in response to the
@@ -55,15 +53,15 @@
         video.video-background( src='../assets/video/G20-ColorWarp.mp4' autoplay muted loop :class="showinfo? 'showing-video' : 'hidingvideo' ")
         img.up-arrow.cursor-pointer(@click="showInfo" src='../assets/img/up.png')
   b-row.mobile-header.align-items-center.hide-on-ipad(  :class="{ borderbottom: !interior && !photo && !graphic}" )
-      .col-4.align-self-center.p-0.m-0.h-100.d-inline-block
-        .header-graphic.d-flex.justify-content-center(@click="showMenu('graphic')"  :class="{ borderbottom: interior || photo }")
-          .align-self-center Graphic
-      .col-4.align-self-center.p-0.m-0.h-100.d-inline-block
+      .col-4.align-self-center.h-100.d-inline-block.header-fix-left
+        .header-graphic.d-flex.justify-content-start(@click="showMenu('graphic')"  :class="{ borderbottom: interior || photo }")
+          .align-self-center.w-100.text-center GRAPHICS-2<span style="font-family: Animal-Soul">0</span>
+      .col-4.align-self-center.h-100.d-inline-block.header-fix-middle
         .header-interior.d-flex.justify-content-center(@click="showMenu('interior')" :class="{ borderbottom: graphic || photo }")
-          .align-self-center Interior
-      .col-4.p-0.m-0.h-100.d-inline-block
+          .align-self-center.w-100.text-center INTERIORS-<span style="font-family: Animal-Soul">2</span>0
+      .col-4.align-self-center.h-100.d-inline-block.header-fix-right
         .header-photo.d-flex.justify-content-center(@click="showMenu('photo')"  :class="{ borderbottom: graphic || interior }")
-          .align-self-center Photo
+          .align-self-center.w-100.text-center PHOTOS<span style="font-family: Animal-Soul">-</span>20
   b-container.container-fluid.info-mobile.graphic-mobile.p-0.hide-on-ipad(:class="{ 'showing-graphic' : graphic }")
       b-row.information.justify-content-center(v-show="graphic" )
         .col-12.graphic-mobile
@@ -92,8 +90,6 @@
             .mobile-head(v-html="styleWord('Website')")
             .mobile-subhead
               a(href='https://www.instagram.com/shodty/' target="_blank") Robbie Landsburg
-            .mobile-head(v-html="styleWord('Concept')") info
-            .mobile-subhead Matt Vlach & Robbie Landsburg
             .mobile-body.w-100
               | This website was conceptualized & created by Robbie Landsburg and Matt Vlach,
               | two alumnis of the 2018 & 2019 CSUS Graphic Design program. The idea emerged in response to the
@@ -233,7 +229,7 @@ body, p, h1, h2, h3
 .header-graphic
   border-right 3px solid #181819
   background-color #c1abd3
-
+  min-width 100%
 .header-interior
   border-right 3px solid #181819
   background-color #b7dba7
@@ -436,4 +432,16 @@ h3
 a
   color #f26b64
   text-decoration underline
+
+.header-fix-left
+  padding-right 0
+
+.header-fix-middle
+  padding 0
+
+.header-fix-right
+  padding-left 0
+
+.text-center
+  text-align center !important
 </style>

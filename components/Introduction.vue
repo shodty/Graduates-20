@@ -41,9 +41,9 @@ b-container(:class='next? "overlay-more" : "overlay-less"')
                 img.cursor-pointer.more(v-if='next' src='../assets/img/back.png' @click='next = !next')
             br
             .col-12
-                button.next.gb.col-4(@click="showDiscipline('graphic')") GRAPHIC
-                button.next.ib.col-4(@click="showDiscipline('interior')") INTERIOR
-                button.next.pb.col-4(@click="showDiscipline('photo')") PHOTO
+                button.next.gb.col-4(@click="showDiscipline('graphic')") GRAPHICS-2<span style="font-family: Animal-Soul">0</span>
+                button.next.ib.col-4(@click="showDiscipline('interior')") INTERIORS-<span style="font-family: Animal-Soul">2</span>0
+                button.next.pb.col-4(@click="showDiscipline('photo')") PHOTOS<span style="font-family: Animal-Soul">-</span>20
 </template>
 
 <script>
