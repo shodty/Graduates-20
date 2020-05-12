@@ -4,17 +4,18 @@ b-col.work(cols="12")
             .studentinfo(key='studentinfo')
               b-container.h-100.mobile-cont
                 b-row.h-100(align-v='start')
-                    b-col.left-section.h-100(cols='5' md='4')
+                    b-col.left-section.h-100(v-if='!student.showWork' cols='5' md='4')
                         // transition-group(name="fade" mode='out-in')
-                        img.selfie(v-if='!student.showWork' :src='getSrc(student, 0)' key='img')
-                        div.col-sm-12(v-if='student.showWork' key='info')
-                            span.main-name(v-html="styleName(student.name)")
-                            h1.proj-title {{student.projecttext[currentImg].title}}
-                            p.proj-desc {{student.projecttext[currentImg].description}}
+                        img.selfie( :src='getSrc(student, 0)' key='img')
+                    b-col.left-section.h-100(v-if='student.showWork' cols='12' md='4')
+                        //div.col-sm-12(v-if='student.showWork' key='info')
+                        span.main-name(v-html="styleName(student.name)")
+                        h1.proj-title {{student.projecttext[currentImg].title}}
+                        p.proj-desc {{student.projecttext[currentImg].description}}
                         button.aboutbutton(v-if='student.showWork' @click="showStudentWork(index)" :class="{ buttonpressed: !student.showWork}") ⟵
-                    b-col.work-section(cols='7' md='8')
+                    b-col.work-section(v-if='!student.showWork' cols='7' md='8')
                             // transition-group(name="fade" mode='out-in')
-                            b-row.info-section.col-12(v-if='!student.showWork' key='info')
+                            b-row.info-section.col-12( key='info')
                                 span.main-name.col-12.p-0(v-html="styleName(student.name)")
                                 .links-container.col-12.p-0
                                     ul.social-links
@@ -37,7 +38,8 @@ b-col.work(cols="12")
                                     li.tags(v-for='tag in student.tags') {{tag}} /
                                 .main-text.col-12.p-0 {{student.text}}
                                 button.view-work.col-sm-12.p-0(@click="showStudentWork(index)") WORK⟶
-                            hooper.student-work.h-100(v-if='student.showWork'  :settings='hooperSettings' key='hooper' ref='hooper' v-on:slide='changeImageDesc')
+                    b-col.work-section(v-if='student.showWork'  cols='12' md='8')
+                            hooper.student-work.h-100(:settings='hooperSettings' key='hooper' ref='hooper' v-on:slide='changeImageDesc')
                                 slide.h-100( v-for="n in student.images" :key="student.code")
                                     video.video-slide(v-if="student.ext[n-1] == 'mp4'" :src='getSrc(student, n)' :alt='student.image1' muted loop controls)
                                     expandable-image(v-else :src='getSrc(student, n)' :alt='student.image1')
@@ -368,13 +370,13 @@ ul
   font-size 2vw !important
   @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     position absolute
+    padding 0 2%
     height 40%
     top 0
-    right 0
+    right 1%
     border none
     color white
     background #181819
-    padding 0 2%
   }
 
 .slide-number

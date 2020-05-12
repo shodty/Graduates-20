@@ -8,8 +8,8 @@
                 img.hide-menu.cursor-pointer(src='../assets/img/left.png' @click="hideMenu")
         b-col.p-0.col-12( @mouseover="hover = true" @mouseleave="hover = false" :id="showmenu? 'right' : 'rightfull'")
             transition-group(name="fade")
-                video.splash-video.hide-on-mobile(v-if="show == 'welcome'" src="../assets/video/G20_MaskSpin.mp4" autoplay muted loop key='vid' :class="showmenu? 'splash-video' : 'w-100'")
-                img.splash-gif.hide-on-ipad(v-if="show == 'welcome'" src="../assets/video/G20_mobile.gif" key='gif')
+                video.splash-video.hide-on-mobile(v-if="show == 'welcome'" src="../assets/video/G20_MaskSpin.mp4" :poster="getSrc('G20-poster0.jpg')"  autoplay muted loop key='vid' :class="showmenu? 'splash-video' : 'w-100'")
+                img.splash-gif.hide-on-ipad(v-if="show == 'welcome'" src="../assets/video/G20_mobile.gif" key='gif' :poster="getSrc('G20-poster1.jpg')" )
                 span.enter.hide-on-ipad(v-if="show == 'welcome' && !hover " key='enter') ENT<span style="font-family: Animal-Soul">E</span>R
                 Introduction.overlay(v-if="hover && show == 'welcome'" key='intro')
 
@@ -69,6 +69,9 @@ export default {
   methods: {
     forceRerender () {
       this.componentKey += 1
+    },
+    getSrc (poster) {
+      return require('../assets/video/' + poster)
     },
     hideMenu () {
       // this.forceRerender()

@@ -158,7 +158,6 @@ export default {
       this.interior = false
       this.photo = false
       this.showmobileinfo = false
-      console.log(this.showmobileinfo)
       if (this.showinfo === true) { this.showInfo() }
       if (discipline === 'welcome') { this.$store.dispatch('students/hideAllStudentWork') }
     },
