@@ -30,8 +30,7 @@ export default {
   */
   plugins: [
     '~/plugins/bus',
-    { src: '~/plugins/vue-expandable-image', mode: 'client' },
-    '~/plugins/vue-analytics'
+    { src: '~/plugins/vue-expandable-image', mode: 'client' }
 
   ],
   /*
@@ -40,10 +39,15 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-166334210-1'
-    }]
+    '@nuxtjs/google-analytics'
   ],
+  googleAnalytics: {
+    id: 'UA-166334210-1',
+    debug: {
+      enabled: true,
+      sendHitTask: true
+    }
+  },
   /*
   ** Nuxt.js modules
   */
@@ -61,7 +65,7 @@ export default {
       directiveOnly: false,
 
       // Default image must be in the static folder
-      defaultImage: '~/assets/loading.png',
+      defaultImage: 'https://imgur.com/a/VMx9qZj.png',
 
       // To remove class set value to false
       loadingClass: 'isLoading',

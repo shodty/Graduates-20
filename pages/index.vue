@@ -4,7 +4,6 @@ Main
 
 <script>
 
-import { page } from 'vue-analytics'
 import Main from './Main.vue'
 
 export default {
@@ -14,11 +13,6 @@ export default {
   },
   data () {
     return {
-    }
-  },
-  methods: {
-    track () {
-      page('/')
     }
   }
 }
