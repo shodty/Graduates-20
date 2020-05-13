@@ -169,7 +169,7 @@ export const state = () => ({
       ],
       showWork: false,
       fill: false,
-      text: 'Molly Berg is a graduating photography student whose work follows a deeply personal and macabre self-reflection of influenced human behaviors. The work includes a variety of mediums including, digital, film, mixed media collage, and embroidery. The self-portraiture is set in environments of abandonment or decay, with the body set in positions to imply the state of death. The overall work has a sense of dark humor and the theatrically staged portraits transform ordinarily dismal scenes into playful and dreamlike images. There is a repetitive motif of thresholds including doorways and windows present within the work as well as the study of the passing of time observed through long exposures and semi-transparent portraits.'
+      text: 'Molly\'s work follows a deeply personal and macabre self-reflection of influenced human behaviors. The work includes a variety of mediums including, digital, film, mixed media collage, and embroidery. The self-portraiture is set in environments of abandonment or decay, with the body set in positions to imply the state of death. The overall work has a sense of dark humor and the theatrically staged portraits transform ordinarily dismal scenes into playful and dreamlike images. '
     },
     {
       code: 'BorbonI',

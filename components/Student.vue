@@ -408,7 +408,7 @@ ul
     position absolute
     padding 0 2%
     margin-right 3%
-    height 20%
+    height 40%
     top 0
     right 1%
     border none
@@ -420,7 +420,7 @@ ul
     padding 0 2%
     margin 0
     margin-right 3%
-    height 20%
+    height 40%
     top 0
     right 1%
     border none

@@ -151,6 +151,7 @@ export default {
       this.$store.dispatch('general/showDiscipline', discipline)
       this.$bus.$emit('homeReset')
       this.$bus.$emit('shuffleStudents')
+      this.scrollToTop()
       this.graphic = false
       this.interior = false
       this.photo = false
@@ -208,6 +209,9 @@ export default {
         newWord = newWord + ' '
       }
       return newWord
+    },
+    scrollToTop () {
+      window.scrollTo(0, 0)
     }
   }
 }
