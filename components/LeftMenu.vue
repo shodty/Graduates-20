@@ -112,6 +112,10 @@ export default {
     },
     alphabetizeStudents (dir) {
       this.$bus.$emit('alphabetizeStudents', dir)
+      this.scrollToTop()
+    },
+    scrollToTop () {
+      window.scrollTo(0, 0)
     }
   }
 }

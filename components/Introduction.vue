@@ -27,15 +27,32 @@ b-container(:class='next? "overlay-more" : "overlay-less"')
             p.intro-text(v-if='next')
                 |<span class="welcome-header">T<span style='font-family: Animal-Soul'>h</span>e Depa<span style='font-family: Animal-Soul'>r</span>tment of De<span style='font-family: Animal-Soul'>s</span>ign</span>
                 |<br><br>
-                |The Department of Design recognizes that the environments in which we live and work are shaped by an ever-increasing quantity of visual information. This information, in the form of two- and three-dimensional forms, comes to us from a variety of sources that utilize both traditional and technologically advanced modes of visual communication. To a greater extent than at any other point in our history, artists and designers are dissolving the boundaries between two- and three-dimensional visualization.
+                | The Department of Design recognizes that the environments in which we live and work are shaped by an
+                | ever-increasing quantity of visual information. This information
+                | comes to us from a multitude of sources, utilizing both traditional and technologically advanced modes of visual communication.
+                | To a greater extent than at any other point in our history, artists and designers are dissolving the boundaries between
+                | two- and three-dimensional visualization.
                 |<br><br>
-                |The Department of Design is well positioned to respond to the multifaceted nature of today’s visual culture. By offering degree programs in Graphic Design, Interior Architecture, and Photography we prepare our students for a wide range of visual and design practices that play a part in creating our built environment.
+                | The Department of Design is well positioned to respond to the multifaceted nature of today’s visual culture.
+                | By offering degree programs in Graphic Design, Interior Architecture, and Photography we prepare our students
+                | for a wide range of design practices that play a part in creating our built environment.
                 |<br><br>
-                |The Department of Design strives to prepare students to have an impact in professional creative environments that will require collaboration, adaptation to technology and leadership in solving complex problems. The needs of the institutions, businesses and individuals they work with are rapidly changing. The technology they will use to create, as well as the technology used by their audiences, will change the most. We want graduates to be capable of seizing opportunities as they arise and turn them into meaningful learning experiences throughout their career.
+                | The Department of Design strives to prepare students to have an impact in professional creative environments
+                | that will require collaboration, adaptation to technology and leadership in solving complex problems.
+                | The needs of the institutions, businesses and individuals they work with are rapidly changing.
+                | The technology they will use to create, as well as the technology used by their audiences is ever-changing.
+                | We want graduates to be capable of seizing opportunities as they arise and turn them into meaningful learning experiences
+                | throughout their career.
                 |<br><br>
-                |The Department of Design is where creative and critical thinking come together in a curriculum that, while preparing students for different career paths, fully engages students in relevant areas of technical and aesthetic concern while establishing historical and social context to their disciplines. Students are taught how to utilize an iterative process to create high quality solutions that respond to complex functional and aesthetic requirements that correspond to the appropriate audience, occupant or user.
+                |The Department of Design is where creative and critical thinking come together in a curriculum that,
+                | while preparing students for different career paths, fully engages students in relevant areas of technical and aesthetic
+                | concern while establishing historical and social context to their disciplines. Students are taught how to utilize an iterative
+                | process to create high quality solutions that respond to complex functional and aesthetic requirements that correspond to the
+                | appropriate audience, occupant or user.
                 |<br><br>
-                |Furthermore, the Department seeks to prepare students to be articulate in their discipline: to be able to discuss and present their work, both in writing and in conversation, from the perspective of the functional and aesthetic concepts that underlay the work and how their decisions in these areas frame and solve a given problem.
+                | Furthermore, the Department seeks to prepare students to be articulate in their discipline: to be able to discuss and present
+                | their work, both in writing and in conversation, from the perspective of the functional and aesthetic concepts that underlay
+                | the work and how their decisions in these areas frame and solve a given problem.
             br
             .images
                 img.cursor-pointer.more(v-if='!next' src='../assets/img/more.png' @click='next = !next')

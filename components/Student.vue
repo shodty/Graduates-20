@@ -63,7 +63,7 @@ b-col.work(cols="12")
                                 slide.h-100( v-for="n in student.images" :key="student.code")
                                     video.video-slide.lazyLoad(v-if="student.ext[n-1] == 'mp4'" :poster="require(`../assets/students/${student.code}/${student.code}${n.toString()}.jpg`)" :alt='student.image1' muted loop controls loading='lazy')
                                       source(:src="require(`../assets/students/${student.code}/${student.code}${n.toString()}.mp4`)"  type="video/mp4")
-                                    expandable-image.lazyLoad( :src="require(`../assets/students/${student.code}/${student.code}${n.toString()}.${student.ext[n-1]}`)" :alt='student.image1' loading='lazy')
+                                    expandable-image.lazyLoad(v-if="student.ext[n-1] !== 'mp4'" :src="require(`../assets/students/${student.code}/${student.code}${n.toString()}.${student.ext[n-1]}`)" :alt='student.image1' loading='lazy')
                                 hooper-navigation.nav(slot='hooper-addons' )
                             p.slide-number( v-if='student.showWork') {{currentImg + 1}} / {{student.images}}
                 //button.workbutton(@click="showStudentWork(index)" :class="{ buttonpressed: student.showWork}") WORK

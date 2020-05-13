@@ -176,7 +176,7 @@ export const state = () => ({
       name: 'Isabel Borbon',
       discipline: 'graphic',
       tags: [
-        'print media',
+        'print',
         'branding',
         'packaging',
         'UX/UI'
@@ -971,7 +971,7 @@ export const state = () => ({
       name: 'Ashley Huck',
       discipline: 'graphic',
       tags: [
-        'brand identity',
+        'branding',
         'layout',
         'publishing'
       ],
@@ -1323,7 +1323,7 @@ export const state = () => ({
         'editorial design',
         'branding',
         'environmental design',
-        'visual identity'
+        'branding'
       ],
       links: {
         website: 'www.kristyluong.com',
