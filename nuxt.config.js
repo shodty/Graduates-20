@@ -31,20 +31,25 @@ export default {
   plugins: [
     '~/plugins/bus',
     { src: '~/plugins/vue-expandable-image', mode: 'client' }
+
   ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-12301-2'
+    }]
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    'nuxt-lazy-load'
   ],
   /*
   ** Build configuration

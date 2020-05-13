@@ -4,7 +4,8 @@ b-container(:class='next? "overlay-more" : "overlay-less"')
         b-col.col-xs-8.offset-xs-2.col-lg-8.offset-lg-2.text-container
             p.intro-text(v-if='!next')
                 | <span class="welcome-header">We<span style='font-family: Animal-Soul'>l</span>co<span style='font-family: Animal-Soul'>m</span>e</span>
-                | <br><br>
+                | <br>
+            p.intro-text.indent(v-if='!next')
                 | We are the Department of Design. We solve problems. We have a part in how we communicate
                 | to and shape the world in which we live. This comes through the questions we ask of others and of
                 | ourselves. Through image and word, form and color, texture and space our answers have a
@@ -44,6 +45,8 @@ b-container(:class='next? "overlay-more" : "overlay-less"')
                 button.next.gb.col-4(@click="showDiscipline('graphic')") GRAPHICS-2<span style="font-family: Animal-Soul">0</span>
                 button.next.ib.col-4(@click="showDiscipline('interior')") INTERIORS-<span style="font-family: Animal-Soul">2</span>0
                 button.next.pb.col-4(@click="showDiscipline('photo')") PHOTOS<span style="font-family: Animal-Soul">-</span>20
+            br
+            br
 </template>
 
 <script>
@@ -86,6 +89,9 @@ export default {
     font-size 20px
     font-weight 800
     padding 0 10%
+
+.indent
+    padding-top 4%
 .welcome-header
     font-family: 'GT-Pressura', sans-serif
     font-size 5vw
@@ -95,6 +101,7 @@ export default {
     @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
         font-size 5vh
         line-height 1.5
+        letter-spacing 2px
     }
 .next
   font-family: 'GT-Pressura', sans-serif

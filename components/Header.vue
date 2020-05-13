@@ -55,13 +55,13 @@
   b-row.mobile-header.align-items-center.hide-on-ipad(  :class="{ borderbottom: !interior && !photo && !graphic}" )
       .col-4.align-self-center.h-100.d-inline-block.header-fix-left
         .header-graphic.d-flex.justify-content-start(@click="showMenu('graphic')"  :class="{ borderbottom: interior || photo }")
-          .align-self-center.w-100.text-center GRAPHICS-2<span style="font-family: Animal-Soul">0</span>
+          .align-self-center.w-100.text-center.cursor-pointer GRAPHICS-2<span style="font-family: Animal-Soul">0</span>
       .col-4.align-self-center.h-100.d-inline-block.header-fix-middle
         .header-interior.d-flex.justify-content-center(@click="showMenu('interior')" :class="{ borderbottom: graphic || photo }")
-          .align-self-center.w-100.text-center INTERIORS-<span style="font-family: Animal-Soul">2</span>0
+          .align-self-center.w-100.text-center.cursor-pointer INTERIORS-<span style="font-family: Animal-Soul">2</span>0
       .col-4.align-self-center.h-100.d-inline-block.header-fix-right
         .header-photo.d-flex.justify-content-center(@click="showMenu('photo')"  :class="{ borderbottom: graphic || interior }")
-          .align-self-center.w-100.text-center PHOTOS<span style="font-family: Animal-Soul">-</span>20
+          .align-self-center.w-100.text-center.cursor-pointer PHOTOS<span style="font-family: Animal-Soul">-</span>20
   b-container.container-fluid.info-mobile.graphic-mobile.p-0.hide-on-ipad(:class="{ 'showing-graphic' : graphic }")
       b-row.information.justify-content-center(v-show="graphic" )
         .col-12.graphic-mobile
@@ -122,10 +122,11 @@
             br
             br
             br
+            br
   .home-button.hide-on-ipad
-    img.home-icon(src='../assets/img/home-button.png' @click="showDiscipline('welcome')")
+    img.home-icon.cursor-pointer(src='../assets/img/home-button.png' @click="showDiscipline('welcome')")
   .info-button.hide-on-ipad
-    img.home-icon(src='../assets/img/info-button.png' @click="showMobileInfo")
+    img.home-icon.cursor-pointer(src='../assets/img/info-button.png' @click="showMobileInfo")
 </template>
 
 <script>
@@ -409,7 +410,7 @@ h3
   font-family 'GT-Pressura', sans-serif
   font-size 3vh
   position fixed
-  bottom 3%
+  bottom 8%
   left 10%
 .graphic-mobile, .interior-mobile, .photo-mobile
   padding 0 10%

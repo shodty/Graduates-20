@@ -147,13 +147,19 @@ p
 }
 
 .hide-on-desktop {
-  @media(min-width: 768px) {
+  @media(min-width: 812px) {
     display: none !important;
   }
 }
 
 .hide-on-ipad {
  @media(min-width: 1200px) {
+    display: none !important;
+  }
+}
+
+.hide-on-something {
+  @media(max-width: 811px) {
     display: none !important;
   }
 }

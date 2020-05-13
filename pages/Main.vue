@@ -8,8 +8,9 @@
                 img.hide-menu.cursor-pointer(src='../assets/img/left.png' @click="hideMenu")
         b-col.p-0.col-12( @mouseover="hover = true" @mouseleave="hover = false" :id="showmenu? 'right' : 'rightfull'")
             transition-group(name="fade")
-                video.splash-video.hide-on-mobile(v-if="show == 'welcome'" :src="getSrc(videourl)" :poster="getSrc('G20-poster0.jpg')" key='vid' :class="showmenu? 'splash-video' : 'w-100'" autoplay muted loop )
-                img.splash-gif.hide-on-ipad(v-if="show == 'welcome'" src="../assets/video/G20_mobile.gif" key='gif' :poster="getSrc('G20-poster1.jpg')" )
+                video.splash-video.hide-on-mobile(v-if="show == 'welcome'" data-poster="../assets/video/G20-poster0.jpg"  key='vid' :class="showmenu? 'splash-video' : 'w-100'" playsinline autoplay muted loop )
+                  source(src="../assets/video/G20_MaskSpin.mp4"  type="video/mp4")
+                img.splash-gif.hide-on-ipad(v-if="show == 'welcome'" src="../assets/video/G20_mobile.gif" key='gif')
                 span.enter.hide-on-ipad(v-if="show == 'welcome' && !hover " key='enter') ENT<span style="font-family: Animal-Soul">E</span>R
                 Introduction.overlay(v-if="hover && show == 'welcome'" key='intro')
 
@@ -76,6 +77,7 @@ export default {
       this.forceRerender()
     })
     this.$bus.$on('homeReset', () => {
+      this.hover = false
       this.showmenu = true
     })
     this.$nextTick(() => {

@@ -6,8 +6,8 @@ b-col.work(cols="12")
                 b-row.h-100(align-v='start')
                     b-col.left-section.h-100(v-if='!student.showWork' cols='5' md='4')
                         // transition-group(name="fade" mode='out-in')
-                        img.selfie( :src='getSrc(student, 0)' key='img')
-                        b-row.info-section.col-12.hide-on-desktop( key='info')
+                        img.selfie( :src="require(`../assets/students/${student.code}/${student.code}0.jpg`)" key='img')
+                        b-row.info-section.col-12.hide-on-desktop.text-align-center( key='info')
                                 .links-container.col-12.p-0
                                     ul.social-links
                                         li(v-if="hasWeb")
@@ -31,13 +31,13 @@ b-col.work(cols="12")
                         //div.col-sm-12(v-if='student.showWork' key='info')
                         span.main-name(v-html="styleName(student.name)")
                         h1.proj-title {{student.projecttext[currentImg].title}}
-                        p.proj-desc {{student.projecttext[currentImg].description}}
+                        p.proj-desc.hide-on-mobile {{student.projecttext[currentImg].description}}
                         button.aboutbutton(v-if='student.showWork' @click="showStudentWork(index)" :class="{ buttonpressed: !student.showWork}") ⟵
                     b-col.work-section(v-if='!student.showWork' cols='7' md='8')
                             // transition-group(name="fade" mode='out-in')
                             b-row.info-section.col-12( key='info')
                                 span.main-name.col-12.p-0(v-html="styleName(student.name)")
-                                .links-container.col-12.p-0.hide-on-mobile
+                                .links-container.col-12.p-0.hide-on-something
                                     ul.social-links
                                         li(v-if="hasWeb")
                                             a(:href='"https://" + student.links.website' target="_blank")
@@ -54,15 +54,16 @@ b-col.work(cols="12")
                                         li(v-if='hasTw')
                                             a(:href=' "https://" + student.links.twitter' target="_blank")
                                                 img.social-img(src='../assets/img/twitter.png')
-                                ul.tagsone.col-12.hide-on-mobile
+                                ul.tagsone.col-12.hide-on-something
                                     li.tags(v-for='tag in student.tags') {{tag}} /
                                 .main-text.col-12.p-0 {{student.text}}
                                 button.view-work.col-sm-12.p-0(@click="showStudentWork(index)") WORK⟶
                     b-col.work-section(v-if='student.showWork'  cols='12' md='8')
                             hooper.student-work.h-100(:settings='hooperSettings' key='hooper' ref='hooper' v-on:slide='changeImageDesc')
                                 slide.h-100( v-for="n in student.images" :key="student.code")
-                                    video.video-slide(v-if="student.ext[n-1] == 'mp4'" :src='getSrc(student, n)' :alt='student.image1' muted loop controls)
-                                    expandable-image(v-else :src='getSrc(student, n)' :alt='student.image1')
+                                    video.video-slide.lazyLoad(v-if="student.ext[n-1] == 'mp4'" :poster="require(`../assets/students/${student.code}/${student.code}${n.toString()}.jpg`)" :alt='student.image1' muted loop controls loading='lazy')
+                                      source(:src="require(`../assets/students/${student.code}/${student.code}${n.toString()}.mp4`)"  type="video/mp4")
+                                    expandable-image.lazyLoad( :src="require(`../assets/students/${student.code}/${student.code}${n.toString()}.${student.ext[n-1]}`)" :alt='student.image1' loading='lazy')
                                 hooper-navigation.nav(slot='hooper-addons' )
                             p.slide-number( v-if='student.showWork') {{currentImg + 1}} / {{student.images}}
                 //button.workbutton(@click="showStudentWork(index)" :class="{ buttonpressed: student.showWork}") WORK
@@ -134,6 +135,9 @@ export default {
         return require('../assets/students/' + student.code + '/' + student.code + imagenumber.toString() + '.' + student.ext[imagenumber - 1])
       }
     },
+    getPosterSrc (student, imagenumber) {
+      return require('../assets/students/' + student.code + '/' + student.code + imagenumber.toString() + '.jpg')
+    },
     styleName (name) {
       const words = name.split(' ')
       // const chars = words.split('')
@@ -186,6 +190,8 @@ export default {
     padding 0
   }
 
+.image-sizing
+  width 100%
 .students
   height: 100%
   width: 100%
@@ -197,6 +203,9 @@ export default {
   height: 100%
   width: 100%
   overflow: hidden
+
+.text-align-center
+  text-align center
 
 .work
   height: 100%
@@ -230,7 +239,12 @@ export default {
 
 .left-section
   @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    height 10% !important
+    height 16% !important
+    padding-right 1%
+  }
+  @media (min-width: 0px) and (max-width: 840px) {
+    height 16% !important
+    padding-right 1%
   }
 .work-section
   padding-left 0
@@ -393,7 +407,20 @@ ul
   @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     position absolute
     padding 0 2%
-    height 40%
+    margin-right 3%
+    height 20%
+    top 0
+    right 1%
+    border none
+    color white
+    background #181819
+  }
+  @media (min-width: 0px) and (max-width: 840px) {
+    position absolute
+    padding 0 2%
+    margin 0
+    margin-right 3%
+    height 20%
     top 0
     right 1%
     border none
@@ -408,7 +435,7 @@ ul
   padding-top 1%
   font-family: 'Ciao-Regular', sans-serif
   @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    padding-top 5%
+    padding-top 0
     font-size 2vw
   }
 </style>
