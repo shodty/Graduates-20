@@ -4,14 +4,21 @@ Main
 
 <script>
 
+import { page } from 'vue-analytics'
 import Main from './Main.vue'
 
 export default {
+  name: 'Graduates20',
   components: {
     Main
   },
   data () {
     return {
+    }
+  },
+  methods: {
+    track () {
+      page('/')
     }
   }
 }

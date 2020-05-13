@@ -21,6 +21,7 @@
     "pug-plain-loader": "^1.0.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
+    "vue-analytics": "^5.22.1",
     "vue-expandable-image": "^0.1.0",
     "vue-image-lightbox": "^7.0.0"
   },

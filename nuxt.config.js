@@ -30,7 +30,8 @@ export default {
   */
   plugins: [
     '~/plugins/bus',
-    { src: '~/plugins/vue-expandable-image', mode: 'client' }
+    { src: '~/plugins/vue-expandable-image', mode: 'client' },
+    '~/plugins/vue-analytics'
 
   ],
   /*
@@ -60,7 +61,7 @@ export default {
       directiveOnly: false,
 
       // Default image must be in the static folder
-      defaultImage: '~/assets/img/loading.png',
+      defaultImage: '~/assets/loading.png',
 
       // To remove class set value to false
       loadingClass: 'isLoading',
