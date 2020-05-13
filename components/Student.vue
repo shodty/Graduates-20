@@ -7,16 +7,7 @@ b-col.work(cols="12")
                     b-col.left-section.h-100(v-if='!student.showWork' cols='5' md='4')
                         // transition-group(name="fade" mode='out-in')
                         img.selfie( :src='getSrc(student, 0)' key='img')
-                    b-col.left-section.h-100(v-if='student.showWork' cols='12' md='4')
-                        //div.col-sm-12(v-if='student.showWork' key='info')
-                        span.main-name(v-html="styleName(student.name)")
-                        h1.proj-title {{student.projecttext[currentImg].title}}
-                        p.proj-desc {{student.projecttext[currentImg].description}}
-                        button.aboutbutton(v-if='student.showWork' @click="showStudentWork(index)" :class="{ buttonpressed: !student.showWork}") ⟵
-                    b-col.work-section(v-if='!student.showWork' cols='7' md='8')
-                            // transition-group(name="fade" mode='out-in')
-                            b-row.info-section.col-12( key='info')
-                                span.main-name.col-12.p-0(v-html="styleName(student.name)")
+                        b-row.info-section.col-12.hide-on-desktop( key='info')
                                 .links-container.col-12.p-0
                                     ul.social-links
                                         li(v-if="hasWeb")
@@ -35,6 +26,35 @@ b-col.work(cols="12")
                                             a(:href=' "https://" + student.links.twitter' target="_blank")
                                                 img.social-img(src='../assets/img/twitter.png')
                                 ul.tagsone.col-12
+                                    li.tags(v-for='tag in student.tags') {{tag}} +
+                    b-col.left-section.h-100(v-if='student.showWork' cols='12' md='4')
+                        //div.col-sm-12(v-if='student.showWork' key='info')
+                        span.main-name(v-html="styleName(student.name)")
+                        h1.proj-title {{student.projecttext[currentImg].title}}
+                        p.proj-desc {{student.projecttext[currentImg].description}}
+                        button.aboutbutton(v-if='student.showWork' @click="showStudentWork(index)" :class="{ buttonpressed: !student.showWork}") ⟵
+                    b-col.work-section(v-if='!student.showWork' cols='7' md='8')
+                            // transition-group(name="fade" mode='out-in')
+                            b-row.info-section.col-12( key='info')
+                                span.main-name.col-12.p-0(v-html="styleName(student.name)")
+                                .links-container.col-12.p-0.hide-on-mobile
+                                    ul.social-links
+                                        li(v-if="hasWeb")
+                                            a(:href='"https://" + student.links.website' target="_blank")
+                                                img.social-img(src='../assets/img/website.png' )
+                                        li(v-if='hasIg')
+                                            a(:href='"https://" + student.links.instagram' target="_blank")
+                                                img.social-img(src='../assets/img/instagram.png')
+                                        li(v-if='hasLi')
+                                            a(:href=' "https://" + student.links.linkedin' target="_blank")
+                                                img.social-img(src='../assets/img/linkedin.png')
+                                        li(v-if='hasBe')
+                                            a(:href=' "https://" + student.links.behance' target="_blank")
+                                                img.social-img(src='../assets/img/behance.png')
+                                        li(v-if='hasTw')
+                                            a(:href=' "https://" + student.links.twitter' target="_blank")
+                                                img.social-img(src='../assets/img/twitter.png')
+                                ul.tagsone.col-12.hide-on-mobile
                                     li.tags(v-for='tag in student.tags') {{tag}} /
                                 .main-text.col-12.p-0 {{student.text}}
                                 button.view-work.col-sm-12.p-0(@click="showStudentWork(index)") WORK⟶
@@ -218,6 +238,7 @@ export default {
 
 .info-section
   padding-left 2%
+  margin 0
   @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     width 100% !important
     padding-right 0 !important
@@ -249,7 +270,7 @@ export default {
   line-height 1
   padding-right 2%
   @media only screen and (min-device-width: 0px) and (max-device-width: 800px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    font-size 1.2vh
+    font-size 1.5vh
   }
 .selfie
   width: 100%
@@ -335,7 +356,8 @@ export default {
     width 5%
     padding-right 1%
     @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-      width 10%
+      width 15%
+      margin 4% 4% 4% 0
     }
 ul
     margin 0

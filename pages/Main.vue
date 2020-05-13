@@ -8,7 +8,7 @@
                 img.hide-menu.cursor-pointer(src='../assets/img/left.png' @click="hideMenu")
         b-col.p-0.col-12( @mouseover="hover = true" @mouseleave="hover = false" :id="showmenu? 'right' : 'rightfull'")
             transition-group(name="fade")
-                video.splash-video.hide-on-mobile(v-if="show == 'welcome'" src="../assets/video/G20_MaskSpin.mp4" :poster="getSrc('G20-poster0.jpg')"  autoplay muted loop key='vid' :class="showmenu? 'splash-video' : 'w-100'")
+                video.splash-video.hide-on-mobile(v-if="show == 'welcome'" :src="getSrc(videourl)" :poster="getSrc('G20-poster0.jpg')" key='vid' :class="showmenu? 'splash-video' : 'w-100'" autoplay muted loop )
                 img.splash-gif.hide-on-ipad(v-if="show == 'welcome'" src="../assets/video/G20_mobile.gif" key='gif' :poster="getSrc('G20-poster1.jpg')" )
                 span.enter.hide-on-ipad(v-if="show == 'welcome' && !hover " key='enter') ENT<span style="font-family: Animal-Soul">E</span>R
                 Introduction.overlay(v-if="hover && show == 'welcome'" key='intro')
@@ -39,7 +39,10 @@ export default {
     return {
       showmenu: true,
       hover: false,
-      componentKey: 0
+      componentKey: 0,
+      windowWidth: 0,
+      videourl: '',
+      autoplay: false
     }
   },
   computed: {
@@ -53,6 +56,16 @@ export default {
       show: state => state.general.show
     })
   },
+  watch: {
+    windowWidth () {
+      if (this.windowWidth >= 1200) {
+        this.videourl = 'G20_MaskSpin.mp4'
+      }
+      if (this.windowWidth < 1200) {
+        this.videourl = ''
+      }
+    }
+  },
   mounted () {
     this.$bus.$on('shuffleStudents', () => {
       this.$store.dispatch('students/shuffleStudents')
@@ -65,12 +78,21 @@ export default {
     this.$bus.$on('homeReset', () => {
       this.showmenu = true
     })
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize)
+      window.addEventListener('load', this.onLoad)
+    })
+  },
+  beforeDestroy () {
+    window.removeEventListener('resize', this.onResize)
+    window.removeEventListener('load', this.onLoad)
   },
   methods: {
     forceRerender () {
       this.componentKey += 1
     },
     getSrc (poster) {
+      if (poster === '') { return '' }
       return require('../assets/video/' + poster)
     },
     hideMenu () {
@@ -82,6 +104,12 @@ export default {
     isInSelectedTags (student) {
       const discipline = this.currentTags[student.discipline]
       if (discipline.length === 0) { return true } else { return discipline.some(tag => student.tags.includes(tag)) }
+    },
+    onLoad () {
+      this.windowWidth = window.innerWidth
+    },
+    onResize () {
+      this.windowWidth = window.innerWidth
     }
   }
 }

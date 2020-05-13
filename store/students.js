@@ -255,7 +255,7 @@ export const state = () => ({
       ],
       showWork: false,
       fill: false,
-      text: 'Billy was an intelligent designer in the Monday/Wednesday cohort that used his life experiences to effectively push the boundaries of design. He liked web design, animals, horror films, The Cure, pizza, science, Shirley Temples, and warm sun. He was an excellent friend to all in the program and was always there when anyone needed something. His humor and often darker outlook on life kept conversation unexpected and enjoyable. He always offered genuine comments during class critiques and kept us endlessly laughing. He was an active member of GRIDS and always showed up to events. We will always honor and remember Billy. The following captions were taken directly from Billy\'s website he updated last December. Feel free to visit, as he has many more pieces to see.'
+      text: 'Billy was an intelligent designer that used his life experiences to effectively push the boundaries of design. He liked web design, animals, horror films, The Cure, pizza, science, Shirley Temples, and warm sun. He was an excellent friend to all in the program and was always there when anyone needed something. He always offered genuine comments during class critiques and kept us endlessly laughing. He was an active member of GRIDS and always showed up to events. We will always honor and remember Billy. The following captions were taken directly from Billy\'s website he updated last December. Feel free to visit, as he has many more pieces to see.'
     },
     {
       code: 'CantorK',

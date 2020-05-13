@@ -102,7 +102,7 @@ export default {
   color #181819
   border: 3px solid #181919
   @media only screen and (min-device-width: 0px) and (max-device-width: 450px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-        font-size 2vh
+        font-size 1.4vh
         line-height 1.5
   }
 

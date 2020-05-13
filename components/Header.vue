@@ -386,7 +386,7 @@ h3
   transition: height 1s ease
 
 .concept
-  padding-right 4%
+  padding-right 15%
 
 .up-arrow
   position fixed
