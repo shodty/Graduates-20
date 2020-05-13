@@ -102,6 +102,7 @@ export default {
   methods: {
     showDiscipline (discipline) {
       this.shuffleStudents()
+      this.scrollToTop()
       this.$store.dispatch('general/showDiscipline', discipline)
     },
     updateTags (tags, discipline) {
