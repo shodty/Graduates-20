@@ -61,7 +61,7 @@ export default {
       directiveOnly: false,
 
       // Default image must be in the static folder
-      defaultImage: 'https://imgur.com/a/VMx9qZj.png',
+      defaultImage: 'loading.png',
 
       // To remove class set value to false
       loadingClass: 'isLoading',
