@@ -2235,7 +2235,7 @@ export const state = () => ({
           description: 'From an ongoing series of large format analog images in collaboration with Molly Berg. The spaces betweenus and our surroundings.'
         },
         {
-          title: 'Hindrances of Free Though',
+          title: 'Hindrances of Free Thought',
           description: 'From a series of digital self-portraits documenting my engagement with place as home through dwelling. Inspired by Martin Heidegger’s essay “Building, Dwelling, Thinking.”'
         },
         {
