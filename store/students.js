@@ -2270,6 +2270,7 @@ export const state = () => ({
       tags: [
       ],
       links: {
+        website: 'lissasmith.design'
       },
       images: 7,
       ext: ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'],
@@ -2305,7 +2306,7 @@ export const state = () => ({
       ],
       showWork: false,
       fill: false,
-      text: ''
+      text: 'Lissa is a graphic designer. She’s also the CFO of Delta Electric Co. Inc. and makes the best Salty Dog you’ll ever have in your entire life. Prior to all this, she was the owner of a dance studio, an office manager, an award-winning filmmaker, a marketing assistant, and a Bob Fosse scholarship-winning dancer. She’s the Swiss Army knife of creatives, is another way of putting it. Lissa works and lives in Sacramento, California with her husband, four daughters, and a black lab named Emo. She holds a B.S. in Graphic Design from Sacramento State University.'
     },
     {
       code: 'StorozhukJ',
